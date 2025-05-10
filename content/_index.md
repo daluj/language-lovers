@@ -1,4 +1,4 @@
 ---
-description: "This is a description of your site."
+description: "Learn Vietnamese for Free"
 excludeSearch: true
 ---

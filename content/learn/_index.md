@@ -1,16 +1,14 @@
 ---
-title: "Documentation"
-type: "docs"
+title: "Learn Vietnamese"
+cascade:
+  type: docs
+sidebar:
+  open: true
 ---
 
-👋 Hello! Welcome to the Hextra documentation!
+👋 Hello! Welcome to your vietnamese learning path!
 
 <!--more-->
-
-## What is Hextra?
-
-Hextra is a modern, fast and batteries-included [Hugo][hugo] theme built with [Tailwind CSS][tailwind-css].
-Designed for building beautiful websites for documentation, blogs, and websites, it provides out-of-the-box features and flexibility to meet various requirements.
 
 ## Features
 
@@ -33,7 +31,7 @@ Designed for building beautiful websites for documentation, blogs, and websites,
 Dive right into the following section to get started:
 
 {{< cards >}}
-  {{< card link="getting-started" title="Getting Started" icon="document-text" subtitle="Learn how to create website using Hextra" >}}
+  {{< card link="getting-started" title="Getting Started" icon="document-text" subtitle="Guide to Rapid Language Acquisition" >}}
 {{< /cards >}}
 
 [hugo]: https://gohugo.io/

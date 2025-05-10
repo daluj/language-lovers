@@ -18,11 +18,7 @@ languages:
   en:
     languageName: English
     weight: 1
-    title: Docs
-  es:
-    languageName: Español
-    weight: 2
-    title: Documentacion
+    title: Learn
 
 module:
   hugoVersion:
