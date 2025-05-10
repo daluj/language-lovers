@@ -10,4 +10,5 @@ These targeted techniques build on the principles and actions to enhance fluency
 {{< cards >}}
   {{< card link="4-3-2-technique" title="4/3/2 Technique" icon="document-duplicate" >}}
   {{< card link="language-parent" title="Language Parent" icon="document-duplicate" >}}
+  {{< card link="goldlist-method" title="The Goldlist Method" icon="document-duplicate" >}}
 {{< /cards >}}

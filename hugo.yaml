@@ -74,13 +74,20 @@ menu:
       params:
         type: separator
       weight: 1
-    - identifier: flashcards
-      name: "Flashcards"
+    - identifier: vocabulary
+      name: "Vocabulary"
       weight: 2
-    - identifier: book
-      name: "Book Session"
-      url: "https://cal.com/"
+    - identifier: pronounciation
+      name: "Pronunciation"
       weight: 3
+    - identifier: conversation
+      name: "Conversation"
+      url: "https://cal.com/"
+      weight: 4
+    - identifier: grammar
+      name: "Grammar"
+      url: "https://cal.com/"
+      weight: 4
 
 
 params:
