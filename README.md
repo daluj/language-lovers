@@ -68,6 +68,10 @@ To start a local development server, run:
 hugo server
 ```
 
+```sh
+hugo server --logLevel debug
+```
+
 This will start the server at `http://localhost:1313/`. Changes to content or templates will automatically reload the site.
 
 ## Production

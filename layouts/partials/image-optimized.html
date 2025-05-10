@@ -17,6 +17,7 @@
   {{ $quality := .quality | default 80 }}
   {{ $isLCP := .isLCP | default false }}
   {{ $class := .class | default "" }}
+  {{ $ref := .ref | default "" }}
   
   {{ $img := resources.Get $src }}
   {{ if $img }}
@@ -50,6 +51,7 @@
         src="{{ $defaultImg.RelPermalink }}" 
         alt="{{ $alt }}" 
         {{ if $class }}class="{{ $class }}"{{ end }}
+        {{ if $ref }}x-ref="{{ $ref }}"{{ end }}
         {{ if $isLCP }}loading="eager" fetchpriority="high"{{ else }}loading="lazy"{{ end }}>
     </picture>
   {{ else }}

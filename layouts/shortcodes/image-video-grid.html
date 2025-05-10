@@ -1,0 +1,84 @@
+{{/* 
+  Image Video Grid Shortcode
+  
+  Usage in content files:
+  {{< image-video-grid gallery="gallery_name" >}}
+  
+  Where gallery_name is a parameter in the front matter that contains
+  an array of objects with the following structure:
+  
+  gallery:
+    - src: image1.jpg
+      title: Image Title 1
+      video_url: https://www.youtube.com/embed/VIDEO_ID_1
+    - src: image2.jpg
+      title: Image Title 2
+      video_url: https://www.youtube.com/embed/VIDEO_ID_2
+*/}}
+
+{{- $galleryName := .Get "gallery" -}}
+{{- $images := index .Page.Params $galleryName -}}
+
+<div class="container mx-auto px-4 py-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    {{- range $index, $image := $images -}}
+    <div x-data="{
+        isOpen: false,
+        imgWidth: 0,
+        imgHeight: 0,
+        videoUrl: '{{ $image.video_url }}',
+        setDimensions() {
+          const img = this.$refs.image{{ $index }};
+          this.imgWidth = img.offsetWidth;
+          this.imgHeight = img.offsetHeight;
+        }
+      }"
+      x-init="setDimensions(); $watch('isOpen', value => { if (value) setDimensions(); })"
+      class="relative"
+    >
+      <!-- Image and Title -->
+      <div class="cursor-pointer" @click="isOpen = true">
+        {{ partial "image-optimized.html" (dict
+          "src" (printf "images/%s" $image.src)
+          "alt" $image.title
+          "isLCP" false
+          "class" (printf "w-full h-auto object-cover rounded-lg")
+          "ref" (printf "image%d" $index)
+        ) }}
+        <div class="mt-2 text-center text-gray-700 font-semibold">
+          {{ $image.title }}
+        </div>
+      </div>
+
+      <!-- Video Modal -->
+      <div
+        x-show="isOpen"
+        class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+        @click="isOpen = false"
+      >
+        <div
+          class="relative"
+          :style="{ width: imgWidth + 'px', height: imgHeight + 'px' }"
+          @click.stop
+        >
+          <iframe
+            :width="imgWidth"
+            :height="imgHeight"
+            :src="isOpen ? videoUrl : ''"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            class="rounded-lg"
+          ></iframe>
+          <button
+            @click="isOpen = false"
+            class="absolute top-2 right-2 text-white bg-gray-800 rounded-full p-2 hover:bg-gray-600"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
+    </div>
+    {{- end -}}
+  </div>
+</div>
