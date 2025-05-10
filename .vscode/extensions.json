@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "mhutchie.git-graph",
+    "esbenp.prettier-vscode",
+    "tamasfe.even-better-toml",
+    "budparr.language-hugo-vscode",
+    "jetify.devbox",
+    "ms-vscode-remote.remote-wsl"
+  ]
+}

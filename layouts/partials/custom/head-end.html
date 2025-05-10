@@ -1,0 +1,21 @@
+{{/* CSS */}}
+{{ $options := dict "inlineImports" true "config" "./assets/css/postcss.config.js" }}
+{{ $styles := resources.Get "css/my-site.css" }}
+{{ $styles = $styles | css.PostCSS $options }}
+{{- if hugo.IsProduction }}
+{{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
+<link href="{{ $styles.Permalink }}" rel="stylesheet" integrity="{{ $styles.Data.Integrity }}"
+    crossorigin="anonymous" />
+{{- else }}
+<link href="{{ $styles.Permalink }}" rel="stylesheet" />
+{{ end }}
+{{/* /CSS */}}
+
+{{/* JS */}}
+{{ partial "alpine.html" . }}
+{{/*{{ partial "plausible_head.html" . }}*/}}
+{{/* /JS */}}
+
+{{ with .Page.Scratch.Get "preloadImage" }}
+    {{ . | safeHTML }}
+{{ end }}

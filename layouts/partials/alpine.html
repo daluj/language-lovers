@@ -1,0 +1,17 @@
+{{ $mainjs := resources.Get "js/alpine.js" | js.Build }}
+<script src="{{ $mainjs.RelPermalink }}" defer></script>
+<script>
+    function carousel() {
+      return {
+        init() {
+          
+        },
+        scrollLeft() {
+          this.$refs.carousel.scrollBy({ left: -300, behavior: 'smooth' });
+        },
+        scrollRight() {
+          this.$refs.carousel.scrollBy({ left: 300, behavior: 'smooth' });
+        },
+      }
+    }
+</script>

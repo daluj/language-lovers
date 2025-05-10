@@ -1,0 +1,668 @@
+<section id="hero" class="py-24 px-6 text-center flex flex-col items-center min-h-[80vh]">
+  <!-- Title and Subtitle Centered -->
+  <div class="max-w-2xl">
+    <h1 class="text-5xl font-medium mb-6 text-blue-800">
+      {{ i18n "hero_title" | default "Feels like your business is drowning in chaos?" }}
+    </h1>
+    <p class="text-xl mb-8">
+      {{ i18n "hero_subtitle" | default "It’s frustrating when complexity slows you down. What if together we could turn that into clarity?" }}
+    </p>
+  </div>
+
+  <!-- Video Thumbnail and Play Behavior -->
+  <div x-data="{ playing: false }" class="w-full max-w-2xl mb-8 rounded-xl overflow-hidden shadow-lg bg-gray-100">
+    <div class="aspect-w-16 aspect-h-9 relative">
+      
+      <template x-if="!playing">
+        <button @click="playing = true" class="absolute inset-0 w-full h-full focus:outline-none">
+          {{ partial "image-optimized.html" (dict 
+            "src" "images/thumbnail.jpg"
+            "alt" "Test"
+            "isLCP" true
+            "class" "thumbnail"
+          ) }}
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="bg-white p-4 rounded-full shadow-lg hover:scale-110 transform transition">
+              <svg class="w-10 h-10 text-orange-800" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+        </button>
+      </template>
+
+      <template x-if="playing">
+        <div x-transition.opacity.duration.700ms class="absolute inset-0 w-full h-full rounded-xl">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+            frameborder="0"
+            allowfullscreen
+            allow="autoplay"
+            class="w-full h-full rounded-xl">
+          </iframe>
+        </div>
+      </template>
+
+    </div>
+  </div>
+
+  <!-- Your Original Buttons -->
+  <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+    <a href="{{ "/docs/" | relLangURL }}"
+       class="px-6 py-3 border-2 border-blue-800 text-blue-800 rounded-lg hover:bg-blue-800 hover:text-white transition-all duration-300" aria-label="View documentation">
+      {{ i18n "view_docs" | default "View Docs" }}
+    </a>
+    <a href="#contact"
+       class="px-6 py-3 bg-orange-800 text-white rounded-lg hover:bg-orange-900 transition-all pulse" aria-label="Get started, contact us">
+      {{ i18n "get_started" | default "Let's Talk About The Chaos" }}
+    </a>
+  </div>
+</section>
+
+<section id="solutions" class="pt-24 pb-24 px-6" x-data="carousel()" x-init="init()">
+  <div class="max-w-6xl mx-auto">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">
+            Sound familiar? You're not alone.
+        </h2>
+        <p class="mt-4 text-lg">
+            We get it, inefficiency stings. Let's cut through the noise and get you back in control.
+        </p>
+      </div>
+      <!-- Carousel Section -->
+      <div class="relative mt-8 flex items-center">
+        <!-- Left Arrow (Desktop only) -->
+        <button @click="scrollLeft" class="hidden md:flex items-center justify-center mr-4 p-3 rounded-full z-10" aria-label="Scroll left through solutions">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+      
+        <!-- Carousel container -->
+        <div class="w-full md:overflow-x-auto no-scrollbar md:snap-x md:snap-mandatory md:scroll-smooth md:px-4 md:py-4 md:scroll-px-4" x-ref="carousel">
+          <div class="flex flex-col md:flex-row gap-4 md:gap-6 md:w-max">
+      
+            <!-- Card 1 -->
+            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg overflow-hidden">
+              <div class="text-left">
+                <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Streamlined Operations</h3>
+                <p class="mt-4 text-sm ">Reduce waste and optimize processes to save time and resources.</p>
+              </div>
+            </div>
+      
+            <!-- Card 2 -->
+            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg overflow-hidden">
+              <div class="text-left">
+                <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Cost Reduction</h3>
+                <p class="mt-4 text-sm ">Identify inefficiencies and implement cost-saving strategies.</p>
+              </div>
+            </div>
+      
+            <!-- Card 3 -->
+            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg overflow-hidden">
+              <div class="text-left">
+                <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Product Development</h3>
+                <p class="mt-4 text-sm ">Create innovative products with a structured approach to R&D.</p>
+              </div>
+            </div>
+      
+            <!-- Card 4 -->
+            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg overflow-hidden">
+              <div class="text-left">
+                <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Market Disruption</h3>
+                <p class="mt-4 text-sm ">Leverage new ideas to gain a competitive edge in your industry.</p>
+              </div>
+            </div>
+      
+            <!-- Card 5 -->
+            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg overflow-hidden">
+              <div class="text-left">
+                <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Organizational Transformation</h3>
+                <p class="mt-4 text-sm ">Navigate complex changes with minimal disruption.</p>
+              </div>
+            </div>
+      
+            <!-- Card 6 -->
+            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg overflow-hidden">
+              <div class="text-left">
+                <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Team Alignment</h3>
+                <p class="mt-4 text-sm ">Ensure your team adapts quickly to new strategies and goals.</p>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      
+        <!-- Right Arrow (Desktop only) -->
+        <button @click="scrollRight" class="hidden md:flex items-center justify-center ml-4 p-3 rounded-full z-10" aria-label="Scroll right through solutions">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- View More link -->
+      <div class="mt-10 flex justify-center">
+        <a href="#solutions-details"
+           class="relative inline-flex items-center justify-center px-6 py-3 text-white text-sm font-semibold rounded-full bg-blue-700 shadow-lg hover:bg-blue-800 transition-all duration-300"
+           aria-label="View more solutions">
+          View More
+          <span class="ml-2">→</span>
+          <!-- Gradient glow -->
+          <span class="absolute inset-0 rounded-full opacity-30 blur-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 -z-10"></span>
+        </a>
+      </div>
+  </div>
+</section>
+
+<section id="success-stories" class="pb-24 px-6" x-data="carousel()" x-init="init()">
+  <div class="max-w-6xl mx-auto">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">
+            Feel like you're stuck? They were too.
+        </h2>
+        <p class="mt-4 text-lg  ">
+            What if your breakthrough was just one step away?
+        </p>
+      </div>
+      <!-- Carousel Section -->
+      <div class="relative mt-8 flex items-center">
+        <!-- Left Arrow (Desktop only) -->
+        <button @click="scrollLeft" class="hidden md:flex items-center justify-center mr-4 p-3 rounded-full z-10" aria-label="Scroll left through success stories">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+      
+        <!-- Carousel container -->
+        <div class="w-full md:overflow-x-auto no-scrollbar md:snap-x md:snap-mandatory md:scroll-smooth md:px-4 md:py-4 md:scroll-px-4" x-ref="carousel">
+          <div class="flex flex-col md:flex-row gap-4 md:gap-6 md:w-max">
+      
+            <!-- Template Card 1 -->
+            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
+              <div class="w-full text-left">
+                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
+                  30% increase in operational efficiency
+                </h3>
+                <p class="text-sm  mb-3">
+                  <span class="font-medium">Objective:</span> Streamline legacy systems
+                </p>
+                <div class="flex items-center gap-3">
+                  <img src="" alt="TechCorp Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
+                  <div class="text-xs text-gray-600">
+                    TechCorp Digital Overhaul
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Template Card 2 -->
+            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
+              <div class="w-full text-left">
+                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
+                  Product launched 6 months ahead
+                </h3>
+                <p class="text-sm  mb-3">
+                  <span class="font-medium">Objective:</span> Accelerate R&D timeline
+                </p>
+                <div class="flex items-center gap-3">
+                  <img src="" alt="InnovateX Logo" class="w-10 h-10 border-2 border-2 rounded-full flex-shrink-0">
+                  <div class="text-xs text-gray-600">
+                    InnovateX Product Launch
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Template Card 3 -->
+            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
+              <div class="w-full text-left">
+                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
+                  25% cost reduction in 3 months
+                </h3>
+                <p class="text-sm  mb-3">
+                  <span class="font-medium">Objective:</span> Reduce production waste
+                </p>
+                <div class="flex items-center gap-3">
+                  <img src="" alt="ManuTech Logo" class="w-10 h-10 border-2 border-2 rounded-full flex-shrink-0">
+                  <div class="text-xs text-gray-600">
+                    ManuTech Process Optimization
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Template Card 4 -->
+            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
+              <div class="w-full text-left">
+                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
+                  40% productivity boost
+                </h3>
+                <p class="text-sm  mb-3">
+                  <span class="font-medium">Objective:</span> Automate manual processes
+                </p>
+                <div class="flex items-center gap-3">
+                  <img src="" alt="SteelWorks Logo" class="w-10 h-10 border-2 border-2 rounded-full flex-shrink-0">
+                  <div class="text-xs text-gray-600">
+                    SteelWorks Automation
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Template Card 5 -->
+            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
+              <div class="w-full text-left">
+                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
+                  20% faster patient processing
+                </h3>
+                <p class="text-sm  mb-3">
+                  <span class="font-medium">Objective:</span> Improve patient throughput
+                </p>
+                <div class="flex items-center gap-3">
+                  <img src="" alt="HealthPlus Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
+                  <div class="text-xs text-gray-600">
+                    HealthPlus Workflow Redesign
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Template Card 6 -->
+            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
+              <div class="w-full text-left">
+                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
+                  95% staff adoption in 2 months
+                </h3>
+                <p class="text-sm  mb-3">
+                  <span class="font-medium">Objective:</span> Transition to new systems
+                </p>
+                <div class="flex items-center gap-3">
+                  <img src="" alt="MediCare Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
+                  <div class="text-xs text-gray-600">
+                    MediCare Change Management
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      
+        <!-- Right Arrow (Desktop only) -->
+        <button @click="scrollRight" class="hidden md:flex items-center justify-center ml-4 p-3 rounded-full z-10" aria-label="Scroll right through success stories">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- View More link -->
+      <div class="mt-10 flex justify-center">
+        <a href="#solutions-details"
+           class="relative inline-flex items-center justify-center px-6 py-3 text-white text-sm font-semibold rounded-full bg-blue-700 shadow-lg hover:bg-blue-800 transition-all duration-300"
+           aria-label="View more solutions">
+          View More
+          <span class="ml-2">→</span>
+          <!-- Gradient glow -->
+          <span class="absolute inset-0 rounded-full opacity-30 blur-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 -z-10"></span>
+        </a>
+      </div>
+  </div>
+</section>
+
+<section id="clients" class="pb-24 px-6">
+  <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">Trusted by Leading Companies</h2>
+      <p class="mt-4 text-lg">We've partnered with industry leaders to drive transformation and results.</p>
+      <div class="flex flex-wrap mt-8 justify-center gap-8 opacity-70">
+        <div class="w-24 h-12 border-2 rounded flex items-center justify-center" aria-label="Client logo 1">Logo 1</div>
+        <div class="w-24 h-12 border-2 rounded flex items-center justify-center" aria-label="Client logo 2">Logo 2</div>
+        <div class="w-24 h-12 border-2 rounded flex items-center justify-center" aria-label="Client logo 3">Logo 3</div>
+        <div class="w-24 h-12 border-2 rounded flex items-center justify-center" aria-label="Client logo 4">Logo 4</div>
+        <div class="w-24 h-12 border-2 rounded flex items-center justify-center" aria-label="Client logo 5">Logo 5</div>
+      </div>
+  </div>
+</section>
+
+<section id="our-process" class="pb-24 px-6">
+  <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">
+        How does a clear path forward sound?
+      </h2>
+      <p class="mt-4 text-lg">
+        After 15 years turning chaos into clarity for companies like yours, we know how to cut through the noise. 
+      </p>
+      <div class="mt-12 flex flex-col items-center space-y-6">
+        <div class="mr-8 md:mr-24 relative p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg ">
+            <div class="w-full text-left">
+              <p class="text-blue-800 font-medium tracking-wider uppercase">Step 1</p>
+              <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Discovery & Analysis</h3>
+              <p class="mt-4 text-sm ">
+                  It seems like you're drowning in data but starving for answers. We dig deep into your business—challenges, goals, market—because we've learned over decades that real solutions start with real understanding.
+              </p>
+            </div>
+        </div>
+        
+        <svg class="h-16 mx-auto text-blue-500 md:h-20" viewBox="0 0 60 200">
+            <line x1="15" x2="15" y1="0" y2="200" stroke="currentColor" stroke-width="8" stroke-linecap="square"></line>
+        </svg>
+        <div class="ml-8 md:ml-24 relative p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg ">
+            <div class="w-full text-left">
+              <p class="text-blue-800 font-medium tracking-wider uppercase">Step 2</p>
+              <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Strategy Development</h3>
+              <p class="mt-4 text-sm ">
+                  It feels like every option's a gamble? With insights from Step 1, we craft a strategy that's worked for industry leaders—precise, practical, and built to tackle your inefficiencies head-on.
+              </p>
+            </div>
+        </div>
+        <svg class="h-16 mx-auto text-blue-500 md:h-20" viewBox="0 0 60 200">
+            <line x1="15" x2="15" y1="0" y2="200" stroke="currentColor" stroke-width="8" stroke-linecap="square"></line>
+        </svg>
+        <div class="mr-8 md:mr-24 relative p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg ">
+            <div class="w-full text-left">
+              <p class="text-blue-800 font-medium tracking-wider uppercase">Step 3</p>
+              <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Implementation</h3>
+              <p class="mt-4 text-sm ">
+                  It looks like execution's where things stall. Our team rolls up our sleeves—drawing on years of hands-on success—to deliver results you can measure, not just promises.
+              </p>
+            </div>
+        </div>
+        <svg class="h-16 mx-auto text-blue-500 md:h-20" viewBox="0 0 60 200">
+            <line x1="15" x2="15" y1="0" y2="200" stroke="currentColor" stroke-width="8" stroke-linecap="square"></line>
+        </svg>
+        <div class="ml-8 md:ml-24 relative p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg ">
+            <div class="w-full text-left">
+              <p class="text-blue-800 font-medium tracking-wider uppercase">Step 4</p>
+              <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Evaluation & Optimization</h3>
+              <p class="mt-4 text-sm ">
+                  It seems like sustainability's the real worry. We've fine-tuned this step over countless projects—assessing, refining, and locking in gains so your success sticks.
+              </p>
+            </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section id="contact" class="py-20">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">{{ i18n "cta_heading" | default "Ready to stop guessing and start winning?" }}</h2>
+      <p class="text-xl mt-4 mb-10">{{ i18n "cta_subheading" | default "We hear you, it’s overwhelming. How about we figure this out in 15 minutes, no pressure?" }}</p>
+      <a href="#" class="inline-block px-8 py-4 bg-orange-800 text-white rounded-lg hover:bg-orange-900 transition-all pulse font-bold" aria-label="Book your free consultation call">{{ i18n "cta_button" | default "Let's Talk Free, No Commitment" }}</a>
+  </div>
+</section>
+
+<section id="pricing" class="section-generic py-16 px-4">
+  <div class="max-w-7xl mx-auto text-center mb-12">
+    <h2 class="text-4xl font-medium text-blue-800">Pricing That Works for You</h2>
+    <p class="mt-4 text-lg">No pressure. No hidden fees. Just a plan that grows with you.</p>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+    <!-- Hobby Plan -->
+    <div class="relative rounded-2xl shadow-lg transform hover:scale-105 transition p-6">
+      <div class="text-center mb-6">
+        <div class="text-lg font-semibold">Hobby</div>
+        <div class="mt-2 text-4xl font-extrabold">
+          $0<span class="text-base font-medium">/month</span>
+        </div>
+        <div class="mt-1 text-sm">For individual hobbyists</div>
+      </div>
+      <a href="{{ "/docs/" | relLangURL }}" class="block text-center border border-blue-800 text-blue-800 font-semibold rounded-lg py-3 hover:bg-blue-800 hover:text-white transition">Learn For Free</a>
+      <ul class="space-y-4 mt-6">
+        <!-- Features... -->
+      </ul>
+    </div>
+
+    <!-- Pro Plan with dynamic price update -->
+    <div x-data="{ editors: 5, pricePerEditor: 30 }" class="relative rounded-2xl shadow-lg transform hover:scale-105 transition p-6">
+      <div class="absolute -mt-4 right-6">
+        <span class="bg-orange-800 text-white uppercase text-xs font-semibold px-3 py-1 rounded-b-full">Popular</span>
+      </div>
+      <div class="text-center mb-6">
+        <div class="text-lg font-semibold">Pro</div>
+        <div class="mt-2 text-4xl font-extrabold">
+          $<span x-text="editors * pricePerEditor"></span><span class="text-base font-medium">/month</span>
+        </div>
+        <div class="mt-1 text-sm">For small teams and startups</div>
+      </div>
+      <a href="#" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg py-3 transition">Get Started</a>
+      <ul class="space-y-4 mt-6">
+        <li class="flex items-center space-x-3">
+          <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+          </svg>
+          <span class="text-sm">Everything in Hobby, plus</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <label for="editors" class="sr-only">Number of editors</label>
+          <select id="editors" x-model="editors"
+                  class="w-16 text-sm border border-gray-600 rounded focus:outline-none px-2 py-1 appearance-none">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+          </select>
+          <span class="text-sm">editors</span>
+        </li>
+        <!-- Other features... -->
+      </ul>
+      
+    </div>
+
+    <!-- Enterprise Plan -->
+    <div class="relative rounded-2xl shadow-lg transform hover:scale-105 transition p-6">
+      <div class="text-center mb-6">
+        <div class="text-lg font-semibold">Enterprise</div>
+        <div class="mt-2 text-4xl font-extrabold">Custom Pricing</div>
+        <div class="mt-1 text-sm">For large organizations</div>
+      </div>
+      <a href="https://cal.com" target="_blank" class="block text-center border border-blue-800 text-blue-800 font-semibold rounded-lg py-3 hover:bg-blue-800 hover:text-white transition">Let's Talk</a>
+      <ul class="space-y-4 mt-6">
+        <!-- Features... -->
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- Mobile App Bar (Bottom Navigation) -->
+<nav class="fixed bottom-0 left-0 right-0 z-20 md:hidden border-t border-gray-700 shadow-lg">
+  <div class="flex justify-around items-center h-16">
+    <a href="tel:+1234567890" class="flex flex-col items-center p-2 hover:text-blue-400">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+      </svg>
+      <span class="text-xs mt-1">Call</span>
+    </a>
+    <a href="https://tally.so/" class="flex flex-col items-center p-2 hover:text-blue-400">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+      </svg>
+      <span class="text-xs mt-1">Email</span>
+    </a>
+    <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-2 hover:text-blue-400">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5v-2a2 2 0 012-2h10a2 2 0 012 2v2h-4m-6 0a9 9 0 1110-14 9 9 0 01-10 14z"></path>
+      </svg>
+      <span class="text-xs mt-1">WhatsApp</span>
+    </a>
+    <a href="https://m.me/yourfacebookpage" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-2 hover:text-blue-400">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+      </svg>
+      <span class="text-xs mt-1">Messenger</span>
+    </a>
+  </div>
+</nav>
+
+<!-- Desktop Sidebar (Right Navigation) -->
+<nav class="hidden md:block fixed bottom-4 right-4 z-20">
+  <div class="relative group">
+    <!-- Chatbot Trigger Button -->
+    <button aria-label="Open chat options" class="w-12 h-12 rounded-full bg-blue-600 shadow-lg border border-gray-700 flex items-center justify-center text-white dark:text-gray-100 hover:bg-blue-600 dark:hover:bg-blue-700 transition-colors focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+      </svg>
+    </button>
+    <!-- Expandable Menu -->
+    <div class="absolute bottom-14 right-0 w-16 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 flex flex-col items-center py-4 space-y-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto">
+      <a href="tel:+1234567890" class="flex flex-col items-center text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" title="Call Us">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+        </svg>
+      </a>
+      <a href="https://tally.so/" class="flex flex-col items-center text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" title="Email Us">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+      </a>
+      <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" title="WhatsApp Us">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5v-2a2 2 0 012-2h10a2 2 0 012 2v2h-4m-6 0a9 9 0 1110-14 9 9 0 01-10 14z"></path>
+        </svg>
+      </a>
+      <a href="https://m.me/yourfacebookpage" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" title="Message Us">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+ 
+ {{- $copyright := (T "copyright") | default "© 2024 My Site." -}}
+<footer class="pt-24 pb-24 px-6 md:px-12 lg:px-16 w-full max-w-[1440px] mx-auto">
+  <div class="flex flex-col lg:flex-row justify-between gap-8 mb-12">
+    <!-- Logo Column -->
+    <div class="flex flex-col items-start gap-4 w-full lg:w-1/5">
+      <div class="flex items-center gap-2">
+        <span class="text-lg font-semibold text-blue-800">My-Site</span>
+      </div>
+      <div class="text-xs">
+        <p>
+          <strong>Main Office:</strong> 
+          <a href="https://www.google.com/maps?q=123+Business+St,+New+York,+NY+10001" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:underline">
+            123 Business St, New York, NY 10001
+          </a>
+        </p>
+        <p>
+          <strong>Branch Office:</strong> 
+          <a href="https://www.google.com/maps?q=456+Innovation+Rd,+San+Francisco,+CA+94105" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:underline">
+            456 Innovation Rd, San Francisco, CA 94105
+          </a>
+        </p>
+        <p>
+          <strong>European Branch:</strong> 
+          <a href="https://www.google.com/maps?q=789+Strategy+Ave,+London,+UK+EC1A+1BB" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:underline">
+            789 Strategy Ave, London, UK EC1A 1BB
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Links Columns -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 w-full lg:w-4/5">
+      <!-- Get Started Column -->
+      <div class="flex flex-col items-start gap-3">
+        <h4 class="text-base font-semibold leading-5 uppercase">Get Started</h4>
+        <a href="https://cal.com" target="_blank" class="text-gray-700 text-sm font-medium leading-5 hover:underline flex items-center gap-1">
+          Schedule a Consultation
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 17 17" fill="none">
+            <path d="M4.66699 5.16699H11.3337V11.8337" stroke="#858481" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M4.66699 11.8337L11.3337 5.16699" stroke="#858481" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Follow Us Column -->
+      <div class="flex flex-col items-start gap-3">
+        <h4 class="text-base font-semibold leading-5 uppercase">Join The Community</h4>
+        <a href="https://www.facebook.com/" target="_blank" class="text-gray-700 text-sm font-medium leading-5 hover:underline flex items-center gap-1">
+          Facebook
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 17 17" fill="none">
+            <path d="M4.66699 5.16699H11.3337V11.8337" stroke="#858481" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M4.66699 11.8337L11.3337 5.16699" stroke="#858481" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+        <a href="https://x.com/" target="_blank" class="text-gray-700 text-sm font-medium leading-5 hover:underline flex items-center gap-1">
+          X (Twitter)
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 17 17" fill="none">
+            <path d="M4.66699 5.16699H11.3337V11.8337" stroke="#858481" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M4.66699 11.8337L11.3337 5.16699" stroke="#858481" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" class="text-gray-700 text-sm font-medium leading-5 hover:underline flex items-center gap-1">
+          LinkedIn
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 17 17" fill="none">
+            <path d="M4.66699 5.16699H11.3337V11.8337" stroke="#858481" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M4.66699 11.8337L11.3337 5.16699" stroke="#858481" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Company Column -->
+      <div class="flex flex-col items-start gap-3">
+        <h4 class="text-base font-semibold leading-5 uppercase">About</h4>
+        <a href="{{ "/blog/" | relLangURL }}" class="text-gray-700 text-sm font-medium leading-5 hover:underline">Blog</a>
+        <a href="#" class="text-gray-700 text-sm font-medium leading-5 hover:underline">Company</a>
+        <a href="#" class="text-gray-700 text-sm font-medium leading-5 hover:underline">Team</a>
+        <a href="#" class="text-gray-700 text-sm font-medium leading-5 hover:underline">Contact Us</a>
+      </div>
+
+      <!-- Resources Column -->
+      <div class="flex flex-col items-start gap-3">
+        <h4 class="text-base font-semibold leading-5 uppercase">Legal</h4>
+        <a href="#" target="_blank" class="text-gray-700 text-sm font-medium leading-5 hover:underline">Privacy Policy</a>
+        <a href="#" target="_blank" class="text-gray-700 text-sm font-medium leading-5 hover:underline">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom Section with Toggle -->
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4 border-solid border-[rgba(0,0,0,0.06)] dark:border-gray-800 relative z-10">
+    <div class="flex gap-4 order-1 md:order-2">
+      <a href="https://x.com/" aria-label="Visit our X (Twitter) profile" target="_blank" class="dark:text-gray-600 text-gray-400  dark:hover:text-gray-800 hover:text-gray-200">
+        <svg viewBox="0 0 16 16" aria-hidden="true" class="h-5 w-5">
+          <path fill="currentColor" d="M12.6 0h2.454l-5.36 6.778L16 16h-4.937l-3.867-5.594L2.771 16H.316l5.733-7.25L0 0h5.063l3.495 5.114L12.601 0Zm-.86 14.376h1.36L4.323 1.539H2.865l8.875 12.837Z"></path>
+        </svg>
+      </a>
+      <a href="https://www.youtube.com/" aria-label="Visit our Youtube profile" target="_blank" class="dark:text-gray-600 text-gray-400 dark:hover:text-gray-800 hover:text-gray-200">
+        <svg viewBox="0 0 16 16" aria-hidden="true" class="h-6 w-6">
+          <path fill="currentColor" fill-rule="evenodd" d="M14.25 2.335c.69.184 1.231.725 1.415 1.414C16 4.996 16 7.6 16 7.6s0 2.604-.335 3.851a2.003 2.003 0 0 1-1.414 1.415c-1.247.335-6.251.335-6.251.335s-5.004 0-6.25-.335a2.004 2.004 0 0 1-1.415-1.415C0 10.204 0 7.601 0 7.601s0-2.605.335-3.852a2.004 2.004 0 0 1 1.414-1.414C2.996 2 8 2 8 2s5.004 0 6.25.335ZM10.556 7.6 6.398 10V5.2l4.157 2.4Z" clip-rule="evenodd"></path>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/" aria-label="Visit our LinkedIn profile" target="_blank" class="dark:text-gray-600 text-gray-400 dark:hover:text-gray-800 hover:text-gray-200">
+        <svg viewBox="0 0 16 16" aria-hidden="true" class="h-6 w-6">
+          <path fill="currentColor" d="M14.82 0H1.18A1.169 1.169 0 0 0 0 1.154v13.694A1.168 1.168 0 0 0 1.18 16h13.64A1.17 1.17 0 0 0 16 14.845V1.15A1.171 1.171 0 0 0 14.82 0ZM4.744 13.64H2.369V5.996h2.375v7.642Zm-1.18-8.684a1.377 1.377 0 1 1 .52-.106 1.377 1.377 0 0 1-.527.103l.006.003Zm10.075 8.683h-2.375V9.921c0-.885-.015-2.025-1.234-2.025-1.218 0-1.425.966-1.425 1.968v3.775H6.233V5.997H8.51v1.05h.032c.317-.601 1.09-1.235 2.246-1.235 2.405-.005 2.851 1.578 2.851 3.63v4.197Z"></path>
+        </svg>
+      </a>
+    </div>
+    <span class="text-gray-600 text-xs"> {{ $copyright }} </span>
+    <div class="order-3 flex items-center space-x-2">
+      {{- if hugo.IsMultilingual -}}
+        {{- partial "language-switch.html" (dict "context" .) -}}
+      {{- end -}}
+      {{ partial "theme-toggle.html" }}
+    </div>
+  </div>
+</footer>

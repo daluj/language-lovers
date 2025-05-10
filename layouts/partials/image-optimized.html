@@ -1,0 +1,57 @@
+{{/* 
+    Partial for optimized image rendering.
+    Parameters:
+      - src: Path to the image (e.g., "images/thumbnail.jpg")
+      - alt: Alt text for accessibility
+      - widths: List of widths for responsive images (default: 400, 800, 1200)
+      - quality: WebP quality (default: 80)
+      - isLCP: Boolean to indicate if this is the LCP image (for preload and eager loading)
+      - class: Optional CSS class for styling
+  */}}
+
+  {{ $scratch := .scratch | default .Page.Scratch }}
+  
+  {{ $src := .src }}
+  {{ $alt := .alt | default "Image" }}
+  {{ $widths := .widths | default (slice 400 800 1200) }}
+  {{ $quality := .quality | default 80 }}
+  {{ $isLCP := .isLCP | default false }}
+  {{ $class := .class | default "" }}
+  
+  {{ $img := resources.Get $src }}
+  {{ if $img }}
+    {{/* Generate responsive images */}}
+    {{ $images := slice }}
+    {{ range $width := $widths }}
+      {{ $resized := $img.Resize (printf "%dx webp q%d" $width $quality) }}
+      {{ $images = $images | append $resized }}
+    {{ end }}
+  
+    {{/* Select the medium size as the default */}}
+    {{ $defaultImg := index $images 1 }} {{/* 800px by default */}}
+  
+    {{/* Build srcset and sizes */}}
+    {{ $srcset := slice }}
+    {{ range $i, $img := $images }}
+      {{ $srcset = $srcset | append (printf "%s %dw" $img.RelPermalink (index $widths $i)) }}
+    {{ end }}
+    {{ $srcsetStr := delimit $srcset ", " }}
+    {{ $sizes := "(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px" }}
+  
+    {{/* Preload LCP image */}}
+    {{ if $isLCP }}
+      {{ $scratch.Set "preloadImage" (printf "<link rel=\"preload\" href=\"%s\" as=\"image\">" $defaultImg.RelPermalink) }}
+    {{ end }}
+  
+    {{/* Render the image with picture element for WebP */}}
+    <picture>
+      <source srcset="{{ $srcsetStr }}" sizes="{{ $sizes }}" type="image/webp">
+      <img 
+        src="{{ $defaultImg.RelPermalink }}" 
+        alt="{{ $alt }}" 
+        {{ if $class }}class="{{ $class }}"{{ end }}
+        {{ if $isLCP }}loading="eager" fetchpriority="high"{{ else }}loading="lazy"{{ end }}>
+    </picture>
+  {{ else }}
+    {{ errorf "Image not found: %s" $src }}
+  {{ end }}

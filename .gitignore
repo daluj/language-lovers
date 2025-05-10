@@ -1,0 +1,19 @@
+# npm
+node_modules/
+
+# Hugo output
+public/
+resources/
+.hugo_build.lock
+bin/
+
+# Python Virtual Environment
+venv/
+.venv/
+
+.devbox/
+devbox.lock
+
+agent-ui/
+tmp/
+__pycache__/
