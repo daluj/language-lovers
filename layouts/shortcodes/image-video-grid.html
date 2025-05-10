@@ -26,14 +26,41 @@
         isOpen: false,
         imgWidth: 0,
         imgHeight: 0,
+        modalWidth: 0,
+        modalHeight: 0,
         videoUrl: '{{ $image.video_url }}',
         setDimensions() {
           const img = this.$refs.image{{ $index }};
           this.imgWidth = img.offsetWidth;
           this.imgHeight = img.offsetHeight;
+          
+          // Calculate responsive dimensions for the modal
+          const viewportWidth = window.innerWidth;
+          const viewportHeight = window.innerHeight;
+          
+          // On larger screens, make the modal bigger
+          if (viewportWidth >= 1024) { // lg breakpoint
+            this.modalWidth = Math.min(viewportWidth * 0.7, 1200); // 70% of viewport width, max 1200px
+            this.modalHeight = Math.min(viewportHeight * 0.7, 800); // 70% of viewport height, max 800px
+          } else if (viewportWidth >= 768) { // md breakpoint
+            this.modalWidth = viewportWidth * 0.8; // 80% of viewport width
+            this.modalHeight = viewportHeight * 0.6; // 60% of viewport height
+          } else { // sm and below
+            // For small screens, use dimensions closer to the thumbnail
+            this.modalWidth = Math.min(viewportWidth * 0.9, this.imgWidth * 1.2);
+            this.modalHeight = Math.min(viewportHeight * 0.6, this.imgHeight * 1.2);
+          }
+          
+          // Maintain aspect ratio
+          const videoAspectRatio = 16/9; // Standard video aspect ratio
+          if (this.modalWidth / this.modalHeight > videoAspectRatio) {
+            this.modalWidth = this.modalHeight * videoAspectRatio;
+          } else {
+            this.modalHeight = this.modalWidth / videoAspectRatio;
+          }
         }
       }"
-      x-init="setDimensions(); $watch('isOpen', value => { if (value) setDimensions(); })"
+      x-init="setDimensions(); window.addEventListener('resize', setDimensions); $watch('isOpen', value => { if (value) setDimensions(); })"
       class="relative"
     >
       <!-- Image and Title -->
@@ -58,12 +85,12 @@
       >
         <div
           class="relative"
-          :style="{ width: imgWidth + 'px', height: imgHeight + 'px' }"
+          :style="{ width: modalWidth + 'px', height: modalHeight + 'px' }"
           @click.stop
         >
           <iframe
-            :width="imgWidth"
-            :height="imgHeight"
+            :width="modalWidth"
+            :height="modalHeight"
             :src="isOpen ? videoUrl : ''"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
