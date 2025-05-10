@@ -1,5 +1,5 @@
 ---
-title: Grammar
+title: Grammar Rules
 weight: 5
 ---
 
