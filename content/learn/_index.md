@@ -6,6 +6,16 @@ cascade:
 sidebar:
   open: true
 tags: ["Vietnamese", "language learning", "immersion", "SMART goals", "pronunciation"]
+share_platforms:
+  - platform: facebook
+    url: "https://www.facebook.com/sharer/sharer.php?u="
+    icon: facebook
+  - platform: X
+    url: "https://x.com/intent/tweet?url="
+    icon: x-twitter
+  - platform: Linkedin
+    url: "https://www.linkedin.com/sharing/share-offsite/?url="
+    icon: linkedin
 ---
 
 👋 Welcome to your Vietnamese learning journey! This guide will help you adopt the right mindset, immerse yourself in the language, and set meaningful goals to achieve fluency faster.
@@ -85,3 +95,5 @@ Ready to dive in? Start with our comprehensive guide to rapid language acquisiti
 {{< cards >}}
   {{< card link="getting-started" title="Getting Started" icon="document-text" subtitle="Guide to Rapid Language Acquisition" >}}
 {{< /cards >}}
+
+{{< share-buttons >}}

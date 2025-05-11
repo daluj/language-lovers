@@ -1,0 +1,19 @@
+<div class="text-sm text-gray-700 mt-4">
+  <p>
+    Found this helpful? Others might too. Sharing this could be the nudge someone needs today.
+  </p>
+</div>
+<div class="mt-4 flex gap-2 my-4">
+    {{- range .Page.Params.share_platforms -}}
+      {{- $icon := index $.Site.Data.icons .icon -}}
+      {{- if $icon -}}
+        <a href="{{ .url | safeHTML }}{{ $.Page.Permalink }}" target="_blank" rel="noopener" class="px-4 py-2 rounded" aria-label="Share on {{ .platform | title }}">
+          <span class="{{ if eq .platform `x-twitter` }}h-5 w-5{{ else }}h-6 w-6{{ end }} text-gray-500 inline-block">
+            {{ $icon | safeHTML }}
+          </span>
+        </a>
+      {{- else -}}
+        {{- warnf "Icon %q not found in data/icons.yaml for platform %q" .icon .platform -}}
+      {{- end -}}
+    {{- end -}}
+</div>
