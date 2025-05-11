@@ -16,8 +16,8 @@
       <template x-if="!playing">
         <button @click="playing = true" class="absolute inset-0 w-full h-full focus:outline-none">
           {{ partial "image-optimized.html" (dict 
-            "src" "images/thumbnail.jpg"
-            "alt" "Test"
+            "src" "images/hero-image.jpg"
+            "alt" "Group of people speaking Vietnamese"
             "isLCP" true
             "class" "thumbnail"
           ) }}
@@ -34,7 +34,7 @@
       <template x-if="playing">
         <div x-transition.opacity.duration.700ms class="absolute inset-0 w-full h-full rounded-xl">
           <iframe
-            src="https://www.youtube.com/embed/nw69d7PPfCQ?autoplay=1"
+            src="https://www.youtube.com/embed/bLY0iyOY-VA?autoplay=1"
             frameborder="0"
             allowfullscreen
             allow="autoplay"
@@ -325,20 +325,6 @@
           <!-- Gradient glow -->
           <span class="absolute inset-0 rounded-full opacity-30 blur-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 -z-10"></span>
         </a>
-      </div>
-  </div>
-</section>
-
-<section id="clients" class="pb-24 px-6">
-  <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">Trusted by Leading Companies</h2>
-      <p class="mt-4 text-lg">We've partnered with industry leaders to drive transformation and results.</p>
-      <div class="flex flex-wrap mt-8 justify-center gap-8 opacity-70">
-        <div class="w-24 h-12 border-2 rounded flex items-center justify-center" aria-label="Client logo 1">Logo 1</div>
-        <div class="w-24 h-12 border-2 rounded flex items-center justify-center" aria-label="Client logo 2">Logo 2</div>
-        <div class="w-24 h-12 border-2 rounded flex items-center justify-center" aria-label="Client logo 3">Logo 3</div>
-        <div class="w-24 h-12 border-2 rounded flex items-center justify-center" aria-label="Client logo 4">Logo 4</div>
-        <div class="w-24 h-12 border-2 rounded flex items-center justify-center" aria-label="Client logo 5">Logo 5</div>
       </div>
   </div>
 </section>
