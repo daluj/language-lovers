@@ -28,25 +28,21 @@ Click on any letter to see its pronunciation:
         </template>
     </div>
 
-<div x-show="currentVideo" x-transition class="video-container mb-8" :class="{'open': currentVideo}">
-    <div class="p-4 flex justify-between items-center">
-        <h2 class="font-bold" x-text="currentLetter ? 'Pronouncing: ' + currentLetter.character : 'Select a letter'"></h2>
-        <button @click="closeVideo()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-    </div>
-    <div class="aspect-w-16 aspect-h-9">
+<template x-if="currentVideo">
+  <div class="fixed inset-0 z-50 flex items-center justify-center bg-opacity-60" @click="closeVideo()" @keydown.escape.window="closeVideo()">
+    <div class="rounded-lg shadow-lg max-w-2xl w-full relative" @click.stop>
+      <div class="aspect-w-16 aspect-h-9">
         <iframe 
-            x-bind:src="currentVideo" 
-            class="w-full h-96" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen
+          x-bind:src="currentVideo" 
+          class="w-full h-96 rounded-b-lg" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
         ></iframe>
+      </div>
     </div>
-</div>
+  </div>
+</template>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="p-6">

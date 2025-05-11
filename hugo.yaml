@@ -123,10 +123,6 @@ params:
     flexsearch:
       # index page by: content | summary | heading | title
       index: content
-
-  blog:
-    list:
-      displayTags: true
   
 #  plausible:
 #    enable: true
