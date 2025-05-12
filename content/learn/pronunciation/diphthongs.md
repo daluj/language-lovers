@@ -1,6 +1,6 @@
 ---
-title: "Minimal Pairs"
-weight: 3
+title: "Diphthongs"
+weight: 5
 gallery:
   - src: "thumbnail.jpg"
     title: "Word 1"

@@ -89,6 +89,9 @@ menu:
       url: "https://cal.com/"
       weight: 4
 
+taxonomies:
+  tag: tags
+  category: categories
 
 params:
 

@@ -1,5 +1,6 @@
 ---
-title: Getting Started
+title: Framework
+description: A structured approach to learning Vietnamese
 weight: 1
 ---
 
