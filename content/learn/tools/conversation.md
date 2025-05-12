@@ -75,7 +75,7 @@ Practice your speaking skills with images or topics
                 <img :src="image.url" alt="Speaking prompt" class="w-full h-32 object-cover rounded-lg">
                 <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
                     <button @click="removeImage(index)" class="text-white hover:text-red-400 transition-colors">
-                        <i class="fas fa-trash"></i>
+                        <i class="fas fa-trash">Remove</i>
                     </button>
                 </div>
             </div>
