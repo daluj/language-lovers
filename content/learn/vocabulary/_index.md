@@ -46,7 +46,6 @@ Avoid translations and build direct associations with personalized flashcards:
   - **Word**: The target language word.
   - **Audio**: A native speaker’s pronunciation.
   - **Sentence**: A simple example.
-- **Tools**: Use Anki, Quizlet, or Memrise to create and review flashcards.
 - Gamify flashcards with funny or personal images (e.g., your dog).
 
 ## Step 3: Use Spaced Repetition Systems (SRS)

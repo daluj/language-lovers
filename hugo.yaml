@@ -70,7 +70,7 @@ menu:
         type: search
   sidebar:
     - identifier: more
-      name: Practice
+      name: Practice Tools
       params:
         type: separator
       weight: 1
@@ -82,7 +82,7 @@ menu:
       weight: 3
     - identifier: conversation
       name: "Conversation"
-      url: "https://cal.com/"
+      pageRef: "/learn/tools/conversation/"
       weight: 4
     - identifier: grammar
       name: "Grammar"
