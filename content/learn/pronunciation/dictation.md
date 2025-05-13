@@ -1,6 +1,6 @@
 ---
-title: "Tonal System"
-weight: 6
+title: "Dictations"
+weight: 7
 gallery:
   - src: "thumbnail.jpg"
     title: "Word 1"
@@ -12,9 +12,3 @@ gallery:
     title: "Word 3"
     video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
 ---
-
-This page demonstrates how to use the new image-video-grid shortcode. The shortcode displays a grid of images that, when clicked, open a modal with an embedded video.
-
-## Example
-
-{{< image-video-grid gallery="gallery" >}}

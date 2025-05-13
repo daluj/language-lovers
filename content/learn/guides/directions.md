@@ -5,8 +5,6 @@ tags: ["beginner", "tourist", "travel"]
 categories: ["How To"]
 ---
 
-# Asking for Directions
-
 ## Introduction
 
 Navigating the vibrant streets of Hanoi or Ho Chi Minh City can be exciting but challenging. This lesson equips you with essential Vietnamese phrases to ask for directions and understand responses, helping you explore with confidence. By the end, you'll be able to:
