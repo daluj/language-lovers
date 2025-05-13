@@ -1,0 +1,7 @@
+<div x-show="showVideoModal" class="fixed inset-0 z-50 flex items-center justify-center bg-opacity-60" @click="closeVideoModal()" @keydown.escape.window="closeVideoModal()">
+  <div class="rounded-lg shadow-lg max-w-2xl w-full relative" @click.stop>
+    <div class="aspect-w-16 aspect-h-9">
+      <iframe :src="currentVideoUrl" class="w-full h-96" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>

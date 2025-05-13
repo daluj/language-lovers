@@ -1,0 +1,22 @@
+{{ $flashcards := .Site.Data.flashcards }}
+{{ if $flashcards }}
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+    {{ range $category, $data := $flashcards }}
+      {{ $title := $category | humanize }}
+      {{ $icon := "fas fa-globe" }}
+      {{ if eq $category "food" }}
+        {{ $icon = "fas fa-utensils" }}
+      {{ else if eq $category "animals" }}
+        {{ $icon = "fas fa-paw" }}
+      {{ end }}
+      <!-- Card HTML directly in the shortcode -->
+      <div class="rounded-lg shadow-md p-6 text-center cursor-pointer bg-white hover:bg-gray-50 transition duration-200" @click="loadDemo('{{ $category }}')">
+        <i class="{{ $icon }} text-3xl text-blue-500 mb-2"></i>
+        <h3 class="text-lg font-semibold text-gray-800">{{ $title }}</h3>
+        <p class="text-sm text-gray-500">{{ printf "Learn about different %s" $category }}</p>
+      </div>
+    {{ end }}
+  </div>
+{{ else }}
+  <p>No flashcard categories available.</p>
+{{ end }}
