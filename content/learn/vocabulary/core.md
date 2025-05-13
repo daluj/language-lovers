@@ -11,10 +11,10 @@ Para esta seccion, en el front del flashcard, ponemos la imagen. En el back del 
         <div class="max-w-3xl mx-auto">
 
 <!-- Flashcard Display Section -->
-<div x-show="flashcards.length > 0" x-transition class="fade-in mt-4">
+<div x-show="exampleJson.length > 0" x-transition class="fade-in mt-4">
     <div class="flex justify-between items-center mb-6">
         <div class="text-gray-700">
-            <span x-text="currentIndex + 1"></span> of <span x-text="flashcards.length"></span>
+            <span x-text="currentIndex + 1"></span> of <span x-text="exampleJson.length"></span>
         </div>
         <div class="flex space-x-2">
             <button @click="shuffleFlashcards" class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded-lg transition duration-200">
@@ -79,7 +79,7 @@ Para esta seccion, en el front del flashcard, ponemos la imagen. En el back del 
             class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg disabled:bg-blue-300 transition duration-200">
         <i class="fas fa-arrow-left mr-2"></i>Previous
     </button>
-    <button @click="nextCard" :disabled="currentIndex === flashcards.length - 1" 
+    <button @click="nextCard" :disabled="currentIndex === exampleJson.length - 1" 
             class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg disabled:bg-blue-300 transition duration-200">
         Next<i class="fas fa-arrow-right ml-2"></i>
     </button>
@@ -96,10 +96,9 @@ Para esta seccion, en el front del flashcard, ponemos la imagen. En el back del 
 </div>
 
 <!-- Empty State -->
-<div x-show="flashcards.length === 0" class="text-center py-12">
+<div x-show="exampleJson.length === 0" class="text-center py-12">
     <i class="fas fa-lightbulb text-5xl text-blue-300 mb-4"></i>
     <h3 class="text-xl font-medium text-gray-700 mb-2">No Flashcards Loaded</h3>
-    <p class="text-gray-500">Choose a demo category or upload a JSON file to start learning with interactive flashcards</p>
 </div>
 </div>
 </div>
