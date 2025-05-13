@@ -47,11 +47,17 @@ share_platforms:
         <h2 class="text-xl font-semibold mb-2">Upload Flashcards JSON</h2>
         <p class="text-gray-500 mb-4">Your file should contain an array of flashcards with front text, image, audio, video, and back text</p>
         <div class="flex space-x-4">
-            <input type="file" id="fileInput" accept=".json" @change="loadFile" class="hidden">
+            <input 
+                type="file" 
+                id="fileInput" 
+                accept=".json" 
+                @change="$dispatch('file-selected', $event.target.files[0])" 
+                class="hidden"
+                x-ref="fileInput"
+            >
             <button 
                 @click="$refs.fileInput.click()" 
                 class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg cursor-pointer transition duration-200"
-                x-ref="fileInput"
             >
                 Upload File
             </button>
@@ -76,6 +82,7 @@ share_platforms:
         </button>
     </div>
     <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto"><code x-text="JSON.stringify(exampleJson, null, 2)"></code></pre>
+</div>
 </div>
 </div>
 

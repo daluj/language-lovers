@@ -341,8 +341,14 @@
                 return this.flashcards[this.currentIndex] || {};
             },
             
-            loadFile(event) {
-                const file = event.target.files[0];
+            init() {
+                // Listen for custom file-selected event
+                this.$el.addEventListener('file-selected', (event) => {
+                    this.loadFile(event.detail);
+                });
+            },
+            
+            loadFile(file) {
                 if (!file) return;
                 
                 this.fileName = file.name;
@@ -377,7 +383,10 @@
                 };
                 
                 reader.readAsText(file);
-                event.target.value = '';
+                // Reset the file input
+                if (this.$refs.fileInput) {
+                    this.$refs.fileInput.value = '';
+                }
             },
             
             loadDemo(category) {
