@@ -33,11 +33,6 @@ share_platforms:
         <h3 class="text-lg font-semibold text-gray-800">Animals</h3>
         <p class="text-sm text-gray-500">Explore the animal kingdom</p>
     </div>
-    <div @click="loadDemo('geography')" class="demo-card  rounded-lg shadow-md p-6 text-center cursor-pointer">
-        <i class="fas fa-globe text-3xl text-blue-500 mb-2"></i>
-        <h3 class="text-lg font-semibold text-gray-800">Geography</h3>
-        <p class="text-sm text-gray-500">Discover world geography</p>
-    </div>
 </div>
 
 <!-- File Upload Section -->

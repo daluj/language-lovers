@@ -1,0 +1,16 @@
+[
+    {
+        "frontText": "What fruit is known for its yellow peel and soft flesh?",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/Ambersweet_Oranges.jpg",
+        "audio": "https://audio12.forvo.com/mp3/8972992/39/8972992_39_6922702.mp3",
+        "video": "https://www.youtube.com/watch?v=bLY0iyOY-VA",
+        "backText": "Banana"
+    },
+    {
+        "frontText": "What is a common Italian dish made with dough, sauce, and cheese?",
+        "image": null,
+        "audio": null,
+        "video": null,
+        "backText": "Pizza"
+    }
+]

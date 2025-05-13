@@ -311,6 +311,7 @@
   });
 </script>
 <script>
+    window.flashcardData = "{{ .Site.Data.flashcards | jsonify }}";
     function flashcardApp() {
         return {
             fileName: '',
@@ -391,81 +392,32 @@
             
             loadDemo(category) {
                 this.fileName = `${category.charAt(0).toUpperCase() + category.slice(1)} Flashcards`;
-                
-                const demoData = {
-                    food: [
-                        {
-                            frontText: "What fruit is known for its yellow peel and soft flesh?",
-                            image: "https://upload.wikimedia.org/wikipedia/commons/4/43/Ambersweet_Oranges.jpg",
-                            audio: "https://audio12.forvo.com/mp3/8972992/39/8972992_39_6922702.mp3",
-                            video: "https://www.youtube.com/watch?v=bLY0iyOY-VA",
-                            backText: "Banana"
-                        },
-                        {
-                            frontText: "What is a common Italian dish made with dough, sauce, and cheese?",
-                            image: null,
-                            audio: null,
-                            video: null,
-                            backText: "Pizza"
-                        }
-                    ],
-                    animals: [
-                        {
-                            frontText: "What animal is known as man's best friend?",
-                            image: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Collage_of_Nine_Dogs.jpg",
-                            audio: "https://audio12.forvo.com/mp3/8972992/39/8972992_39_6922702.mp3",
-                            video: "https://www.youtube.com/watch?v=bLY0iyOY-VA",
-                            backText: "Dog"
-                        },
-                        {
-                            frontText: "What large mammal lives in the ocean and breathes air?",
-                            image: null,
-                            audio: null,
-                            video: null,
-                            backText: "Whale"
-                        }
-                    ],
-                    geography: [
-                        {
-                            frontText: "What is the capital city of Brazil?",
-                            image: null,
-                            audio: "https://audio12.forvo.com/mp3/8972992/39/8972992_39_6922702.mp3",
-                            video: "https://www.youtube.com/watch?v=bLY0iyOY-VA",
-                            backText: "Brasília"
-                        },
-                        {
-                            frontText: "What is the largest continent by land area?",
-                            image: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Asia_%28orthographic_projection%29.svg",
-                            audio: null,
-                            video: null,
-                            backText: "Asia"
-                        }
-                    ]
-                };
-                
+
                 try {
-                    const selectedData = demoData[category] || [];
-                    if (selectedData.length === 0) {
-                        alert('No demo data available for this category');
-                        return;
-                    }
-                    
-                    this.flashcards = selectedData.map(card => ({
-                        frontText: card.frontText || '',
-                        image: card.image || null,
-                        audio: card.audio || null,
-                        video: card.video || null,
-                        backText: card.backText || 'No explanation provided'
-                    }));
-                    
-                    this.currentIndex = 0;
-                    this.isFlipped = false;
-                    
-                    if (this.currentFlashcard.audio) {
-                        this.preloadAudio(this.currentFlashcard.audio);
-                    }
+                  // Use window.flashcardData instead of demoData
+                  const selectedData = JSON.parse(window.flashcardData)[category];
+
+                  if (!Array.isArray(selectedData) || selectedData.length === 0) {
+                    alert('No demo data available for this category');
+                    return;
+                  }
+          
+                  this.flashcards = selectedData.map(card => ({
+                    frontText: card.frontText || '',
+                    image: card.image || null,
+                    audio: card.audio || null,
+                    video: card.video || null,
+                    backText: card.backText || 'No explanation provided'
+                  }));
+          
+                  this.currentIndex = 0;
+                  this.isFlipped = false;
+          
+                  if (this.currentFlashcard.audio) {
+                    this.preloadAudio(this.currentFlashcard.audio);
+                  }
                 } catch (error) {
-                    alert('Error loading demo flashcards: ' + error.message);
+                  alert('Error loading demo flashcards: ' + error.message);
                 }
             },
             

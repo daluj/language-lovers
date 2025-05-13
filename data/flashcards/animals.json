@@ -1,0 +1,16 @@
+[
+    {
+        "frontText": "What animal is known as man's best friend?",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Collage_of_Nine_Dogs.jpg",
+        "audio": "https://audio12.forvo.com/mp3/8972992/39/8972992_39_6922702.mp3",
+        "video": "https://www.youtube.com/watch?v=bLY0iyOY-VA",
+        "backText": "Dog"
+    },
+    {
+        "frontText": "What large mammal lives in the ocean and breathes air?",
+        "image": null,
+        "audio": null,
+        "video": null,
+        "backText": "Whale"
+    }
+]
