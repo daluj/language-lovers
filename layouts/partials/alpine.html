@@ -310,3 +310,221 @@
       }));
   });
 </script>
+<script>
+    function flashcardApp() {
+        return {
+            fileName: '',
+            flashcards: [],
+            currentIndex: 0,
+            isFlipped: false,
+            showVideoModal: false,
+            currentVideoUrl: '',
+            audioElement: null,
+            
+            get currentFlashcard() {
+                return this.flashcards[this.currentIndex] || {};
+            },
+            
+            loadFile(event) {
+                const file = event.target.files[0];
+                if (!file) return;
+                
+                this.fileName = file.name;
+                const reader = new FileReader();
+                
+                reader.onload = (e) => {
+                    try {
+                        const data = JSON.parse(e.target.result);
+                        if (!Array.isArray(data)) {
+                            alert('The file should contain an array of flashcards');
+                            return;
+                        }
+                        
+                        this.flashcards = data.map(card => ({
+                            frontText: card.frontText || '',
+                            image: card.image || null,
+                            audio: card.audio || null,
+                            video: card.video || null,
+                            backText: card.backText || 'No explanation provided'
+                        }));
+                        
+                        this.currentIndex = 0;
+                        this.isFlipped = false;
+                        
+                        if (this.currentFlashcard.audio) {
+                            this.preloadAudio(this.currentFlashcard.audio);
+                        }
+                        
+                    } catch (error) {
+                        alert('Error parsing JSON file: ' + error.message);
+                    }
+                };
+                
+                reader.readAsText(file);
+                event.target.value = '';
+            },
+            
+            loadDemo(category) {
+                this.fileName = `${category.charAt(0).toUpperCase() + category.slice(1)} Flashcards`;
+                
+                const demoData = {
+                    food: [
+                        {
+                            frontText: "What fruit is known for its yellow peel and soft flesh?",
+                            image: "https://upload.wikimedia.org/wikipedia/commons/4/43/Ambersweet_Oranges.jpg",
+                            audio: "https://audio12.forvo.com/mp3/8972992/39/8972992_39_6922702.mp3",
+                            video: "https://www.youtube.com/watch?v=bLY0iyOY-VA",
+                            backText: "Banana"
+                        },
+                        {
+                            frontText: "What is a common Italian dish made with dough, sauce, and cheese?",
+                            image: null,
+                            audio: null,
+                            video: null,
+                            backText: "Pizza"
+                        }
+                    ],
+                    animals: [
+                        {
+                            frontText: "What animal is known as man's best friend?",
+                            image: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Collage_of_Nine_Dogs.jpg",
+                            audio: "https://audio12.forvo.com/mp3/8972992/39/8972992_39_6922702.mp3",
+                            video: "https://www.youtube.com/watch?v=bLY0iyOY-VA",
+                            backText: "Dog"
+                        },
+                        {
+                            frontText: "What large mammal lives in the ocean and breathes air?",
+                            image: null,
+                            audio: null,
+                            video: null,
+                            backText: "Whale"
+                        }
+                    ],
+                    geography: [
+                        {
+                            frontText: "What is the capital city of Brazil?",
+                            image: null,
+                            audio: "https://audio12.forvo.com/mp3/8972992/39/8972992_39_6922702.mp3",
+                            video: "https://www.youtube.com/watch?v=bLY0iyOY-VA",
+                            backText: "Brasília"
+                        },
+                        {
+                            frontText: "What is the largest continent by land area?",
+                            image: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Asia_%28orthographic_projection%29.svg",
+                            audio: null,
+                            video: null,
+                            backText: "Asia"
+                        }
+                    ]
+                };
+                
+                try {
+                    const selectedData = demoData[category] || [];
+                    if (selectedData.length === 0) {
+                        alert('No demo data available for this category');
+                        return;
+                    }
+                    
+                    this.flashcards = selectedData.map(card => ({
+                        frontText: card.frontText || '',
+                        image: card.image || null,
+                        audio: card.audio || null,
+                        video: card.video || null,
+                        backText: card.backText || 'No explanation provided'
+                    }));
+                    
+                    this.currentIndex = 0;
+                    this.isFlipped = false;
+                    
+                    if (this.currentFlashcard.audio) {
+                        this.preloadAudio(this.currentFlashcard.audio);
+                    }
+                } catch (error) {
+                    alert('Error loading demo flashcards: ' + error.message);
+                }
+            },
+            
+            toggleFlip() {
+                this.isFlipped = !this.isFlipped;
+            },
+            
+            nextCard() {
+                if (this.currentIndex < this.flashcards.length - 1) {
+                    this.currentIndex++;
+                    this.isFlipped = false;
+                    
+                    if (this.currentFlashcard.audio) {
+                        this.preloadAudio(this.currentFlashcard.audio);
+                    }
+                }
+            },
+            
+            prevCard() {
+                if (this.currentIndex > 0) {
+                    this.currentIndex--;
+                    this.isFlipped = false;
+                    
+                    if (this.currentFlashcard.audio) {
+                        this.preloadAudio(this.currentFlashcard.audio);
+                    }
+                }
+            },
+            
+            shuffleFlashcards() {
+                for (let i = this.flashcards.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [this.flashcards[i], this.flashcards[j]] = [this.flashcards[j], this.flashcards[i]];
+                }
+                this.currentIndex = 0;
+                this.isFlipped = false;
+            },
+            
+            resetFlashcards() {
+                this.currentIndex = 0;
+                this.isFlipped = false;
+            },
+            
+            playAudio(audioUrl) {
+                if (this.audioElement) {
+                    this.audioElement.pause();
+                }
+                
+                this.audioElement = new Audio(audioUrl);
+                this.audioElement.play().catch(e => {
+                    console.error('Audio playback failed:', e);
+                    alert('Could not play audio: ' + e.message);
+                });
+            },
+            
+            preloadAudio(audioUrl) {
+                if (this.audioElement) {
+                    this.audioElement.pause();
+                }
+                
+                this.audioElement = new Audio(audioUrl);
+                this.audioElement.preload = 'auto';
+            },
+            
+            showVideo(videoUrl) {
+                if (videoUrl.includes('youtube.com/watch')) {
+                    const videoId = videoUrl.split('v=')[1];
+                    const ampersandPosition = videoId.indexOf('&');
+                    if (ampersandPosition !== -1) {
+                        this.currentVideoUrl = `https://www.youtube.com/embed/${videoId.substring(0, ampersandPosition)}`;
+                    } else {
+                        this.currentVideoUrl = `https://www.youtube.com/embed/${videoId}`;
+                    }
+                } else {
+                    this.currentVideoUrl = videoUrl;
+                }
+                
+                this.showVideoModal = true;
+            },
+            
+            closeVideoModal() {
+                this.currentVideoUrl = '';
+                this.showVideoModal = false;
+            }
+        }
+    }
+</script>

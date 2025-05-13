@@ -76,6 +76,7 @@ menu:
       weight: 1
     - identifier: vocabulary
       name: "Vocabulary"
+      pageRef: "/learn/tools/vocabulary/"
       weight: 2
     - identifier: pronounciation
       name: "Pronunciation"
