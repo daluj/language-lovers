@@ -320,6 +320,22 @@
             showVideoModal: false,
             currentVideoUrl: '',
             audioElement: null,
+            exampleJson: [
+                {
+                    "frontText": "What is the capital of France?",
+                    "image": "https://example.com/images/france.jpg",
+                    "audio": "https://example.com/audio/france.mp3",
+                    "video": "https://example.com/video/france.mp4",
+                    "backText": "The capital of France is Paris."
+                },
+                {
+                    "frontText": "What is 2 + 2?",
+                    "image": null,
+                    "audio": null,
+                    "video": null,
+                    "backText": "2 + 2 equals 4."
+                }
+            ],
             
             get currentFlashcard() {
                 return this.flashcards[this.currentIndex] || {};
