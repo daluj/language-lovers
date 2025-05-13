@@ -321,22 +321,7 @@
             showVideoModal: false,
             currentVideoUrl: '',
             audioElement: null,
-            exampleJson: [
-                {
-                    "frontText": "What is the capital of France?",
-                    "image": "https://example.com/images/france.jpg",
-                    "audio": "https://example.com/audio/france.mp3",
-                    "video": "https://example.com/video/france.mp4",
-                    "backText": "The capital of France is Paris."
-                },
-                {
-                    "frontText": "What is 2 + 2?",
-                    "image": null,
-                    "audio": null,
-                    "video": null,
-                    "backText": "2 + 2 equals 4."
-                }
-            ],
+            exampleJson: JSON.parse("{{ .Site.Data.templates.flashcard | jsonify }}"),
             
             get currentFlashcard() {
                 return this.flashcards[this.currentIndex] || {};
@@ -394,14 +379,16 @@
                 this.fileName = `${category.charAt(0).toUpperCase() + category.slice(1)} Flashcards`;
 
                 try {
-                  // Use window.flashcardData instead of demoData
-                  const selectedData = JSON.parse(window.flashcardData)[category];
-
+                  // Parse window.flashcardData and access category, with fallback
+                  const flashcardData = JSON.parse(window.flashcardData);
+                  const selectedData = flashcardData[category] || [];
+              
                   if (!Array.isArray(selectedData) || selectedData.length === 0) {
-                    alert('No demo data available for this category');
+                    console.warn(`No demo data available for category: ${category}`);
+                    this.flashcards = []; // Reset flashcards
                     return;
                   }
-          
+              
                   this.flashcards = selectedData.map(card => ({
                     frontText: card.frontText || '',
                     image: card.image || null,
@@ -409,15 +396,16 @@
                     video: card.video || null,
                     backText: card.backText || 'No explanation provided'
                   }));
-          
+              
                   this.currentIndex = 0;
                   this.isFlipped = false;
-          
+              
                   if (this.currentFlashcard.audio) {
                     this.preloadAudio(this.currentFlashcard.audio);
                   }
                 } catch (error) {
                   alert('Error loading demo flashcards: ' + error.message);
+                  console.error('Error in loadDemo:', error);
                 }
             },
             
