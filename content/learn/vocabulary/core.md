@@ -9,66 +9,6 @@ Para esta seccion, en el front del flashcard, ponemos la imagen. En el back del 
 <div class="min-h-screen">
 <div x-data="flashcardApp()" class="container mx-auto px-4 py-8">
         <div class="max-w-3xl mx-auto">
-            <h1 class="text-3xl font-bold text-center text-blue-700 mb-2">Interactive Flashcards</h1>
-            <p class="text-center text-gray-600 mb-8">Choose a demo category or upload your JSON file to start learning</p>
-            
-<!-- Demo Cards Section -->
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-    <div @click="loadDemo('food')" class="demo-card  rounded-lg shadow-md p-6 text-center cursor-pointer">
-        <i class="fas fa-utensils text-3xl text-blue-500 mb-2"></i>
-        <h3 class="text-lg font-semibold text-gray-800">Food</h3>
-        <p class="text-sm text-gray-500">Learn about different foods</p>
-    </div>
-    <div @click="loadDemo('animals')" class="demo-card  rounded-lg shadow-md p-6 text-center cursor-pointer">
-        <i class="fas fa-paw text-3xl text-blue-500 mb-2"></i>
-        <h3 class="text-lg font-semibold text-gray-800">Animals</h3>
-        <p class="text-sm text-gray-500">Explore the animal kingdom</p>
-    </div>
-    <div @click="loadDemo('geography')" class="demo-card  rounded-lg shadow-md p-6 text-center cursor-pointer">
-        <i class="fas fa-globe text-3xl text-blue-500 mb-2"></i>
-        <h3 class="text-lg font-semibold text-gray-800">Geography</h3>
-        <p class="text-sm text-gray-500">Discover world geography</p>
-    </div>
-</div>
-
-<!-- File Upload Section -->
-<div class="rounded-lg p-6 mb-8">
-    <div x-data="{ showExample: false }" class="flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded-lg p-8">
-        <i class="fas fa-file-upload text-4xl text-blue-500 mb-4"></i>
-        <h2 class="text-xl font-semibold mb-2">Upload Flashcards JSON</h2>
-        <p class="text-gray-500 mb-4">Your file should contain an array of flashcards with front text, image, audio, video, and back text</p>
-        <div class="flex space-x-4">
-            <input type="file" id="fileInput" accept=".json" @change="loadFile" class="hidden">
-            <button 
-                @click="$refs.fileInput.click()" 
-                class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg cursor-pointer transition duration-200"
-                x-ref="fileInput"
-            >
-                Upload File
-            </button>
-            <button 
-                @click="showExample = !showExample" 
-                class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-2 px-6 rounded-lg transition duration-200"
-            >
-                Example File Structure
-            </button>
-        </div>
-        <p x-show="fileName" class="mt-4 text-sm text-gray-600">Selected: <span x-text="fileName" class="font-medium"></span></p>
-
-<!-- Example JSON Structure -->
-<div x-show="showExample" x-transition class="mt-6 w-full bg-gray-50 p-4 rounded-lg">
-    <div class="flex justify-between items-center mb-2">
-        <h3 class="text-lg font-semibold text-gray-800">Example JSON Format</h3>
-        <button 
-            @click="navigator.clipboard.writeText(JSON.stringify(exampleJson, null, 2))"
-            class="bg-blue-600 hover:bg-blue-700 text-white text-sm py-1 px-3 rounded-lg transition duration-200"
-        >
-            Copy
-        </button>
-    </div>
-    <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto"><code x-text="JSON.stringify(exampleJson, null, 2)"></code></pre>
-</div>
-</div>
 
 <!-- Flashcard Display Section -->
 <div x-show="flashcards.length > 0" x-transition class="fade-in mt-4">
