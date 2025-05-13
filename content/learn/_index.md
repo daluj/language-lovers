@@ -93,7 +93,7 @@ graph TD
 Ready to dive in? Start with our comprehensive guide to rapid language acquisition:
 
 {{< cards >}}
-  {{< card link="getting-started" title="Getting Started" icon="document-text" subtitle="Guide to Rapid Language Acquisition" >}}
+  {{< card link="framework" title="Framework" icon="document-text" subtitle="Guide to Rapid Language Acquisition" >}}
 {{< /cards >}}
 
 {{< share-buttons >}}
