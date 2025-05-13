@@ -11,17 +11,17 @@ breadcrumbs: false
             
 <!-- Demo Cards Section -->
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-    <div @click="loadDemo('food')" class="demo-card bg-white rounded-lg shadow-md p-6 text-center cursor-pointer">
+    <div @click="loadDemo('food')" class="demo-card  rounded-lg shadow-md p-6 text-center cursor-pointer">
         <i class="fas fa-utensils text-3xl text-blue-500 mb-2"></i>
         <h3 class="text-lg font-semibold text-gray-800">Food</h3>
         <p class="text-sm text-gray-500">Learn about different foods</p>
     </div>
-    <div @click="loadDemo('animals')" class="demo-card bg-white rounded-lg shadow-md p-6 text-center cursor-pointer">
+    <div @click="loadDemo('animals')" class="demo-card  rounded-lg shadow-md p-6 text-center cursor-pointer">
         <i class="fas fa-paw text-3xl text-blue-500 mb-2"></i>
         <h3 class="text-lg font-semibold text-gray-800">Animals</h3>
         <p class="text-sm text-gray-500">Explore the animal kingdom</p>
     </div>
-    <div @click="loadDemo('geography')" class="demo-card bg-white rounded-lg shadow-md p-6 text-center cursor-pointer">
+    <div @click="loadDemo('geography')" class="demo-card  rounded-lg shadow-md p-6 text-center cursor-pointer">
         <i class="fas fa-globe text-3xl text-blue-500 mb-2"></i>
         <h3 class="text-lg font-semibold text-gray-800">Geography</h3>
         <p class="text-sm text-gray-500">Discover world geography</p>
@@ -29,7 +29,7 @@ breadcrumbs: false
 </div>
 
 <!-- File Upload Section -->
-<div class="bg-white rounded-lg shadow-md p-6 mb-8">
+<div class=" rounded-lg shadow-md p-6 mb-8">
     <div class="flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded-lg p-8">
         <i class="fas fa-file-upload text-4xl text-blue-500 mb-4"></i>
         <h2 class="text-xl font-semibold mb-2">Upload Flashcards JSON</h2>
@@ -59,7 +59,7 @@ breadcrumbs: false
     </div>
     
 <!-- Flashcard -->
-<div class="flashcard bg-white rounded-xl shadow-lg overflow-hidden" :class="{ 'flipped': isFlipped }" @click="toggleFlip">
+<div class="flashcard  rounded-xl shadow-lg overflow-hidden" :class="{ 'flipped': isFlipped }" @click="toggleFlip">
     <div class="flashcard-inner">
         <!-- Front of the card -->
         <div class="flashcard-front p-6">
