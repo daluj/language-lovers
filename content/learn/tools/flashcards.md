@@ -71,7 +71,7 @@ share_platforms:
         <p x-show="fileName" class="mt-4 text-sm text-gray-600">Selected: <span x-text="fileName" class="font-medium"></span></p>
 
 <!-- Example JSON Structure -->
-<div x-show="showExample" x-transition class="mt-6 w-full bg-gray-50 p-4 rounded-lg">
+<div x-show="showExample" x-transition class="mt-6 w-full p-4 rounded-lg">
     <div class="flex justify-between items-center mb-2">
         <h3 class="text-lg font-semibold text-gray-800">Example JSON Format</h3>
         <button 
