@@ -2,6 +2,7 @@
 title: "Fluency Speaking Tool"
 description: "Practice your Vietnamese speaking skills with images or topics"
 breadcrumbs: false
+excludeSearch: true
 share_platforms:
   - platform: facebook
     url: "https://www.facebook.com/sharer/sharer.php?u="

@@ -70,25 +70,21 @@ menu:
         type: search
   sidebar:
     - identifier: more
-      name: Practice Tools
+      name: Tools
       params:
         type: separator
       weight: 1
-    - identifier: vocabulary
-      name: "Vocabulary"
-      pageRef: "/learn/tools/vocabulary/"
-      weight: 2
+    - identifier: flashcards
+      name: "Flashcards"
+      pageRef: "/learn/tools/flashcards/"
     - identifier: pronounciation
       name: "Pronunciation"
-      weight: 3
     - identifier: conversation
       name: "Conversation"
       pageRef: "/learn/tools/conversation/"
-      weight: 4
     - identifier: grammar
       name: "Grammar"
       url: "https://cal.com/"
-      weight: 4
 
 taxonomies:
   tag: tags
