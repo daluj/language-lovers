@@ -206,16 +206,12 @@ Practice your speaking skills with images or topics
     <button 
         @click="pauseTimer"
         x-show="isRunning && !isPaused"
-        class="px-6 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors"
-    >
-        Pause
+        class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors">Pause</button>
     </button>
     <button 
         @click="resumeTimer"
         x-show="isPaused"
-        class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-    >
-        Resume
+        class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">Resume</button>
     </button>
     <button 
         @click="resetTimer"
@@ -245,8 +241,8 @@ Practice your speaking skills with images or topics
                 </div>
             </template>
             <div class="flex justify-end mt-4">
-                <button @click="pauseTimer" class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors">Pause</button>
-                <button @click="resumeTimer" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">Resume</button>
+                <button @click="pauseTimer" x-show="isRunning && !isPaused" class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors">Pause</button>
+                <button @click="resumeTimer" x-show="isPaused" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">Resume</button>
             </div>
         </div>
     </div>
