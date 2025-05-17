@@ -121,6 +121,26 @@
                   this.currentImage = this.images[0]?.url || '';
               }
           },
+
+          addRandomImage() {
+              // Path to the random image - using the optimized image path
+              const imagePath = '/images/432Fluency/dogs.jpg';
+              
+              // Create a new image object with the optimized image path
+              const randomImage = {
+                  url: imagePath,
+                  name: 'Random Practice Image'
+              };
+              
+              // Add to images array
+              this.images.push(randomImage);
+              this.saveData();
+              
+              // Set as current image if none is set
+              if (!this.currentImage) {
+                  this.currentImage = imagePath;
+              }
+          },
       
           addTopic() {
               if (this.newTopic.trim() === '') return;

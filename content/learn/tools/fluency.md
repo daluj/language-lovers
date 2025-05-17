@@ -42,9 +42,8 @@ Practice your speaking skills with images or topics
 <div x-show="activeTab === 'images'" x-transition:enter="fade-enter-active" x-transition:leave="fade-leave-active">
 <div class="mb-6">
     <div class="flex items-center justify-center w-full" x-show="images.length === 0">
-        <label class="flex flex-col items-center justify-center w-full h-36 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer transition-colors">
+        <div class="flex flex-col items-center justify-center w-full h-42 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer transition-colors">
             <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                <i class="fas fa-cloud-upload-alt text-gray-400 text-3xl mb-2"></i>
                 <p class="mb-2 text-sm text-gray-500">
                     <span class="font-semibold">Click to Upload Image</span>
                 </p>
@@ -57,7 +56,10 @@ Practice your speaking skills with images or topics
                 accept="image/*" 
                 @change="handleImageUpload"
             >
-        </label>
+            <button @click="addRandomImage" class="flex items-center mb-6 justify-center px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                Random Image
+            </button>
+        </div>
     </div>
 </div>
 
