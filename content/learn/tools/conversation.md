@@ -161,6 +161,14 @@ Practice your speaking skills with images or topics
     </button>
 </div>
 
+<!-- Toggle for Audio Recording -->
+<div class="flex items-center justify-center mb-8">
+    <label class="flex items-center space-x-3">
+        <input type="checkbox" x-model="recordAudio" class="form-checkbox h-5 w-5 text-blue-600">
+        <span class="text-gray-700">Record Audio</span>
+    </label>
+</div>
+
 <!-- Timer Display -->
 <div class="flex flex-col items-center">
     <div class="relative w-48 h-48 mb-6">
