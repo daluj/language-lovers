@@ -10,10 +10,8 @@
         {{ $icon = "fas fa-paw" }}
       {{ end }}
       <!-- Card HTML directly in the shortcode -->
-      <div class="rounded-lg shadow-md p-6 text-center cursor-pointer transition duration-200" @click="loadDemo('{{ $category }}')">
-        <i class="{{ $icon }} text-3xl text-blue-500 mb-2"></i>
-        <h3 class="text-lg font-semibold text-gray-800">{{ $title }}</h3>
-        <p class="text-sm text-gray-500">{{ printf "Learn about different %s" $category }}</p>
+      <div class="shadow-md text-center p-2 cursor-pointer transition" @click="loadDemo('{{ $category }}')">
+        <div class="text-lg font-semibold text-gray-800">{{ $title }}</div>
       </div>
     {{ end }}
   </div>

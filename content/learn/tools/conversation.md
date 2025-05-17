@@ -47,7 +47,7 @@ Practice your speaking skills with images or topics
             <div class="flex flex-col items-center justify-center pt-5 pb-6">
                 <i class="fas fa-cloud-upload-alt text-gray-400 text-3xl mb-2"></i>
                 <p class="mb-2 text-sm text-gray-500">
-                    <span class="font-semibold">Click to upload</span> or drag and drop
+                    <span class="font-semibold">Click to upload</span>
                 </p>
                 <p class="text-xs text-gray-500">PNG, JPG, GIF (MAX. 5MB each)</p>
             </div>
