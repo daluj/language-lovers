@@ -123,3 +123,99 @@ Hugo templates are located in the `layouts/` directory. You can customize the la
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request if you have suggestions or improvements.
+
+# Hugo Shortcodes
+
+## Image Shortcode
+
+The `image` shortcode is a wrapper for the `image-optimized` partial that makes it easier to use in content files.
+
+### Usage
+
+```markdown
+{{< image 
+  src="images/example.jpg" 
+  alt="Example image" 
+  widths="400 800 1200" 
+  quality="80" 
+  isLCP=true 
+  class="my-custom-class" 
+  ref="myImageRef" 
+>}}
+```
+
+### Parameters
+
+- `src`: Path to the image (e.g., "images/thumbnail.jpg")
+- `alt`: Alt text for accessibility (default: "Image")
+- `widths`: Space-separated list of widths for responsive images (default: "400 800 1200")
+- `quality`: WebP quality (default: 80)
+- `isLCP`: Boolean to indicate if this is the Largest Contentful Paint image for performance optimization (default: false)
+- `class`: Optional CSS class for styling
+- `ref`: Optional Alpine.js x-ref attribute
+
+### Example in Content
+
+```markdown
+## My Page Title
+
+{{< image src="images/hero.jpg" alt="Hero image" isLCP=true class="w-full rounded-lg shadow-md" >}}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.
+```
+
+This shortcode automatically handles:
+- Responsive image generation
+- WebP conversion
+- Lazy loading (except for LCP images)
+- Proper HTML structure with the `<picture>` element
+
+# Image Shortcode Usage Example
+
+This file demonstrates how to use the new `image` shortcode in your content files.
+
+## Basic Usage
+
+```markdown
+---
+title: "My Page with Optimized Images"
+description: "A page demonstrating the image shortcode"
+---
+
+## Welcome to My Page
+
+{{< image 
+  src="images/hero.jpg" 
+  alt="Hero image" 
+  isLCP=true 
+  class="w-full rounded-lg shadow-md" 
+>}}
+
+This is my main content with an optimized hero image above.
+
+## More Content
+
+Here are some additional images:
+
+{{< image src="images/photo1.jpg" alt="Photo 1" class="rounded-md" >}}
+
+{{< image 
+  src="images/photo2.jpg" 
+  alt="Photo 2" 
+  widths="300 600 900" 
+  quality="90" 
+  class="border-2 border-gray-200" 
+>}}
+```
+
+## Parameter Details
+
+- `src`: Path to the image file (required)
+- `alt`: Accessibility text (defaults to "Image" if not provided)
+- `widths`: Custom responsive widths (defaults to "400 800 1200" if not provided)
+- `quality`: WebP conversion quality (defaults to 80 if not provided)
+- `isLCP`: Set to true for the main/hero image for performance optimization
+- `class`: Any CSS classes you want to apply
+- `ref`: For Alpine.js references if needed
+
+The shortcode automatically handles responsive image generation, WebP conversion, and proper loading attributes.

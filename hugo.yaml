@@ -79,9 +79,9 @@ menu:
       pageRef: "/learn/tools/flashcards/"
     - identifier: pronounciation
       name: "Pronunciation"
-    - identifier: conversation
+    - identifier: fluency
       name: "Fluency Speaking Tool"
-      pageRef: "/learn/tools/conversation/"
+      pageRef: "/learn/tools/fluency/"
     - identifier: grammar
       name: "Grammar"
       url: "https://cal.com/"

@@ -1,0 +1,48 @@
+{{/* 
+  Image Shortcode
+  
+  A shortcode wrapper for the image-optimized partial.
+  
+  Usage in content files:
+  {{< image src="images/example.jpg" alt="Example image" widths="400 800 1200" quality="80" isLCP=true class="my-custom-class" ref="myImageRef" >}}
+  
+  Parameters:
+    - src: Path to the image (e.g., "images/thumbnail.jpg")
+    - alt: Alt text for accessibility (default: "Image")
+    - widths: List of widths for responsive images (default: 400, 800, 1200)
+    - quality: WebP quality (default: 80)
+    - isLCP: Boolean to indicate if this is the LCP image (default: false)
+    - class: Optional CSS class for styling
+    - ref: Optional Alpine.js x-ref attribute
+*/}}
+
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "Image" -}}
+
+{{/* Parse widths parameter if provided */}}
+{{- $widths := slice 400 800 1200 -}}
+{{- with .Get "widths" -}}
+  {{- $widthsStr := . -}}
+  {{- $widths = slice -}}
+  {{- range (split $widthsStr " ") -}}
+    {{- $width := int . -}}
+    {{- $widths = $widths | append $width -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $quality := int (.Get "quality" | default 80) -}}
+{{- $isLCP := .Get "isLCP" | default false -}}
+{{- $class := .Get "class" | default "" -}}
+{{- $ref := .Get "ref" | default "" -}}
+
+{{/* Call the image-optimized partial with the parameters */}}
+{{ partial "image-optimized.html" (dict 
+  "src" $src
+  "alt" $alt
+  "widths" $widths
+  "quality" $quality
+  "isLCP" $isLCP
+  "class" $class
+  "ref" $ref
+  "scratch" .Page.Scratch
+) }}
