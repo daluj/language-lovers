@@ -1,7 +1,6 @@
 ---
 title: Grammar Guide
 description: Discover an engaging way to learn Vietnamese grammar using sentence-based learning, music, visual stories, and language chunking. Master high-frequency phrases, contextual sentences, and grammar patterns for effective language acquisition.
-keywords: learn grammar, sentence-based learning, language chunking, grammar patterns, visual stories, language acquisition, high-frequency phrases, contextual learning
 weight: 5
 ---
 
