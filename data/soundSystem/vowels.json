@@ -1,0 +1,14 @@
+[
+    { "character": "A", "video": "https://www.youtube.com/embed/VIDEO_ID_A" },
+    { "character": "Ă", "video": "https://www.youtube.com/embed/VIDEO_ID_AW" },
+    { "character": "Â", "video": "https://www.youtube.com/embed/VIDEO_ID_UH" },
+    { "character": "E", "video": "https://www.youtube.com/embed/VIDEO_ID_E" },
+    { "character": "Ê", "video": "https://www.youtube.com/embed/VIDEO_ID_EY" },
+    { "character": "I", "video": "https://www.youtube.com/embed/VIDEO_ID_I" },
+    { "character": "O", "video": "https://www.youtube.com/embed/VIDEO_ID_O" },
+    { "character": "Ô", "video": "https://www.youtube.com/embed/VIDEO_ID_OH" },
+    { "character": "Ơ", "video": "https://www.youtube.com/embed/VIDEO_ID_UHOH" },
+    { "character": "U", "video": "https://www.youtube.com/embed/VIDEO_ID_U" },
+    { "character": "Ư", "video": "https://www.youtube.com/embed/VIDEO_ID_OO" },
+    { "character": "Y", "video": "https://www.youtube.com/embed/VIDEO_ID_Y" }
+]

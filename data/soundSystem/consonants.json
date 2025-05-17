@@ -1,0 +1,20 @@
+[
+    { "character": "B", "video": "https://www.youtube.com/embed/VIDEO_ID_B" },
+    { "character": "C", "video": "https://www.youtube.com/embed/VIDEO_ID_C" },
+    { "character": "D", "video": "https://www.youtube.com/embed/VIDEO_ID_D" },
+    { "character": "Đ", "video": "https://www.youtube.com/embed/VIDEO_ID_DD" },
+    { "character": "F", "video": "https://www.youtube.com/embed/VIDEO_ID_F" },
+    { "character": "G", "video": "https://www.youtube.com/embed/VIDEO_ID_G" },
+    { "character": "H", "video": "https://www.youtube.com/embed/VIDEO_ID_H" },
+    { "character": "K", "video": "https://www.youtube.com/embed/VIDEO_ID_K" },
+    { "character": "L", "video": "https://www.youtube.com/embed/VIDEO_ID_L" },
+    { "character": "M", "video": "https://www.youtube.com/embed/VIDEO_ID_M" },
+    { "character": "N", "video": "https://www.youtube.com/embed/VIDEO_ID_N" },
+    { "character": "P", "video": "https://www.youtube.com/embed/VIDEO_ID_P" },
+    { "character": "Q", "video": "https://www.youtube.com/embed/VIDEO_ID_Q" },
+    { "character": "R", "video": "https://www.youtube.com/embed/VIDEO_ID_R" },
+    { "character": "S", "video": "https://www.youtube.com/embed/VIDEO_ID_S" },
+    { "character": "T", "video": "https://www.youtube.com/embed/VIDEO_ID_T" },
+    { "character": "V", "video": "https://www.youtube.com/embed/VIDEO_ID_V" },
+    { "character": "X", "video": "https://www.youtube.com/embed/VIDEO_ID_X" }
+]
