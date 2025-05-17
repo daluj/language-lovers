@@ -237,10 +237,11 @@ Practice your speaking skills with images or topics
             <template x-if="activeTab === 'topics' && topics.length > 0">
                 <div class="text-center">
                     <p class="text-gray-600">Speak about this topic for <span x-text="selectedTime"></span> minutes</p>
-                    <h3 x-text="currentTopic" class="text-2xl font-bold text-blue-600 mb-4"></h3>
+                    <p x-text="currentTopic" class="text-2xl font-bold text-blue-600 mb-4"></p>
                 </div>
             </template>
             <div class="flex justify-end mt-4">
+                <span x-text="formatTime(timeLeft)" class="text-gray-600 text-sm mr-auto"></span>
                 <button @click="pauseTimer" x-show="isRunning && !isPaused" class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors">Pause</button>
                 <button @click="resumeTimer" x-show="isPaused" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">Resume</button>
             </div>
