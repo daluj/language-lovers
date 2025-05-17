@@ -73,6 +73,9 @@
               
               // Set initial time based on selectedTime
               this.timeLeft = this.selectedTime * 60;
+
+              // Initialize showInput
+              this.showInput = this.topics.length === 0;
           },
 
           handleImageUpload(event) {
@@ -129,6 +132,8 @@
               if (!this.currentTopic) {
                   this.currentTopic = this.topics[0];
               }
+              // Hide input field
+              this.showInput = false;
           },
 
           removeTopic(index) {
@@ -138,6 +143,8 @@
               // Update current topic if needed
               if (this.topics.length === 0) {
                   this.currentTopic = '';
+                  // Show input field
+                  this.showInput = true;
               } else if (this.currentTopic === this.topics[index]) {
                   this.currentTopic = this.topics[0] || '';
               }

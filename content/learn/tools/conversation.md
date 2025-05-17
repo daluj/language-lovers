@@ -41,13 +41,12 @@ Practice your speaking skills with images or topics
 <!-- Images Tab -->
 <div x-show="activeTab === 'images'" x-transition:enter="fade-enter-active" x-transition:leave="fade-leave-active">
 <div class="mb-6">
-    <label class="block text-sm font-medium text-gray-700 mb-2">Upload Images</label>
-    <div class="flex items-center justify-center w-full">
+    <div class="flex items-center justify-center w-full" x-show="images.length === 0">
         <label class="flex flex-col items-center justify-center w-full h-36 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer transition-colors">
             <div class="flex flex-col items-center justify-center pt-5 pb-6">
                 <i class="fas fa-cloud-upload-alt text-gray-400 text-3xl mb-2"></i>
                 <p class="mb-2 text-sm text-gray-500">
-                    <span class="font-semibold">Click to upload</span>
+                    <span class="font-semibold">Click to Upload Image</span>
                 </p>
                 <p class="text-xs text-gray-500">PNG, JPG, GIF (MAX. 5MB each)</p>
             </div>
@@ -63,13 +62,6 @@ Practice your speaking skills with images or topics
 </div>
 
 <div class="mb-4">
-    <h3 class="text-lg font-medium text-gray-900 mb-2">Available Images</h3>
-    <template x-if="images.length === 0">
-        <div class="text-center py-8 rounded-lg">
-            <i class="fas fa-image text-gray-300 text-4xl mb-2"></i>
-            <p class="text-gray-500">No images uploaded yet</p>
-        </div>
-    </template>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" x-show="images.length > 0">
         <template x-for="(image, index) in images" :key="index">
             <div class="relative group">
@@ -87,8 +79,7 @@ Practice your speaking skills with images or topics
 
 <!-- Topics Tab -->
 <div x-show="activeTab === 'topics'" x-transition:enter="fade-enter-active" x-transition:leave="fade-leave-active">
-<div class="mb-6">
-    <label class="block text-sm font-medium text-gray-700 mb-2">Add Topics</label>
+<div class="mb-6" x-show="showInput">
     <div class="flex">
         <input 
             type="text" 
@@ -106,8 +97,7 @@ Practice your speaking skills with images or topics
     </div>
 </div>
 
-<div class="mb-4">
-    <h3 class="text-lg font-medium text-gray-900 mb-2">Available Topics</h3>
+<div class="mb-4" x-show="!showInput">
     <template x-if="topics.length === 0">
         <div class="text-center py-8 rounded-lg">
             <i class="fas fa-list-ul text-gray-300 text-4xl mb-2"></i>
