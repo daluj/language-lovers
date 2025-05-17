@@ -80,7 +80,7 @@ menu:
     - identifier: pronounciation
       name: "Pronunciation"
     - identifier: conversation
-      name: "Conversation"
+      name: "Fluency Speaking Tool"
       pageRef: "/learn/tools/conversation/"
     - identifier: grammar
       name: "Grammar"
