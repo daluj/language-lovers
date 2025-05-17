@@ -1,7 +1,7 @@
 ---
 title: Rhythm and Sync
 description: Learn Vietnamese effectively using sentence-based learning with rhythm and singing. This guide leverages high-frequency sentences, melodies, and movement for engaging, language acquisition.
-keywords: sentence-based learning, language learning, rhythm and singing, high-frequency sentences, language acquisition, pronunciation practice, contextual learning
+weight: 4
 ---
 
 Discover a fun and effective way to learn a language through **sentence-based learning** paired with **rhythm and singing**. By combining high-frequency sentences, catchy melodies, and physical movement, this method embeds language in your brain, making it intuitive and memorable. This method is a fun and effective way to learn a language, whether you’re a beginner or an advanced learner.

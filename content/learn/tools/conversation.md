@@ -230,13 +230,13 @@ Practice your speaking skills with images or topics
         <div class="p-6">
             <template x-if="activeTab === 'images' && images.length > 0">
                 <div class="text-center">
-                    <p class="text-gray-600">Describe what you see in this image</p>
+                    <p class="text-gray-600">Describe what you see in this image and explain what you think is happening.</p>
                     <img :src="currentImage" alt="Speaking prompt" class="max-h-64 mx-auto mb-4 rounded-lg">
                 </div>
             </template>
             <template x-if="activeTab === 'topics' && topics.length > 0">
                 <div class="text-center">
-                    <p class="text-gray-600">Speak about this topic for <span x-text="selectedTime"></span> minutes</p>
+                    <p class="text-gray-600">Speak about this topic for <span x-text="selectedTime"></span> minutes as fluently as you can</p>
                     <p x-text="currentTopic" class="text-2xl font-bold text-blue-600 mb-4"></p>
                 </div>
             </template>

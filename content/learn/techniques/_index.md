@@ -12,4 +12,5 @@ These targeted techniques build on the principles and actions to enhance fluency
   {{< card link="language-parent" title="Language Parent" icon="document-duplicate" >}}
   {{< card link="goldlist-method" title="The Goldlist Method" icon="document-duplicate" >}}
   {{< card link="rhythm-sync" title="Rhythm and Sync" icon="document-duplicate" >}}
+  {{< card link="roundabout-technique" title="Roundabout Technique" icon="document-duplicate" >}}
 {{< /cards >}}
