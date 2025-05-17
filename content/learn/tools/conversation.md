@@ -250,6 +250,5 @@ Practice your speaking skills with images or topics
 </div>
 </div>
 </div>
-</div>
 
 {{<share-buttons>}}
