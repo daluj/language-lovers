@@ -229,23 +229,27 @@ Practice your speaking skills with images or topics
 </div>
 
 <!-- Current Prompt -->
-<div x-show="isRunning || isPaused">
-    <div class="p-6">
-        <h2 class="text-xl font-bold text-gray-800 mb-4">Current Prompt</h2>
-        
-<template x-if="activeTab === 'images' && images.length > 0">
-    <div class="text-center">
-        <img :src="currentImage" alt="Speaking prompt" class="max-h-64 mx-auto mb-4 rounded-lg">
-        <p class="text-gray-600">Describe what you see in this image</p>
+<div x-show="showModal" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg overflow-hidden shadow-xl max-w-md w-full">
+        <div class="p-6">
+            <template x-if="activeTab === 'images' && images.length > 0">
+                <div class="text-center">
+                    <p class="text-gray-600">Describe what you see in this image</p>
+                    <img :src="currentImage" alt="Speaking prompt" class="max-h-64 mx-auto mb-4 rounded-lg">
+                </div>
+            </template>
+            <template x-if="activeTab === 'topics' && topics.length > 0">
+                <div class="text-center">
+                    <p class="text-gray-600">Speak about this topic for <span x-text="selectedTime"></span> minutes</p>
+                    <h3 x-text="currentTopic" class="text-2xl font-bold text-blue-600 mb-4"></h3>
+                </div>
+            </template>
+            <div class="flex justify-end mt-4">
+                <button @click="pauseTimer" class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors">Pause</button>
+                <button @click="resumeTimer" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">Resume</button>
+            </div>
+        </div>
     </div>
-</template>
-
-<template x-if="activeTab === 'topics' && topics.length > 0">
-    <div class="text-center">
-        <h3 x-text="currentTopic" class="text-2xl font-bold text-blue-600 mb-4"></h3>
-        <p class="text-gray-600">Speak about this topic for <span x-text="selectedTime"></span> minutes</p>
-    </div>
-</template>
 </div>
 </div>
 </div>
