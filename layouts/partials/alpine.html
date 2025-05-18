@@ -123,36 +123,32 @@
           },
 
           addRandomImage() {
-            // List of available images in the images/432Fluency/ folder
-            const availableImages = [ 
-                {{ range (resources.Match "images/432Fluency/*") }}
-                    "{{ .RelPermalink }}",
+            const availableImages = [
+                {{ range $.Site.Data.images.fluency }}
+                    "{{ .url }}",
                 {{ end }}
             ];
-
-            // Filter out undefined or empty entries
+        
+            console.log('Available images:', availableImages);
+        
             const validImages = availableImages.filter(img => img && img.trim() !== '');
-
+        
             if (validImages.length === 0) {
-                console.warn('No images found in images/432Fluency/');
+                console.warn('No images found in images/fluency/');
                 return;
             }
-
-            // Select a random image from the available images
+        
             const randomIndex = Math.floor(Math.random() * validImages.length);
             const imagePath = validImages[randomIndex];
-
-            // Create a new image object
+        
             const randomImage = {
                 url: imagePath,
                 name: 'Random Practice Image'
             };
-
-            // Add to images array
+        
             this.images.push(randomImage);
             this.saveData();
-
-            // Set as current image if none is set
+        
             if (!this.currentImage) {
                 this.currentImage = imagePath;
             }
