@@ -97,6 +97,9 @@ Practice your speaking skills with images or topics
             Add
         </button>
     </div>
+    <button @click="addRandomTopic" class="flex items-center mt-4 mx-auto justify-center px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+        Random Topic
+    </button>
 </div>
 
 <div class="mb-4" x-show="!showInput">
@@ -249,7 +252,6 @@ Practice your speaking skills with images or topics
             </div>
         </div>
     </div>
-</div>
 </div>
 </div>
 

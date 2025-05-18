@@ -153,6 +153,36 @@
                 this.currentImage = imagePath;
             }
           },
+          
+          addRandomTopic() {
+            const availableTopics = [
+                {{ range $.Site.Data.fluency.topics }}
+                    "{{ . }}",
+                {{ end }}
+            ];
+            
+            console.log('Available topics:', availableTopics);
+            
+            const validTopics = availableTopics.filter(topic => topic && topic.trim() !== '');
+            
+            if (validTopics.length === 0) {
+                console.warn('No topics found in data/fluency/topics.json');
+                return;
+            }
+            
+            const randomIndex = Math.floor(Math.random() * validTopics.length);
+            const topic = validTopics[randomIndex];
+            
+            this.topics.push(topic);
+            this.saveData();
+            
+            if (!this.currentTopic) {
+                this.currentTopic = topic;
+            }
+            
+            // Hide input field after adding a topic
+            this.showInput = false;
+          },
       
           addTopic() {
               if (this.newTopic.trim() === '') return;
