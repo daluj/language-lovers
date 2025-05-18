@@ -123,23 +123,39 @@
           },
 
           addRandomImage() {
-              // Path to the random image - using the optimized image path
-              const imagePath = '/images/432Fluency/dogs.jpg';
-              
-              // Create a new image object with the optimized image path
-              const randomImage = {
-                  url: imagePath,
-                  name: 'Random Practice Image'
-              };
-              
-              // Add to images array
-              this.images.push(randomImage);
-              this.saveData();
-              
-              // Set as current image if none is set
-              if (!this.currentImage) {
-                  this.currentImage = imagePath;
-              }
+            // List of available images in the images/432Fluency/ folder
+            const availableImages = [ 
+                {{ range (resources.Match "images/432Fluency/*") }}
+                    "{{ .RelPermalink }}",
+                {{ end }}
+            ];
+
+            // Filter out undefined or empty entries
+            const validImages = availableImages.filter(img => img && img.trim() !== '');
+
+            if (validImages.length === 0) {
+                console.warn('No images found in images/432Fluency/');
+                return;
+            }
+
+            // Select a random image from the available images
+            const randomIndex = Math.floor(Math.random() * validImages.length);
+            const imagePath = validImages[randomIndex];
+
+            // Create a new image object
+            const randomImage = {
+                url: imagePath,
+                name: 'Random Practice Image'
+            };
+
+            // Add to images array
+            this.images.push(randomImage);
+            this.saveData();
+
+            // Set as current image if none is set
+            if (!this.currentImage) {
+                this.currentImage = imagePath;
+            }
           },
       
           addTopic() {

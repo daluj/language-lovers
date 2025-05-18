@@ -238,7 +238,7 @@ Practice your speaking skills with images or topics
             </template>
             <template x-if="activeTab === 'topics' && topics.length > 0">
                 <div class="text-center">
-                    <p class="text-gray-600">Speak about this topic for <span x-text="selectedTime"></span> minutes as fluently as you can</p>
+                    <p class="text-gray-600">Speak about this topic for <span x-text="selectedTime"></span> minutes</p>
                     <p x-text="currentTopic" class="text-2xl font-bold text-blue-600 mb-4"></p>
                 </div>
             </template>
