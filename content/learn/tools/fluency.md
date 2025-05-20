@@ -47,7 +47,7 @@ Practice your speaking skills with images or topics
                 <p class="mb-2 text-sm text-gray-500">
                     <span class="font-semibold">Click to Upload Image</span>
                 </p>
-                <p class="text-xs text-gray-500">PNG, JPG, GIF (MAX. 5MB each)</p>
+                <p class="text-xs text-gray-500">PNG, JPG, GIF (MAX. 10MB each)</p>
             </div>
             <input 
                 type="file" 
