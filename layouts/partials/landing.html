@@ -447,117 +447,21 @@
 </section>
  
  {{- $copyright := (T "copyright") | default "© 2024 My Site." -}}
-<footer class="pt-24 pb-24 px-6 md:px-12 lg:px-16 w-full max-w-[1440px] mx-auto">
-  <div class="flex flex-col lg:flex-row justify-between gap-8 mb-12">
-    <!-- Logo Column -->
-    <div class="flex flex-col items-start gap-4 w-full lg:w-1/5">
-      <div class="flex items-center gap-2">
-        <span class="text-lg font-semibold text-blue-800">My-Site</span>
-      </div>
-      <div class="text-xs">
-        <p>
-          <strong>Main Office:</strong> 
-          <a href="https://www.google.com/maps?q=123+Business+St,+New+York,+NY+10001" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:underline">
-            123 Business St, New York, NY 10001
-          </a>
-        </p>
-        <p>
-          <strong>Branch Office:</strong> 
-          <a href="https://www.google.com/maps?q=456+Innovation+Rd,+San+Francisco,+CA+94105" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:underline">
-            456 Innovation Rd, San Francisco, CA 94105
-          </a>
-        </p>
-        <p>
-          <strong>European Branch:</strong> 
-          <a href="https://www.google.com/maps?q=789+Strategy+Ave,+London,+UK+EC1A+1BB" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:underline">
-            789 Strategy Ave, London, UK EC1A 1BB
-          </a>
-        </p>
-      </div>
-    </div>
-
-    <!-- Links Columns -->
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 w-full lg:w-4/5">
-      <!-- Get Started Column -->
-      <div class="flex flex-col items-start gap-3">
-        <h4 class="text-base font-semibold leading-5 uppercase">Get Started</h4>
-        <a href="https://cal.com" target="_blank" class="text-gray-700 text-sm font-medium leading-5 hover:underline flex items-center gap-1">
-          Schedule a Consultation
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 17 17" fill="none">
-            <path d="M4.66699 5.16699H11.3337V11.8337" stroke="#858481" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M4.66699 11.8337L11.3337 5.16699" stroke="#858481" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Follow Us Column -->
-      <div class="flex flex-col items-start gap-3">
-        <h4 class="text-base font-semibold leading-5 uppercase">Join The Community</h4>
-        <a href="https://www.facebook.com/" target="_blank" class="text-gray-700 text-sm font-medium leading-5 hover:underline flex items-center gap-1">
-          Facebook
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 17 17" fill="none">
-            <path d="M4.66699 5.16699H11.3337V11.8337" stroke="#858481" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M4.66699 11.8337L11.3337 5.16699" stroke="#858481" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-        <a href="https://x.com/" target="_blank" class="text-gray-700 text-sm font-medium leading-5 hover:underline flex items-center gap-1">
-          X (Twitter)
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 17 17" fill="none">
-            <path d="M4.66699 5.16699H11.3337V11.8337" stroke="#858481" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M4.66699 11.8337L11.3337 5.16699" stroke="#858481" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/" target="_blank" class="text-gray-700 text-sm font-medium leading-5 hover:underline flex items-center gap-1">
-          LinkedIn
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 17 17" fill="none">
-            <path d="M4.66699 5.16699H11.3337V11.8337" stroke="#858481" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M4.66699 11.8337L11.3337 5.16699" stroke="#858481" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Company Column -->
-      <div class="flex flex-col items-start gap-3">
-        <h4 class="text-base font-semibold leading-5 uppercase">About</h4>
-        <a href="#" class="text-gray-700 text-sm font-medium leading-5 hover:underline">Company</a>
-        <a href="#" class="text-gray-700 text-sm font-medium leading-5 hover:underline">Team</a>
-        <a href="#" class="text-gray-700 text-sm font-medium leading-5 hover:underline">Contact Us</a>
-      </div>
-
-      <!-- Resources Column -->
-      <div class="flex flex-col items-start gap-3">
-        <h4 class="text-base font-semibold leading-5 uppercase">Legal</h4>
-        <a href="#" target="_blank" class="text-gray-700 text-sm font-medium leading-5 hover:underline">Privacy Policy</a>
-        <a href="#" target="_blank" class="text-gray-700 text-sm font-medium leading-5 hover:underline">Terms of Service</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer Bottom Section with Toggle -->
-  <div class="flex flex-col md:flex-row justify-between items-center gap-4 border-solid border-[rgba(0,0,0,0.06)] dark:border-gray-800 relative z-10">
-    <div class="flex gap-4 order-1 md:order-2">
-      <a href="https://x.com/" aria-label="Visit our X (Twitter) profile" target="_blank" class="dark:text-gray-600 text-gray-400  dark:hover:text-gray-800 hover:text-gray-200">
-        <svg viewBox="0 0 16 16" aria-hidden="true" class="h-5 w-5">
-          <path fill="currentColor" d="M12.6 0h2.454l-5.36 6.778L16 16h-4.937l-3.867-5.594L2.771 16H.316l5.733-7.25L0 0h5.063l3.495 5.114L12.601 0Zm-.86 14.376h1.36L4.323 1.539H2.865l8.875 12.837Z"></path>
-        </svg>
-      </a>
-      <a href="https://www.youtube.com/" aria-label="Visit our Youtube profile" target="_blank" class="dark:text-gray-600 text-gray-400 dark:hover:text-gray-800 hover:text-gray-200">
-        <svg viewBox="0 0 16 16" aria-hidden="true" class="h-6 w-6">
-          <path fill="currentColor" fill-rule="evenodd" d="M14.25 2.335c.69.184 1.231.725 1.415 1.414C16 4.996 16 7.6 16 7.6s0 2.604-.335 3.851a2.003 2.003 0 0 1-1.414 1.415c-1.247.335-6.251.335-6.251.335s-5.004 0-6.25-.335a2.004 2.004 0 0 1-1.415-1.415C0 10.204 0 7.601 0 7.601s0-2.605.335-3.852a2.004 2.004 0 0 1 1.414-1.414C2.996 2 8 2 8 2s5.004 0 6.25.335ZM10.556 7.6 6.398 10V5.2l4.157 2.4Z" clip-rule="evenodd"></path>
-        </svg>
-      </a>
-      <a href="https://www.linkedin.com/" aria-label="Visit our LinkedIn profile" target="_blank" class="dark:text-gray-600 text-gray-400 dark:hover:text-gray-800 hover:text-gray-200">
-        <svg viewBox="0 0 16 16" aria-hidden="true" class="h-6 w-6">
-          <path fill="currentColor" d="M14.82 0H1.18A1.169 1.169 0 0 0 0 1.154v13.694A1.168 1.168 0 0 0 1.18 16h13.64A1.17 1.17 0 0 0 16 14.845V1.15A1.171 1.171 0 0 0 14.82 0ZM4.744 13.64H2.369V5.996h2.375v7.642Zm-1.18-8.684a1.377 1.377 0 1 1 .52-.106 1.377 1.377 0 0 1-.527.103l.006.003Zm10.075 8.683h-2.375V9.921c0-.885-.015-2.025-1.234-2.025-1.218 0-1.425.966-1.425 1.968v3.775H6.233V5.997H8.51v1.05h.032c.317-.601 1.09-1.235 2.246-1.235 2.405-.005 2.851 1.578 2.851 3.63v4.197Z"></path>
-        </svg>
-      </a>
-    </div>
-    <span class="text-gray-600 text-xs"> {{ $copyright }} </span>
-    <div class="order-3 flex items-center space-x-2">
-      {{- if hugo.IsMultilingual -}}
-        {{- partial "language-switch.html" (dict "context" .) -}}
-      {{- end -}}
-      {{ partial "theme-toggle.html" }}
-    </div>
-  </div>
+<footer class="flex items-center gap-x-3 p-4 lg:p-6 text-xs text-muted-foreground">
+  <span><a class="hover:text-primary" href="/about">{{ $copyright }}</a></span>
+  <a class="hover:text-primary" href="/terms">Terms</a>
+  <a class="hover:text-primary" href="/privacy">Privacy</a>
+  <a class="ml-auto hover:text-primary" href="https://github.com/" target="_blank">
+    <svg fill="currentColor" class="h-4 w-4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+  </a>
+  <a class="hover:text-primary" href="https://discord.com" target="_blank">
+    <svg fill="currentColor" class="h-4 w-4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Discord</title><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"></path></svg>
+  </a>
+  <a class="hover:text-primary" href="https://x.com/" target="_blank">
+    <svg class="h-4 w-4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg>
+  </a>
+  {{- if hugo.IsMultilingual -}}
+    {{- partial "language-switch.html" (dict "context" .) -}}
+  {{- end -}}
+  {{ partial "theme-toggle.html" }}
 </footer>

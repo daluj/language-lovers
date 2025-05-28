@@ -1,5 +1,5 @@
 # Configuration
-baseURL: "https://daluj.github.io/language-lovers/"
+baseURL: "http://localhost:1313/"
 title: "My Site"
 timeout: "2m"
 enableRobotsTXT: true
