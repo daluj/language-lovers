@@ -1,34 +1,48 @@
-<section id="hero" class="py-24 px-6 text-center flex flex-col items-center min-h-[80vh]">
-  <!-- Title and Subtitle Centered -->
-  <div class="max-w-2xl">
-    <h1 class="text-5xl font-medium mb-6 text-blue-800">
-      {{ i18n "hero_title" | default "Is it a bad idea to finally speak Vietnamese fluently?" }}
-    </h1>
-    <p class="text-xl mb-8">
-      {{ i18n "hero_subtitle" | default "In just 200 hours, master real-life conversations with our immersive, science-backed method, no textbooks or boring stuff." }}
-    </p>
-  </div>
+<div class="px-4 lg:px-8">
+  <section id="hero" class="max-w-xl mx-auto my-24 lg:my-28 text-center">
+    <!-- Heading and subheading -->
+    <div class="space-y-8">
+      <h1 class="font-semibold tracking-tight text-4xl lg:text-6xl text-blue-800">
+        {{ i18n "hero_title" | default "Is it a bad idea to finally speak Vietnamese fluently?" }}
+      </h1>
+      <p class="text-muted-foreground md:text-lg">
+        {{ i18n "hero_subtitle" | default "In just 200 hours, master real-life conversations with our immersive, science-backed method, no textbooks or boring stuff." }}
+      </p>
+    </div>
+    
+    <!-- CTAs -->
+    <div class="mt-6 flex max-md:flex-col md:gap-x-4 max-md:gap-y-4 justify-center">
+      <a href="{{ "/learn/" | relLangURL }}"
+        class="px-6 py-3 border-2 border-blue-800 text-blue-800 rounded-lg hover:bg-blue-800 hover:text-white transition-all duration-300" aria-label="View documentation">
+        {{ i18n "view_docs" | default "Learn For Free" }}
+      </a>
+      <a href="https://tally.so/r/w4qe6b" target="_blank"
+        class="px-6 py-3 bg-orange-800 text-white rounded-lg hover:bg-orange-900 transition-all pulse" aria-label="Get started, contact us">
+        {{ i18n "get_started" | default "Let's Talk Free, No Commitment" }}
+      </a>
+    </div>
+  </section>
 
-  <!-- Video Thumbnail and Play Behavior -->
-  <div x-data="{ playing: false }" class="w-full max-w-2xl mb-8 rounded-xl overflow-hidden shadow-lg bg-gray-100">
+  <!-- Intro Video -->
+  <div x-data="{ playing: false }" class="rounded-2xl overflow-hidden max-w-6xl mx-auto block relative group bg-neutral-950 mb-12 cursor-pointer">
     <div class="aspect-w-16 aspect-h-9 relative">
       
       <template x-if="!playing">
-        <button @click="playing = true" class="absolute inset-0 w-full h-full focus:outline-none">
+        <div @click="playing = true" class="button flex gap-x-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 !rounded-full group-hover:scale-105 duration-1000 !transition-transform">
           {{ partial "image-optimized.html" (dict 
             "src" "images/hero-image.jpg"
             "alt" "Group of people speaking Vietnamese"
             "isLCP" true
-            "class" "thumbnail"
+            "class" "w-full group-hover:opacity-90 transition-opacity block"
           ) }}
-          <div class="absolute inset-0 flex items-center justify-center">
+          <div class="button flex gap-x-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 !rounded-full group-hover:scale-105 duration-1000 !transition-transform">
             <div class="bg-white p-4 rounded-full shadow-lg hover:scale-110 transform transition">
               <svg class="w-10 h-10 text-orange-800" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
               </svg>
             </div>
           </div>
-        </button>
+        </div>
       </template>
 
       <template x-if="playing">
@@ -46,55 +60,31 @@
     </div>
   </div>
 
-  <!-- Your Original Buttons -->
-  <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-    <a href="{{ "/learn/" | relLangURL }}"
-       class="px-6 py-3 border-2 border-blue-800 text-blue-800 rounded-lg hover:bg-blue-800 hover:text-white transition-all duration-300" aria-label="View documentation">
-      {{ i18n "view_docs" | default "Learn For Free" }}
-    </a>
-    <a href="https://tally.so/r/w4qe6b" target="_blank"
-       class="px-6 py-3 bg-orange-800 text-white rounded-lg hover:bg-orange-900 transition-all pulse" aria-label="Get started, contact us">
-      {{ i18n "get_started" | default "Let's Talk Free, No Commitment" }}
-    </a>
-  </div>
-</section>
-
-<section id="solutions" class="pt-24 pb-24 px-6" x-data="carousel()" x-init="init()">
-  <div class="max-w-6xl mx-auto">
-      <div class="text-center">
-        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">
+  <section id="solutions" class="max-w-5xl mx-auto my-24 lg:my-28">
+        <div class="text-center">
+          <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">
             Sound familiar? You're not alone.
-        </h2>
-        <p class="mt-4 text-lg">
+          </h2>
+          <p class="mt-4 text-lg  ">
             We get it, inefficiency stings. Let's cut through the noise and get you back in control.
-        </p>
-      </div>
-      <!-- Carousel Section -->
-      <div class="relative mt-8 flex items-center">
-        <!-- Left Arrow (Desktop only) -->
-        <button @click="scrollLeft" class="hidden md:flex items-center justify-center mr-4 p-3 rounded-full z-10" aria-label="Scroll left through solutions">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-      
+          </p>
+        </div>
+        
         <!-- Carousel container -->
-        <div class="w-full md:overflow-x-auto no-scrollbar md:snap-x md:snap-mandatory md:scroll-smooth md:px-4 md:py-4 md:scroll-px-4" x-ref="carousel">
-          <div class="flex flex-col md:flex-row gap-4 md:gap-6 md:w-max">
-      
+        <ul class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
             <!-- Card 1 -->
-            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg overflow-hidden">
-              <div class="text-left">
+            <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
+              <div class="flex items-center gap-x-2">
                 <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                 </svg>
-                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Streamlined Operations</h3>
-                <p class="mt-4 text-sm ">Reduce waste and optimize processes to save time and resources.</p>
               </div>
-            </div>
+              <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Streamlined Operations</h3>
+              <p class="mt-4 text-sm">Reduce waste and optimize processes to save time and resources.</p>
+            </li>
       
             <!-- Card 2 -->
-            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg overflow-hidden">
+            <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
               <div class="text-left">
                 <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
@@ -102,10 +92,10 @@
                 <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Cost Reduction</h3>
                 <p class="mt-4 text-sm ">Identify inefficiencies and implement cost-saving strategies.</p>
               </div>
-            </div>
+            </li>
       
             <!-- Card 3 -->
-            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg overflow-hidden">
+            <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
               <div class="text-left">
                 <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
@@ -113,10 +103,10 @@
                 <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Product Development</h3>
                 <p class="mt-4 text-sm ">Create innovative products with a structured approach to R&D.</p>
               </div>
-            </div>
+            </li>
       
             <!-- Card 4 -->
-            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg overflow-hidden">
+            <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
               <div class="text-left">
                 <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
@@ -124,10 +114,10 @@
                 <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Market Disruption</h3>
                 <p class="mt-4 text-sm ">Leverage new ideas to gain a competitive edge in your industry.</p>
               </div>
-            </div>
+            </li>
       
             <!-- Card 5 -->
-            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg overflow-hidden">
+            <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
               <div class="text-left">
                 <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
@@ -135,10 +125,10 @@
                 <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Organizational Transformation</h3>
                 <p class="mt-4 text-sm ">Navigate complex changes with minimal disruption.</p>
               </div>
-            </div>
+            </li>
       
             <!-- Card 6 -->
-            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg overflow-hidden">
+            <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
               <div class="text-left">
                 <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
@@ -146,305 +136,296 @@
                 <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Team Alignment</h3>
                 <p class="mt-4 text-sm ">Ensure your team adapts quickly to new strategies and goals.</p>
               </div>
-            </div>
-      
-          </div>
-        </div>
-      
-        <!-- Right Arrow (Desktop only) -->
-        <button @click="scrollRight" class="hidden md:flex items-center justify-center ml-4 p-3 rounded-full z-10" aria-label="Scroll right through solutions">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
-  </div>
-</section>
+            </li>
+        </ul>
 
-<section id="success-stories" class="pb-24 px-6" x-data="carousel()" x-init="init()">
-  <div class="max-w-6xl mx-auto">
-      <div class="text-center">
-        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">
-            Feel like you're stuck? They were too.
-        </h2>
-        <p class="mt-4 text-lg  ">
-            What if your breakthrough was just one step away?
-        </p>
-      </div>
-      <!-- Carousel Section -->
-      <div class="relative mt-8 flex items-center">
-        <!-- Left Arrow (Desktop only) -->
-        <button @click="scrollLeft" class="hidden md:flex items-center justify-center mr-4 p-3 rounded-full z-10" aria-label="Scroll left through success stories">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-      
-        <!-- Carousel container -->
-        <div class="w-full md:overflow-x-auto no-scrollbar md:snap-x md:snap-mandatory md:scroll-smooth md:px-4 md:py-4 md:scroll-px-4" x-ref="carousel">
-          <div class="flex flex-col md:flex-row gap-4 md:gap-6 md:w-max">
-      
-            <!-- Template Card 1 -->
-            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
-              <div class="w-full text-left">
-                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
-                  30% increase in operational efficiency
-                </h3>
-                <p class="text-sm  mb-3">
-                  <span class="font-medium">Objective:</span> Streamline legacy systems
-                </p>
-                <div class="flex items-center gap-3">
-                  <img src="" alt="TechCorp Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
-                  <div class="text-xs text-gray-600">
-                    TechCorp Digital Overhaul
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Template Card 2 -->
-            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
-              <div class="w-full text-left">
-                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
-                  Product launched 6 months ahead
-                </h3>
-                <p class="text-sm  mb-3">
-                  <span class="font-medium">Objective:</span> Accelerate R&D timeline
-                </p>
-                <div class="flex items-center gap-3">
-                  <img src="" alt="InnovateX Logo" class="w-10 h-10 border-2 border-2 rounded-full flex-shrink-0">
-                  <div class="text-xs text-gray-600">
-                    InnovateX Product Launch
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Template Card 3 -->
-            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
-              <div class="w-full text-left">
-                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
-                  25% cost reduction in 3 months
-                </h3>
-                <p class="text-sm  mb-3">
-                  <span class="font-medium">Objective:</span> Reduce production waste
-                </p>
-                <div class="flex items-center gap-3">
-                  <img src="" alt="ManuTech Logo" class="w-10 h-10 border-2 border-2 rounded-full flex-shrink-0">
-                  <div class="text-xs text-gray-600">
-                    ManuTech Process Optimization
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Template Card 4 -->
-            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
-              <div class="w-full text-left">
-                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
-                  40% productivity boost
-                </h3>
-                <p class="text-sm  mb-3">
-                  <span class="font-medium">Objective:</span> Automate manual processes
-                </p>
-                <div class="flex items-center gap-3">
-                  <img src="" alt="SteelWorks Logo" class="w-10 h-10 border-2 border-2 rounded-full flex-shrink-0">
-                  <div class="text-xs text-gray-600">
-                    SteelWorks Automation
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Template Card 5 -->
-            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
-              <div class="w-full text-left">
-                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
-                  20% faster patient processing
-                </h3>
-                <p class="text-sm  mb-3">
-                  <span class="font-medium">Objective:</span> Improve patient throughput
-                </p>
-                <div class="flex items-center gap-3">
-                  <img src="" alt="HealthPlus Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
-                  <div class="text-xs text-gray-600">
-                    HealthPlus Workflow Redesign
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Template Card 6 -->
-            <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
-              <div class="w-full text-left">
-                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
-                  95% staff adoption in 2 months
-                </h3>
-                <p class="text-sm  mb-3">
-                  <span class="font-medium">Objective:</span> Transition to new systems
-                </p>
-                <div class="flex items-center gap-3">
-                  <img src="" alt="MediCare Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
-                  <div class="text-xs text-gray-600">
-                    MediCare Change Management
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-          </div>
-        </div>
-      
-        <!-- Right Arrow (Desktop only) -->
-        <button @click="scrollRight" class="hidden md:flex items-center justify-center ml-4 p-3 rounded-full z-10" aria-label="Scroll right through success stories">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
-  </div>
-</section>
+  </section>
 
-<section id="our-process" class="pb-24 px-6">
-  <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">
-        How does a clear path forward sound?
-      </h2>
-      <p class="mt-4 text-lg">
-        After 15 years turning chaos into clarity for companies like yours, we know how to cut through the noise. 
-      </p>
-      <div class="mt-12 flex flex-col items-center space-y-6">
-        <div class="mr-8 md:mr-24 relative p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg ">
-            <div class="w-full text-left">
-              <p class="text-blue-800 font-medium tracking-wider uppercase">Step 1</p>
-              <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Discovery & Analysis</h3>
-              <p class="mt-4 text-sm ">
-                  It seems like you're drowning in data but starving for answers. We dig deep into your business—challenges, goals, market—because we've learned over decades that real solutions start with real understanding.
-              </p>
-            </div>
+  <section id="success-stories" class="pb-24 px-6" x-data="carousel()" x-init="init()">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center">
+          <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">
+              Feel like you're stuck? They were too.
+          </h2>
+          <p class="mt-4 text-lg  ">
+              What if your breakthrough was just one step away?
+          </p>
         </div>
+        <!-- Carousel Section -->
+        <div class="relative mt-8 flex items-center">
+          <!-- Left Arrow (Desktop only) -->
+          <button @click="scrollLeft" class="hidden md:flex items-center justify-center mr-4 p-3 rounded-full z-10" aria-label="Scroll left through success stories">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
         
-        <svg class="h-16 mx-auto text-blue-500 md:h-20" viewBox="0 0 60 200">
-            <line x1="15" x2="15" y1="0" y2="200" stroke="currentColor" stroke-width="8" stroke-linecap="square"></line>
-        </svg>
-        <div class="ml-8 md:ml-24 relative p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg ">
-            <div class="w-full text-left">
-              <p class="text-blue-800 font-medium tracking-wider uppercase">Step 2</p>
-              <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Strategy Development</h3>
-              <p class="mt-4 text-sm ">
-                  It feels like every option's a gamble? With insights from Step 1, we craft a strategy that's worked for industry leaders—precise, practical, and built to tackle your inefficiencies head-on.
-              </p>
+          <!-- Carousel container -->
+          <div class="w-full md:overflow-x-auto no-scrollbar md:snap-x md:snap-mandatory md:scroll-smooth md:px-4 md:py-4 md:scroll-px-4" x-ref="carousel">
+            <div class="flex flex-col md:flex-row gap-4 md:gap-6 md:w-max">
+        
+              <!-- Template Card 1 -->
+              <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
+                <div class="w-full text-left">
+                  <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
+                    30% increase in operational efficiency
+                  </h3>
+                  <p class="text-sm  mb-3">
+                    <span class="font-medium">Objective:</span> Streamline legacy systems
+                  </p>
+                  <div class="flex items-center gap-3">
+                    <img src="" alt="TechCorp Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
+                    <div class="text-xs text-gray-600">
+                      TechCorp Digital Overhaul
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Template Card 2 -->
+              <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
+                <div class="w-full text-left">
+                  <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
+                    Product launched 6 months ahead
+                  </h3>
+                  <p class="text-sm  mb-3">
+                    <span class="font-medium">Objective:</span> Accelerate R&D timeline
+                  </p>
+                  <div class="flex items-center gap-3">
+                    <img src="" alt="InnovateX Logo" class="w-10 h-10 border-2 border-2 rounded-full flex-shrink-0">
+                    <div class="text-xs text-gray-600">
+                      InnovateX Product Launch
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Template Card 3 -->
+              <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
+                <div class="w-full text-left">
+                  <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
+                    25% cost reduction in 3 months
+                  </h3>
+                  <p class="text-sm  mb-3">
+                    <span class="font-medium">Objective:</span> Reduce production waste
+                  </p>
+                  <div class="flex items-center gap-3">
+                    <img src="" alt="ManuTech Logo" class="w-10 h-10 border-2 border-2 rounded-full flex-shrink-0">
+                    <div class="text-xs text-gray-600">
+                      ManuTech Process Optimization
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Template Card 4 -->
+              <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
+                <div class="w-full text-left">
+                  <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
+                    40% productivity boost
+                  </h3>
+                  <p class="text-sm  mb-3">
+                    <span class="font-medium">Objective:</span> Automate manual processes
+                  </p>
+                  <div class="flex items-center gap-3">
+                    <img src="" alt="SteelWorks Logo" class="w-10 h-10 border-2 border-2 rounded-full flex-shrink-0">
+                    <div class="text-xs text-gray-600">
+                      SteelWorks Automation
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Template Card 5 -->
+              <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
+                <div class="w-full text-left">
+                  <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
+                    20% faster patient processing
+                  </h3>
+                  <p class="text-sm  mb-3">
+                    <span class="font-medium">Objective:</span> Improve patient throughput
+                  </p>
+                  <div class="flex items-center gap-3">
+                    <img src="" alt="HealthPlus Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
+                    <div class="text-xs text-gray-600">
+                      HealthPlus Workflow Redesign
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Template Card 6 -->
+              <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
+                <div class="w-full text-left">
+                  <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
+                    95% staff adoption in 2 months
+                  </h3>
+                  <p class="text-sm  mb-3">
+                    <span class="font-medium">Objective:</span> Transition to new systems
+                  </p>
+                  <div class="flex items-center gap-3">
+                    <img src="" alt="MediCare Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
+                    <div class="text-xs text-gray-600">
+                      MediCare Change Management
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
             </div>
+          </div>
+        
+          <!-- Right Arrow (Desktop only) -->
+          <button @click="scrollRight" class="hidden md:flex items-center justify-center ml-4 p-3 rounded-full z-10" aria-label="Scroll right through success stories">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
-        <svg class="h-16 mx-auto text-blue-500 md:h-20" viewBox="0 0 60 200">
-            <line x1="15" x2="15" y1="0" y2="200" stroke="currentColor" stroke-width="8" stroke-linecap="square"></line>
-        </svg>
-        <div class="mr-8 md:mr-24 relative p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg ">
-            <div class="w-full text-left">
-              <p class="text-blue-800 font-medium tracking-wider uppercase">Step 3</p>
-              <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Implementation</h3>
-              <p class="mt-4 text-sm ">
-                  It looks like execution's where things stall. Our team rolls up our sleeves—drawing on years of hands-on success—to deliver results you can measure, not just promises.
-              </p>
-            </div>
-        </div>
-        <svg class="h-16 mx-auto text-blue-500 md:h-20" viewBox="0 0 60 200">
-            <line x1="15" x2="15" y1="0" y2="200" stroke="currentColor" stroke-width="8" stroke-linecap="square"></line>
-        </svg>
-        <div class="ml-8 md:ml-24 relative p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg ">
-            <div class="w-full text-left">
-              <p class="text-blue-800 font-medium tracking-wider uppercase">Step 4</p>
-              <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Evaluation & Optimization</h3>
-              <p class="mt-4 text-sm ">
-                  It seems like sustainability's the real worry. We've fine-tuned this step over countless projects—assessing, refining, and locking in gains so your success sticks.
-              </p>
-            </div>
-        </div>
-      </div>
-  </div>
-</section>
-
-<section id="pricing" class="section-generic py-16 px-4">
-  <div class="max-w-7xl mx-auto text-center mb-12">
-    <h2 class="text-4xl font-medium text-blue-800">Pricing That Works for You</h2>
-    <p class="mt-4 text-lg">No pressure. No hidden fees. Just a plan that grows with you.</p>
-  </div>
-
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-
-    <!-- Hobby Plan -->
-    <div class="relative rounded-2xl shadow-lg transform hover:scale-105 transition p-6">
-      <div class="text-center mb-6">
-        <div class="text-lg font-semibold">Hobby</div>
-        <div class="mt-2 text-4xl font-extrabold">
-          $0<span class="text-base font-medium">/month</span>
-        </div>
-        <div class="mt-1 text-sm">For individual hobbyists</div>
-      </div>
-      <a href="{{ "/learn/" | relLangURL }}" class="block text-center border border-blue-800 text-blue-800 font-semibold rounded-lg py-3 hover:bg-blue-800 hover:text-white transition">Learn For Free</a>
-      <ul class="space-y-4 mt-6">
-        <!-- Features... -->
-      </ul>
     </div>
+  </section>
 
-    <!-- Pro Plan with dynamic price update -->
-    <div x-data="{ editors: 5, pricePerEditor: 30 }" class="relative rounded-2xl shadow-lg transform hover:scale-105 transition p-6">
-      <div class="absolute -mt-4 right-6">
-        <span class="bg-orange-800 text-white uppercase text-xs font-semibold px-3 py-1 rounded-b-full">Popular</span>
-      </div>
-      <div class="text-center mb-6">
-        <div class="text-lg font-semibold">Pro</div>
-        <div class="mt-2 text-4xl font-extrabold">
-          $<span x-text="editors * pricePerEditor"></span><span class="text-base font-medium">/month</span>
-        </div>
-        <div class="mt-1 text-sm">For small teams and startups</div>
-      </div>
-      <a href="#" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg py-3 transition">Get Started</a>
-      <ul class="space-y-4 mt-6">
-        <li class="flex items-center space-x-3">
-          <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+  <section id="our-process" class="pb-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">
+          How does a clear path forward sound?
+        </h2>
+        <p class="mt-4 text-lg">
+          After 15 years turning chaos into clarity for companies like yours, we know how to cut through the noise. 
+        </p>
+        <div class="mt-12 flex flex-col items-center space-y-6">
+          <div class="mr-8 md:mr-24 relative p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg ">
+              <div class="w-full text-left">
+                <p class="text-blue-800 font-medium tracking-wider uppercase">Step 1</p>
+                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Discovery & Analysis</h3>
+                <p class="mt-4 text-sm ">
+                    It seems like you're drowning in data but starving for answers. We dig deep into your business—challenges, goals, market—because we've learned over decades that real solutions start with real understanding.
+                </p>
+              </div>
+          </div>
+          
+          <svg class="h-16 mx-auto text-blue-500 md:h-20" viewBox="0 0 60 200">
+              <line x1="15" x2="15" y1="0" y2="200" stroke="currentColor" stroke-width="8" stroke-linecap="square"></line>
           </svg>
-          <span class="text-sm">Everything in Hobby, plus</span>
-        </li>
-        <li class="flex items-center space-x-3">
-          <label for="editors" class="sr-only">Number of editors</label>
-          <select id="editors" x-model="editors"
-                  class="w-16 text-sm border border-gray-600 rounded focus:outline-none px-2 py-1 appearance-none">
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-          </select>
-          <span class="text-sm">editors</span>
-        </li>
-        <!-- Other features... -->
-      </ul>
-      
+          <div class="ml-8 md:ml-24 relative p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg ">
+              <div class="w-full text-left">
+                <p class="text-blue-800 font-medium tracking-wider uppercase">Step 2</p>
+                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Strategy Development</h3>
+                <p class="mt-4 text-sm ">
+                    It feels like every option's a gamble? With insights from Step 1, we craft a strategy that's worked for industry leaders—precise, practical, and built to tackle your inefficiencies head-on.
+                </p>
+              </div>
+          </div>
+          <svg class="h-16 mx-auto text-blue-500 md:h-20" viewBox="0 0 60 200">
+              <line x1="15" x2="15" y1="0" y2="200" stroke="currentColor" stroke-width="8" stroke-linecap="square"></line>
+          </svg>
+          <div class="mr-8 md:mr-24 relative p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg ">
+              <div class="w-full text-left">
+                <p class="text-blue-800 font-medium tracking-wider uppercase">Step 3</p>
+                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Implementation</h3>
+                <p class="mt-4 text-sm ">
+                    It looks like execution's where things stall. Our team rolls up our sleeves—drawing on years of hands-on success—to deliver results you can measure, not just promises.
+                </p>
+              </div>
+          </div>
+          <svg class="h-16 mx-auto text-blue-500 md:h-20" viewBox="0 0 60 200">
+              <line x1="15" x2="15" y1="0" y2="200" stroke="currentColor" stroke-width="8" stroke-linecap="square"></line>
+          </svg>
+          <div class="ml-8 md:ml-24 relative p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg ">
+              <div class="w-full text-left">
+                <p class="text-blue-800 font-medium tracking-wider uppercase">Step 4</p>
+                <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Evaluation & Optimization</h3>
+                <p class="mt-4 text-sm ">
+                    It seems like sustainability's the real worry. We've fine-tuned this step over countless projects—assessing, refining, and locking in gains so your success sticks.
+                </p>
+              </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="section-generic py-16 px-4">
+    <div class="max-w-7xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-medium text-blue-800">Pricing That Works for You</h2>
+      <p class="mt-4 text-lg">No pressure. No hidden fees. Just a plan that grows with you.</p>
     </div>
 
-    <!-- Enterprise Plan -->
-    <div class="relative rounded-2xl shadow-lg transform hover:scale-105 transition p-6">
-      <div class="text-center mb-6">
-        <div class="text-lg font-semibold">Enterprise</div>
-        <div class="mt-2 text-4xl font-extrabold">Custom Pricing</div>
-        <div class="mt-1 text-sm">For large organizations</div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+      <!-- Hobby Plan -->
+      <div class="relative rounded-2xl shadow-lg transform hover:scale-105 transition p-6">
+        <div class="text-center mb-6">
+          <div class="text-lg font-semibold">Hobby</div>
+          <div class="mt-2 text-4xl font-extrabold">
+            $0<span class="text-base font-medium">/month</span>
+          </div>
+          <div class="mt-1 text-sm">For individual hobbyists</div>
+        </div>
+        <a href="{{ "/learn/" | relLangURL }}" class="block text-center border border-blue-800 text-blue-800 font-semibold rounded-lg py-3 hover:bg-blue-800 hover:text-white transition">Learn For Free</a>
+        <ul class="space-y-4 mt-6">
+          <!-- Features... -->
+        </ul>
       </div>
-      <a href="https://cal.com" target="_blank" class="block text-center border border-blue-800 text-blue-800 font-semibold rounded-lg py-3 hover:bg-blue-800 hover:text-white transition">Let's Talk</a>
-      <ul class="space-y-4 mt-6">
-        <!-- Features... -->
-      </ul>
+
+      <!-- Pro Plan with dynamic price update -->
+      <div x-data="{ editors: 5, pricePerEditor: 30 }" class="relative rounded-2xl shadow-lg transform hover:scale-105 transition p-6">
+        <div class="absolute -mt-4 right-6">
+          <span class="bg-orange-800 text-white uppercase text-xs font-semibold px-3 py-1 rounded-b-full">Popular</span>
+        </div>
+        <div class="text-center mb-6">
+          <div class="text-lg font-semibold">Pro</div>
+          <div class="mt-2 text-4xl font-extrabold">
+            $<span x-text="editors * pricePerEditor"></span><span class="text-base font-medium">/month</span>
+          </div>
+          <div class="mt-1 text-sm">For small teams and startups</div>
+        </div>
+        <a href="#" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg py-3 transition">Get Started</a>
+        <ul class="space-y-4 mt-6">
+          <li class="flex items-center space-x-3">
+            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-sm">Everything in Hobby, plus</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <label for="editors" class="sr-only">Number of editors</label>
+            <select id="editors" x-model="editors"
+                    class="w-16 text-sm border border-gray-600 rounded focus:outline-none px-2 py-1 appearance-none">
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+            </select>
+            <span class="text-sm">editors</span>
+          </li>
+          <!-- Other features... -->
+        </ul>
+        
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="relative rounded-2xl shadow-lg transform hover:scale-105 transition p-6">
+        <div class="text-center mb-6">
+          <div class="text-lg font-semibold">Enterprise</div>
+          <div class="mt-2 text-4xl font-extrabold">Custom Pricing</div>
+          <div class="mt-1 text-sm">For large organizations</div>
+        </div>
+        <a href="https://cal.com" target="_blank" class="block text-center border border-blue-800 text-blue-800 font-semibold rounded-lg py-3 hover:bg-blue-800 hover:text-white transition">Let's Talk</a>
+        <ul class="space-y-4 mt-6">
+          <!-- Features... -->
+        </ul>
+      </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
-
-<section id="contact" class="py-20">
-  <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">{{ i18n "cta_heading" | default "Ready to stop guessing and start winning?" }}</h2>
-      <p class="text-xl mt-4 mb-10">{{ i18n "cta_subheading" | default "We hear you, it’s overwhelming. How about we figure this out in 15 minutes, no pressure?" }}</p>
-      <a href="https://tally.so/r/w4qe6b" target="_blank" class="inline-block px-8 py-4 bg-orange-800 text-white rounded-lg hover:bg-orange-900 transition-all pulse font-bold" aria-label="Book your free consultation call">{{ i18n "cta_button" | default "Let's Talk Free, No Commitment" }}</a>
-  </div>
-</section>
+  <section id="contact" class="py-20">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">{{ i18n "cta_heading" | default "Ready to stop guessing and start winning?" }}</h2>
+        <p class="text-xl mt-4 mb-10">{{ i18n "cta_subheading" | default "We hear you, it’s overwhelming. How about we figure this out in 15 minutes, no pressure?" }}</p>
+        <a href="https://tally.so/r/w4qe6b" target="_blank" class="inline-block px-8 py-4 bg-orange-800 text-white rounded-lg hover:bg-orange-900 transition-all pulse font-bold" aria-label="Book your free consultation call">{{ i18n "cta_button" | default "Let's Talk Free, No Commitment" }}</a>
+    </div>
+  </section>
+</div>
  
  {{- $copyright := (T "copyright") | default "© 2024 My Site." -}}
 <footer class="flex items-center gap-x-3 p-4 lg:p-6 text-xs text-muted-foreground">
