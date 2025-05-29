@@ -70,9 +70,7 @@
           </p>
         </div>
         
-        <!-- Carousel container -->
         <ul class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
-            <!-- Card 1 -->
             <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
               <div class="flex items-center gap-x-2">
                 <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,7 +81,6 @@
               <p class="mt-4 text-sm">Reduce waste and optimize processes to save time and resources.</p>
             </li>
       
-            <!-- Card 2 -->
             <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
               <div class="text-left">
                 <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,7 +91,6 @@
               </div>
             </li>
       
-            <!-- Card 3 -->
             <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
               <div class="text-left">
                 <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,7 +101,6 @@
               </div>
             </li>
       
-            <!-- Card 4 -->
             <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
               <div class="text-left">
                 <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -116,7 +111,6 @@
               </div>
             </li>
       
-            <!-- Card 5 -->
             <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
               <div class="text-left">
                 <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -127,7 +121,6 @@
               </div>
             </li>
       
-            <!-- Card 6 -->
             <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
               <div class="text-left">
                 <svg class="w-8 h-8 mb-4 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -141,148 +134,120 @@
 
   </section>
 
-  <section id="success-stories" class="pb-24 px-6" x-data="carousel()" x-init="init()">
-    <div class="max-w-6xl mx-auto">
-        <div class="text-center">
-          <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">
-              Feel like you're stuck? They were too.
-          </h2>
-          <p class="mt-4 text-lg  ">
-              What if your breakthrough was just one step away?
-          </p>
-        </div>
-        <!-- Carousel Section -->
-        <div class="relative mt-8 flex items-center">
-          <!-- Left Arrow (Desktop only) -->
-          <button @click="scrollLeft" class="hidden md:flex items-center justify-center mr-4 p-3 rounded-full z-10" aria-label="Scroll left through success stories">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-        
-          <!-- Carousel container -->
-          <div class="w-full md:overflow-x-auto no-scrollbar md:snap-x md:snap-mandatory md:scroll-smooth md:px-4 md:py-4 md:scroll-px-4" x-ref="carousel">
-            <div class="flex flex-col md:flex-row gap-4 md:gap-6 md:w-max">
-        
-              <!-- Template Card 1 -->
-              <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
-                <div class="w-full text-left">
-                  <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
-                    30% increase in operational efficiency
-                  </h3>
-                  <p class="text-sm  mb-3">
-                    <span class="font-medium">Objective:</span> Streamline legacy systems
-                  </p>
-                  <div class="flex items-center gap-3">
-                    <img src="" alt="TechCorp Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
-                    <div class="text-xs text-gray-600">
-                      TechCorp Digital Overhaul
-                    </div>
-                  </div>
-                </div>
+  <section id="success-stories" class="max-w-5xl mx-auto my-24 lg:my-28">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">
+            Feel like you're stuck? They were too.
+        </h2>
+        <p class="mt-4 text-lg  ">
+            What if your breakthrough was just one step away?
+        </p>
+      </div>
+      
+      <ul class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+      
+        <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
+          <div class="w-full text-left">
+            <div class="flex items-center gap-3 mb-2">
+              <img src="" alt="TechCorp Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
+              <div class="text-xs text-gray-600">
+                TechCorp Digital Overhaul
               </div>
-        
-              <!-- Template Card 2 -->
-              <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
-                <div class="w-full text-left">
-                  <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
-                    Product launched 6 months ahead
-                  </h3>
-                  <p class="text-sm  mb-3">
-                    <span class="font-medium">Objective:</span> Accelerate R&D timeline
-                  </p>
-                  <div class="flex items-center gap-3">
-                    <img src="" alt="InnovateX Logo" class="w-10 h-10 border-2 border-2 rounded-full flex-shrink-0">
-                    <div class="text-xs text-gray-600">
-                      InnovateX Product Launch
-                    </div>
-                  </div>
-                </div>
-              </div>
-        
-              <!-- Template Card 3 -->
-              <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
-                <div class="w-full text-left">
-                  <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
-                    25% cost reduction in 3 months
-                  </h3>
-                  <p class="text-sm  mb-3">
-                    <span class="font-medium">Objective:</span> Reduce production waste
-                  </p>
-                  <div class="flex items-center gap-3">
-                    <img src="" alt="ManuTech Logo" class="w-10 h-10 border-2 border-2 rounded-full flex-shrink-0">
-                    <div class="text-xs text-gray-600">
-                      ManuTech Process Optimization
-                    </div>
-                  </div>
-                </div>
-              </div>
-        
-              <!-- Template Card 4 -->
-              <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
-                <div class="w-full text-left">
-                  <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
-                    40% productivity boost
-                  </h3>
-                  <p class="text-sm  mb-3">
-                    <span class="font-medium">Objective:</span> Automate manual processes
-                  </p>
-                  <div class="flex items-center gap-3">
-                    <img src="" alt="SteelWorks Logo" class="w-10 h-10 border-2 border-2 rounded-full flex-shrink-0">
-                    <div class="text-xs text-gray-600">
-                      SteelWorks Automation
-                    </div>
-                  </div>
-                </div>
-              </div>
-        
-              <!-- Template Card 5 -->
-              <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
-                <div class="w-full text-left">
-                  <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
-                    20% faster patient processing
-                  </h3>
-                  <p class="text-sm  mb-3">
-                    <span class="font-medium">Objective:</span> Improve patient throughput
-                  </p>
-                  <div class="flex items-center gap-3">
-                    <img src="" alt="HealthPlus Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
-                    <div class="text-xs text-gray-600">
-                      HealthPlus Workflow Redesign
-                    </div>
-                  </div>
-                </div>
-              </div>
-        
-              <!-- Template Card 6 -->
-              <div class="flex-shrink-0 w-full md:min-w-[300px] md:max-w-[350px] snap-start p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg shadow-md overflow-hidden">
-                <div class="w-full text-left">
-                  <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-500 mb-4">
-                    95% staff adoption in 2 months
-                  </h3>
-                  <p class="text-sm  mb-3">
-                    <span class="font-medium">Objective:</span> Transition to new systems
-                  </p>
-                  <div class="flex items-center gap-3">
-                    <img src="" alt="MediCare Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
-                    <div class="text-xs text-gray-600">
-                      MediCare Change Management
-                    </div>
-                  </div>
-                </div>
-              </div>
-        
             </div>
+            <h3 class="text-sm mb-2">
+              <span class="font-medium">Objective:</span> Steamline legacy systems
+            </h3>
+            <p class="text-2xl font-semibold leading-snug tracking-tight text-blue-800 mb-4">
+              30% increase in operational efficiency
+            </p>
           </div>
-        
-          <!-- Right Arrow (Desktop only) -->
-          <button @click="scrollRight" class="hidden md:flex items-center justify-center ml-4 p-3 rounded-full z-10" aria-label="Scroll right through success stories">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
-    </div>
+        </li>
+
+        <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
+          <div class="w-full text-left">
+            <div class="flex items-center gap-3 mb-2">
+              <img src="" alt="TechCorp Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
+              <div class="text-xs text-gray-600">
+                TechCorp Digital Overhaul
+              </div>
+            </div>
+            <h3 class="text-sm mb-2">
+              <span class="font-medium">Objective:</span> Steamline legacy systems
+            </h3>
+            <p class="text-2xl font-semibold leading-snug tracking-tight text-blue-800 mb-4">
+              30% increase in operational efficiency
+            </p>
+          </div>
+        </li>
+  
+        <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
+          <div class="w-full text-left">
+            <div class="flex items-center gap-3 mb-2">
+              <img src="" alt="TechCorp Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
+              <div class="text-xs text-gray-600">
+                TechCorp Digital Overhaul
+              </div>
+            </div>
+            <h3 class="text-sm mb-2">
+              <span class="font-medium">Objective:</span> Steamline legacy systems
+            </h3>
+            <p class="text-2xl font-semibold leading-snug tracking-tight text-blue-800 mb-4">
+              30% increase in operational efficiency
+            </p>
+          </div>
+        </li>
+
+        <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
+          <div class="w-full text-left">
+            <div class="flex items-center gap-3 mb-2">
+              <img src="" alt="TechCorp Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
+              <div class="text-xs text-gray-600">
+                TechCorp Digital Overhaul
+              </div>
+            </div>
+            <h3 class="text-sm mb-2">
+              <span class="font-medium">Objective:</span> Steamline legacy systems
+            </h3>
+            <p class="text-2xl font-semibold leading-snug tracking-tight text-blue-800 mb-4">
+              30% increase in operational efficiency
+            </p>
+          </div>
+        </li>
+  
+        <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
+          <div class="w-full text-left">
+            <div class="flex items-center gap-3 mb-2">
+              <img src="" alt="TechCorp Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
+              <div class="text-xs text-gray-600">
+                TechCorp Digital Overhaul
+              </div>
+            </div>
+            <h3 class="text-sm mb-2">
+              <span class="font-medium">Objective:</span> Steamline legacy systems
+            </h3>
+            <p class="text-2xl font-semibold leading-snug tracking-tight text-blue-800 mb-4">
+              30% increase in operational efficiency
+            </p>
+          </div>
+        </li>
+  
+        <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
+          <div class="w-full text-left">
+            <div class="flex items-center gap-3 mb-2">
+              <img src="" alt="TechCorp Logo" class="w-10 h-10 border-2 rounded-full flex-shrink-0">
+              <div class="text-xs text-gray-600">
+                TechCorp Digital Overhaul
+              </div>
+            </div>
+            <h3 class="text-sm mb-2">
+              <span class="font-medium">Objective:</span> Steamline legacy systems
+            </h3>
+            <p class="text-2xl font-semibold leading-snug tracking-tight text-blue-800 mb-4">
+              30% increase in operational efficiency
+            </p>
+          </div>
+        </li>
+      </ul>
   </section>
 
   <section id="our-process" class="pb-24 px-6">
