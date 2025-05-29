@@ -339,6 +339,21 @@
   });
 </script>
 <script>
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('faqAccordion', () => ({
+      openItem: null,
+      
+      toggle(index) {
+        this.openItem = this.openItem === index ? null : index;
+      },
+      
+      isOpen(index) {
+        return this.openItem === index;
+      }
+    }));
+  });
+</script>
+<script>
     window.flashcardData = "{{ .Site.Data.flashcards | jsonify }}";
     function flashcardApp() {
         return {
