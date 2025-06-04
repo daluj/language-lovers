@@ -88,11 +88,11 @@ The 11 simple vowels are:
 #### Understanding the Three 'A' Vowels
 Vietnamese has three distinct 'a' sounds, each with a unique pronunciation:
 
-| Vowel | Pronunciation | Example Word | Meaning |
-|-------|---------------|--------------|---------|
-| a     | /a/           | An           | (Name)  |
-| ă     | /a/           | Ăn           | Eat     |
-| â     | /ə/           | Ân           | (Name)  |
+| Vowel | Pronunciation | Example Word |
+|-------|---------------|--------------|
+| a     | /a/           | An           |
+| ă     | /a/           | Ăn           |
+| â     | /ə/           | Ân           |
 
 ### Vowel Series
 The vowels are grouped into series based on their phonetic characteristics:
