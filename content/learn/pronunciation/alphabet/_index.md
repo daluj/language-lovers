@@ -110,6 +110,19 @@ The vowels are grouped into series based on their phonetic characteristics:
 
 Vietnamese consonants are divided into **simple** and **compound** consonants, with specific roles as initial or final sounds in syllables.
 
+In Vietnamese phonetics, certain consonants share similar sounds but differ in their spelling based on the vowels that follow them:
+- "c" and "k" both produce the same hard [k] sound.
+- "g" and "gh" both produce the same [g] sound.
+- "ng" and "ngh" both produce the nasal [n] sound (like the "ng" in "sing").
+
+However, their usage depends on the vowel that follows:
+- "k", "gh" and "ngh" are only used **before the front vowels: "i", "y", "e" and "ê"**
+    Example: khi, ghế, nghĩ
+- "c", "g" and "ng" are used **before all the other vowels: "a", "ă", "â", "o", "ô", "ơ", and "u"**
+    Example: cá, gà, ngô
+
+> **Note**: This rule helps maintain clarity in pronunciation and spelling, especially for learners navigating Vietnamese’s phonetic system.
+
 ### Simple Consonants
 There are **16 simple consonants**: b, d, đ, g, h, k, l, m, n, p, q, r, s, t, v, x.
 
