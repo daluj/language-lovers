@@ -140,7 +140,7 @@
 
   </section>
 
-  <section id="success-stories" class="max-w-5xl mx-auto my-24 lg:my-28">
+  <section id="success-stories" class="text-center mb-12 mt-12 lg:mb-12 lg:mt-16">
       <div class="text-center">
         <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">
             Feel like you're stuck? They were too.
@@ -149,169 +149,219 @@
             What if your breakthrough was just one step away?
         </p>
       </div>
-      
-      <ul class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 text-left">
-      
-        <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
-          <div class="w-full text-left">
-            <div class="flex items-center gap-3 mb-2">
-              {{ partial "image-optimized.html" (dict 
-                "src" "images/success-story1.jpg"
-                "alt" "Business Person with Suit"
-                "isLCP" true
-                "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
-              ) }}
+    <div class="mt-8 mx-auto overflow-hidden relative w-full max-w-[1200px]">
+      <div class="w-full flex animate-infinite-scroll">
+        <ul class="inline-flex gap-12">
+          <li class="w-[300px] flex-shrink-0 overflow-hidden mx-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <!-- Review Content -->
+              <div class="p-6">
+                  <div class="mb-6">
+                      <p class="text-gray-700 italic text-lg leading-relaxed">
+                          "BPC has completely transformed our online sales. We've seen a 300% increase in conversions since switching to their platform."
+                      </p>
+                  </div>
+              </div>
               
-              <div class="text-xs text-gray-600">
-                Thomas Hecher
+              <!-- Person Details -->
+              <div class="px-8 py-4 border-t border-gray-100">
+                  <div class="flex items-center space-x-4">
+                      {{ partial "image-optimized.html" (dict 
+                      "src" "images/success-story1.jpg"
+                      "alt" "Business Person with Suit"
+                      "isLCP" true
+                      "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
+                    ) }}
+                      <div>
+                          <h3 class="font-semibold">Thomas Hecher</h3>
+                      </div>
+                  </div>
               </div>
-            </div>
-            <h3 class="text-sm mb-2">
-              <span class="font-medium">Objective:</span> Learn Vietnamese in a fun, easy way.
-            </h3>
-            <ul class="space-y-2 mb-4">
-              <li class="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="font-semibold text-blue-800">Had fun learning words, sounds, and more with exciting lessons.</span>
-              </li>
-              <li class="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="font-semibold text-blue-800">Got help remembering words with simple stories about Vietnam.</span>
-              </li>
-              <li class="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="font-semibold text-blue-800">Felt happy with Tien’s kind teaching, going at my speed.</span>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
-          <div class="w-full text-left">
-            <div class="flex items-center gap-3 mb-2">
-              {{ partial "image-optimized.html" (dict 
-                "src" "images/success-story2.jpg"
-                "alt" "Business Person with Suit"
-                "isLCP" true
-                "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
-              ) }}
-              <div class="text-xs text-gray-600">
-                Brian Sweet
+          </li>
+          <li class="w-[300px] flex-shrink-0 overflow-hidden mx-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <!-- Review Content -->
+              <div class="p-6">
+                  <div class="mb-6">
+                      <p class="text-gray-700 italic text-lg leading-relaxed">
+                          "BPC has completely transformed our online sales. We've seen a 300% increase in conversions since switching to their platform."
+                      </p>
+                  </div>
               </div>
-            </div>
-            <h3 class="text-sm mb-2">
-              <span class="font-medium">Objective:</span> Have fun getting better at Vietnamese.
-            </h3>
-            <ul class="space-y-2 mb-4">
-              <li class="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="font-semibold text-blue-800">Loved weekly lessons that made learning fun and cool.</span>
-              </li>
-              <li class="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="font-semibold text-blue-800">Got better at reading, writing, talking, and listening.</span>
-              </li>
-              <li class="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="font-semibold text-blue-800">Always wanted to learn more with Tien’s fun teaching.</span>
-              </li>
-            </ul>
-          </div>
-        </li>
-  
-        <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
-          <div class="w-full text-left">
-            <div class="flex items-center gap-3 mb-2">
-              {{ partial "image-optimized.html" (dict 
-                "src" "images/success-story3.jpg"
-                "alt" "Business Person with Suit"
-                "isLCP" true
-                "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
-              ) }}
-              <div class="text-xs text-gray-600">
-                Robert Kiss
+              
+              <!-- Person Details -->
+              <div class="px-8 py-4 border-t border-gray-100">
+                  <div class="flex items-center space-x-4">
+                    {{ partial "image-optimized.html" (dict 
+                      "src" "images/success-story2.jpg"
+                      "alt" "Business Person with Suit"
+                      "isLCP" true
+                      "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
+                    ) }}
+              <div>
+                          <h3 class="font-semibold">Brian Sweet</h3>
+                      </div>
+                  </div>
               </div>
-            </div>
-            <h3 class="text-sm mb-2">
-              <span class="font-medium">Objective:</span> Learn Vietnamese with clear help.
-            </h3>
-            <ul class="space-y-2 mb-4">
-              <li class="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="font-semibold text-blue-800">Learned a lot about Vietnamese with Tien’s smart teaching.</span>
-              </li>
-              <li class="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="font-semibold text-blue-800">Felt good with her kind and patient help.</span>
-              </li>
-              <li class="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="font-semibold text-blue-800">Wanted to tell others about Tien’s great lessons.</span>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="rounded-lg bg-card text-card-foreground shadow-sm p-6 ring-1 ring-blue-700/50">
-          <div class="w-full text-left">
-            <div class="flex items-center gap-3 mb-2">
-              {{ partial "image-optimized.html" (dict 
-                "src" "images/success-story4.jpg"
-                "alt" "Business Person with Suit"
-                "isLCP" true
-                "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
-              ) }}
-              <div class="text-xs text-gray-600">
-                Ron Fluegel
+          </li>
+          <li class="w-[300px] flex-shrink-0 overflow-hidden mx-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <!-- Review Content -->
+              <div class="p-6">
+                  <div class="mb-6">
+                      <p class="text-gray-700 italic text-lg leading-relaxed">
+                          "BPC has completely transformed our online sales. We've seen a 300% increase in conversions since switching to their platform."
+                      </p>
+                  </div>
               </div>
-            </div>
-            <h3 class="text-sm mb-2">
-              <span class="font-medium">Objective:</span> Learn Vietnamese to help my business grow.
-            </h3>
-            <ul class="space-y-2 mb-4">
-              <li class="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="font-semibold text-blue-800">Talked easily with Vietnamese partners, making better deals.</span>
-              </li>
-              <li class="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="font-semibold text-blue-800">Felt confident in meetings with clear Vietnamese words.</span>
-              </li>
-              <li class="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="font-semibold text-blue-800">Helped my business do better by understanding local ways.</span>
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
+              
+              <!-- Person Details -->
+              <div class="px-8 py-4 border-t border-gray-100">
+                  <div class="flex items-center space-x-4">
+                    {{ partial "image-optimized.html" (dict 
+                      "src" "images/success-story3.jpg"
+                      "alt" "Business Person with Suit"
+                      "isLCP" true
+                      "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
+                    ) }}
+              <div>
+                          <h3 class="font-semibold">Robert Kiss</h3>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          <li class="w-[300px] flex-shrink-0 overflow-hidden mx-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <!-- Review Content -->
+              <div class="p-6">
+                  <div class="mb-6">
+                      <p class="text-gray-700 italic text-lg leading-relaxed">
+                          "BPC has completely transformed our online sales. We've seen a 300% increase in conversions since switching to their platform."
+                      </p>
+                  </div>
+              </div>
+              
+              <!-- Person Details -->
+              <div class="px-8 py-4 border-t border-gray-100">
+                  <div class="flex items-center space-x-4">
+                      {{ partial "image-optimized.html" (dict 
+                        "src" "images/success-story4.jpg"
+                        "alt" "Business Person with Suit"
+                        "isLCP" true
+                        "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
+                      ) }}
+              <div>
+                          <h3 class="font-semibold">Ron Fluegel</h3>
+                      </div>
+                  </div>
+              </div>
+          </li>
+        </ul>
+        <ul class="inline-flex gap-12">
+          <li class="w-[300px] flex-shrink-0 overflow-hidden mx-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <!-- Review Content -->
+              <div class="p-6">
+                  <div class="mb-6">
+                      <p class="text-gray-700 italic text-lg leading-relaxed">
+                          "BPC has completely transformed our online sales. We've seen a 300% increase in conversions since switching to their platform."
+                      </p>
+                  </div>
+              </div>
+              
+              <!-- Person Details -->
+              <div class="px-8 py-4 border-t border-gray-100">
+                  <div class="flex items-center space-x-4">
+                      {{ partial "image-optimized.html" (dict 
+                      "src" "images/success-story1.jpg"
+                      "alt" "Business Person with Suit"
+                      "isLCP" true
+                      "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
+                    ) }}
+                      <div>
+                          <h3 class="font-semibold">Thomas Hecher</h3>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          <li class="w-[300px] flex-shrink-0 overflow-hidden mx-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <!-- Review Content -->
+              <div class="p-6">
+                  <div class="mb-6">
+                      <p class="text-gray-700 italic text-lg leading-relaxed">
+                          "BPC has completely transformed our online sales. We've seen a 300% increase in conversions since switching to their platform."
+                      </p>
+                  </div>
+              </div>
+              
+              <!-- Person Details -->
+              <div class="px-8 py-4 border-t border-gray-100">
+                  <div class="flex items-center space-x-4">
+                    {{ partial "image-optimized.html" (dict 
+                      "src" "images/success-story2.jpg"
+                      "alt" "Business Person with Suit"
+                      "isLCP" true
+                      "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
+                    ) }}
+              <div>
+                          <h3 class="font-semibold">Brian Sweet</h3>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          <li class="w-[300px] flex-shrink-0 overflow-hidden mx-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <!-- Review Content -->
+              <div class="p-6">
+                  <div class="mb-6">
+                      <p class="text-gray-700 italic text-lg leading-relaxed">
+                          "BPC has completely transformed our online sales. We've seen a 300% increase in conversions since switching to their platform."
+                      </p>
+                  </div>
+              </div>
+              
+              <!-- Person Details -->
+              <div class="px-8 py-4 border-t border-gray-100">
+                  <div class="flex items-center space-x-4">
+                    {{ partial "image-optimized.html" (dict 
+                      "src" "images/success-story3.jpg"
+                      "alt" "Business Person with Suit"
+                      "isLCP" true
+                      "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
+                    ) }}
+              <div>
+                          <h3 class="font-semibold">Robert Kiss</h3>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          <li class="w-[300px] flex-shrink-0 overflow-hidden mx-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <!-- Review Content -->
+              <div class="p-6">
+                  <div class="mb-6">
+                      <p class="text-gray-700 italic text-lg leading-relaxed">
+                          "BPC has completely transformed our online sales. We've seen a 300% increase in conversions since switching to their platform."
+                      </p>
+                  </div>
+              </div>
+              
+              <!-- Person Details -->
+              <div class="px-8 py-4 border-t border-gray-100">
+                  <div class="flex items-center space-x-4">
+                      {{ partial "image-optimized.html" (dict 
+                        "src" "images/success-story4.jpg"
+                        "alt" "Business Person with Suit"
+                        "isLCP" true
+                        "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
+                      ) }}
+              <div>
+                          <h3 class="font-semibold">Ron Fluegel</h3>
+                      </div>
+                  </div>
+              </div>
+          </li>
+        </ul>
+      </div>
+      <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r "></div>
+      <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l "></div>
+    </div>
   </section>
 
-  <section id="our-process" class="pb-24 px-6">
+  <section id="our-process" class="px-6 my-24">
     <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">
           How does a clear path forward sound?
@@ -370,7 +420,7 @@
     </div>
   </section>
 
-  <section id="pricing" class="section-generic py-16 px-4">
+  <section id="pricing" class="section-generic px-4">
     <div class="max-w-7xl mx-auto text-center mb-12">
       <h2 class="text-4xl font-medium text-blue-800">Pricing That Works for You</h2>
       <p class="mt-4 text-lg">No pressure. No hidden fees. Just a plan that grows with you.</p>
@@ -518,14 +568,11 @@
   <span><a class="hover:text-primary" href="/about">{{ $copyright }}</a></span>
   <a class="hover:text-primary" href="/terms">Terms</a>
   <a class="hover:text-primary" href="/privacy">Privacy</a>
-  <a class="ml-auto hover:text-primary" href="https://github.com/" target="_blank">
-    <svg fill="currentColor" class="h-4 w-4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
-  </a>
-  <a class="hover:text-primary" href="https://discord.com" target="_blank">
-    <svg fill="currentColor" class="h-4 w-4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Discord</title><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"></path></svg>
-  </a>
-  <a class="hover:text-primary" href="https://x.com/" target="_blank">
-    <svg class="h-4 w-4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg>
+  <a class="ml-auto hover:text-primary" href="https://facebook.com/" target="_blank">
+    <svg fill="currentColor" class="h-4 w-4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <title>Facebook</title>
+      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+    </svg>
   </a>
   {{- if hugo.IsMultilingual -}}
     {{- partial "language-switch.html" (dict "context" .) -}}
