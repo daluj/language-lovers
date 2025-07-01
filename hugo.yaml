@@ -1,6 +1,6 @@
 # Configuration
 baseURL: "http://localhost:1313/"
-title: "V2L"
+title: "V2L - Vietnamese Language Lovers"
 timeout: "2m"
 enableRobotsTXT: true
 enableGitInfo: true
@@ -18,7 +18,6 @@ languages:
   en:
     languageName: English
     weight: 1
-    title: Learn
 
 module:
   hugoVersion:
