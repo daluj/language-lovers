@@ -11,6 +11,8 @@
           vowels: JSON.parse("{{ .Site.Data.soundSystem.vowels | jsonify }}"),
           
           consonants: JSON.parse("{{ .Site.Data.soundSystem.consonants | jsonify }}"),
+
+          compoundConsonants: JSON.parse("{{ .Site.Data.soundSystem.compoundConsonants | jsonify }}"),
           
           showVideo(letter) {
               this.currentVideo = letter.video;
