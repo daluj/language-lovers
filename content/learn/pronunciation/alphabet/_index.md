@@ -13,20 +13,18 @@ The Vietnamese alphabet is the foundation of the language, consisting of **29 le
 Click on any letter to see its pronunciation:
 
 <div x-data="vietnameseAlphabet" class="max-w-4xl mx-auto">
-    <div class="mb-8">
-        <div class="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-10 gap-3 p-6">
-            <template x-for="(letter, index) in alphabet" :key="index">
-                <div class="relative">
-                    <div 
-                        @click="showVideo(letter)"
-                        class="letter-cell cursor-pointer bg-white border-2 border-gray-200 rounded-lg h-16 flex items-center justify-center text-2xl font-bold text-gray-800 relative hover:border-blue-400 hover:bg-blue-50"
-                        :class="{'border-blue-500 bg-blue-50': currentVideo === letter.video}"
-                    >
-                        <span x-text="letter.character"></span>
-                    </div>
+    <div class="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-10 gap-3 p-6">
+        <template x-for="(letter, index) in alphabet" :key="index">
+            <div class="relative">
+                <div 
+                    @click="showVideo(letter)"
+                    class="letter-cell cursor-pointer bg-white border-2 border-gray-200 rounded-lg h-16 flex items-center justify-center text-2xl font-bold text-gray-800 relative hover:border-blue-400 hover:bg-blue-50"
+                    :class="{'border-blue-500 bg-blue-50': currentVideo === letter.video}"
+                >
+                    <span x-text="letter.character"></span>
                 </div>
-            </template>
-        </div>
+            </div>
+        </template>
     </div>
 
 <template x-if="currentVideo">
@@ -103,9 +101,9 @@ Vietnamese has three distinct 'a' sounds, each with a unique pronunciation:
 
 | Vowel | Pronunciation | Example Word |
 |-------|---------------|--------------|
-| a     | /a/           | An           |
-| ă     | /a/           | Ăn           |
-| â     | /ə/           | Ân           |
+| a     | <-------------------------------->  | An |
+| ă     | <----------------------->  | Ăn |
+| â     | <----------->  | Ân |
 
 ### Vowel Series
 The vowels are grouped into series based on their phonetic characteristics:
