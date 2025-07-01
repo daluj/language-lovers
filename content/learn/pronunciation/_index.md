@@ -1,5 +1,5 @@
 ---
-title: "The Sound System"
+title: "Step 1 - The Sound System"
 description: "Learn the phonetic system of vietnamese with practical tips, minimal pair exercises, and native speaker shadowing for perfect pronunciation."
 weight: 3
 tags: ["language learning", "pronunciation", "phonetics", "minimal pairs", "spaced repetition"]

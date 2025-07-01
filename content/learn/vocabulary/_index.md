@@ -1,6 +1,6 @@
 ---
-title: Vocabulary
-weight: 4
+title: Step 3 - Vocabulary
+weight: 5
 ---
 
 Building a robust vocabulary is the cornerstone of language fluency. This guide shows you how to learn the 625 most common words in your target language using image-based flashcards, spaced repetition systems (SRS), and mnemonic techniques. By focusing on visual, high-frequency words and contextual learning, you’ll retain vocabulary faster and more effectively.

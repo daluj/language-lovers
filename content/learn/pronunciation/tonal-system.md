@@ -1,6 +1,6 @@
 ---
 title: "Tonal System"
-weight: 6
+weight: 2
 gallery:
   - src: "thumbnail.jpg"
     title: "Word 1"
