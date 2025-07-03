@@ -1,5 +1,5 @@
 ---
-title: "Vietnamese for the Workplace"
+title: "Workplace Sentences"
 description: Vietnamese for the Workplace - Develop professional communication skills
 ---
 

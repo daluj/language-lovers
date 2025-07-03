@@ -1,5 +1,5 @@
 ---
-title: Practical Communication Skills
+title: Practical Sentences
 description: Practical communication skills for everyday situations
 ---
 

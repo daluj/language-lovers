@@ -1,0 +1,128 @@
+{
+    "planner": [
+        {
+            "id": 1,
+            "sender": "A",
+            "name": "Alice",
+            "description": "bartender",
+            "text": "Hey Bob, I'm thinking about planning a trip to San Diego for late April. Any thoughts?"
+        },
+        {
+            "id": 2,
+            "sender": "B",
+            "name": "Bob",
+            "description": "traveler",
+            "text": "That sounds awesome, Alice! April 24-29 could work. Maybe focus on seafood restaurants and some cultural sites?"
+        },
+        {
+            "id": 3,
+            "sender": "A",
+            "name": "Alice",
+            "description": "bartender",
+            "text": "Love that idea! Can you look into some good seafood spots? Oh, and maybe book a dinner at Peohe's for the 26th?"
+        }
+    ],
+    "phone": [
+        {
+            "id": 1,
+            "sender": "A",
+            "name": "Alice",
+            "description": "bartender",
+            "text": "Bob, can you call Peohe's for a reservation on the 26th? Party of 4, one of us has a shellfish allergy and another is vegetarian."
+        },
+        {
+            "id": 2,
+            "sender": "B",
+            "name": "Bob",
+            "description": "traveler",
+            "text": "Got it! I'll call Peohe's and request a window table too. Any other preferences?"
+        },
+        {
+            "id": 3,
+            "sender": "A",
+            "name": "Alice",
+            "description": "bartender",
+            "text": "Just make sure they know about the dietary restrictions. A window table would be perfect!"
+        }
+    ],
+    "video": [
+        {
+            "id": 1,
+            "sender": "A",
+            "name": "Alice",
+            "description": "bartender",
+            "text": "Bob, we should create a video montage of our San Diego trip. Maybe some clips of the cultural sites?"
+        },
+        {
+            "id": 2,
+            "sender": "B",
+            "name": "Bob",
+            "description": "traveler",
+            "text": "Great idea! I can start collecting some footage of Balboa Park and maybe the Gaslamp Quarter."
+        }
+    ],
+    "research": [
+        {
+            "id": 1,
+            "sender": "A",
+            "name": "Alice",
+            "description": "bartender",
+            "text": "Bob, can you research some historical sites in San Diego for our trip?"
+        },
+        {
+            "id": 2,
+            "sender": "B",
+            "name": "Bob",
+            "description": "traveler",
+            "text": "Sure thing! I'll look into the history of Old Town and the Cabrillo National Monument."
+        }
+    ],
+    "data": [
+        {
+            "id": 1,
+            "sender": "A",
+            "name": "Alice",
+            "description": "bartender",
+            "text": "Bob, can you analyze the best times to visit San Diego attractions based on crowd data?"
+        },
+        {
+            "id": 2,
+            "sender": "B",
+            "name": "Bob",
+            "description": "traveler",
+            "text": "On it! I'll check crowd patterns for April and suggest the best times to visit."
+        }
+    ],
+    "web": [
+        {
+            "id": 1,
+            "sender": "A",
+            "name": "Alice",
+            "description": "bartender",
+            "text": "Bob, let's create a webpage for our San Diego trip itinerary."
+        },
+        {
+            "id": 2,
+            "sender": "B",
+            "name": "Bob",
+            "description": "traveler",
+            "text": "Cool! I can set up a simple site with our plans and some photos."
+        }
+    ],
+    "content": [
+        {
+            "id": 1,
+            "sender": "A",
+            "name": "Alice",
+            "description": "bartender",
+            "text": "Bob, can you summarize our San Diego trip plan into a short report?"
+        },
+        {
+            "id": 2,
+            "sender": "B",
+            "name": "Bob",
+            "description": "traveler",
+            "text": "Sure, I'll put together a concise summary of our itinerary and key details."
+        }
+    ]
+}

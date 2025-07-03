@@ -1,5 +1,5 @@
 ---
-title: Quick Chats
+title: Common Sentences
 description: Example conversations in Vietnamese
 ---
 

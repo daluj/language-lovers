@@ -74,16 +74,15 @@ menu:
         type: separator
       weight: 1
     - identifier: flashcards
-      name: "Flashcards"
+      name: "Vocabulary Flashcards"
       pageRef: "/learn/tools/flashcards/"
-    - identifier: pronounciation
-      name: "Pronunciation"
+      weight: 2
     - identifier: fluency
       name: "Fluency Speaking Tool"
       pageRef: "/learn/tools/fluency/"
     - identifier: grammar
-      name: "Grammar"
-      url: "https://cal.com/"
+      name: "Quick Chats"
+      url: "/learn/tools/quick-chats/"
 
 taxonomies:
   tag: tags

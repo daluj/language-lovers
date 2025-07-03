@@ -113,3 +113,17 @@
 .demo-card:hover {
     transform: translateY(-4px);
 }
+
+.agent-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.selected-agent {
+    border-color: #4f46e5;
+    background-color: #f0f5ff;
+}
+.message-bubble {
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    max-width: 75%;
+}

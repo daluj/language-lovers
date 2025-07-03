@@ -538,3 +538,17 @@
         }
     }
 </script>
+<script>
+function chatApp() {
+    return {
+        selectedAgent: 'planner',
+        messages: JSON.parse("{{ .Site.Data.quickChats | jsonify }}"),
+        selectAgent(agent) {
+            this.selectedAgent = agent;
+        },
+        getAgentMessages() {
+            return this.messages[this.selectedAgent] || [];
+        }
+    };
+}
+</script>
