@@ -541,13 +541,60 @@
 <script>
 function chatApp() {
     return {
-        selectedAgent: 'planner',
         messages: JSON.parse("{{ .Site.Data.quickChats | jsonify }}"),
-        selectAgent(agent) {
-            this.selectedAgent = agent;
+        selectedCategory: '',
+        
+        init() {
+            // Set default category to the first message's category
+            if (this.messages && this.messages.length > 0) {
+                this.selectedCategory = this.messages[0].category;
+            }
+            
+            this.$nextTick(() => {
+                this.scrollToBottom();
+            });
         },
-        getAgentMessages() {
-            return this.messages[this.selectedAgent] || [];
+        
+        get categories() {
+            // Get unique categories from messages
+            const categories = new Set();
+            this.messages.forEach(msg => categories.add(msg.category));
+            return Array.from(categories);
+        },
+        
+        filteredMessages() {
+            // Filter messages by selected category
+            return this.messages.filter(msg => 
+                this.selectedCategory === '' || msg.category === this.selectedCategory
+            );
+        },
+        
+        selectCategory(category) {
+            this.selectedCategory = category;
+            this.$nextTick(() => {
+                this.scrollToBottom();
+            });
+        },
+        
+        scrollToBottom() {
+            if (this.$refs.messagesContainer) {
+                this.$refs.messagesContainer.scrollTop = this.$refs.messagesContainer.scrollHeight;
+            }
+        },
+        
+        formatTime(timestamp) {
+            const date = new Date(timestamp);
+            return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        },
+        
+        getCategoryEmoji(category) {
+            const emojis = {
+                'greeting': '👋',
+                'order': '🛒',
+                'delivery': '🚚',
+                'refund': '💸'
+            };
+            return emojis[category] || '❓';
         }
     };
 }
