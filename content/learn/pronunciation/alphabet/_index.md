@@ -101,9 +101,9 @@ Vietnamese has three distinct 'a' sounds, each with a unique pronunciation:
 
 | Vowel | Pronunciation | Example Word |
 |-------|---------------|--------------|
-| a     | <-------------------------------->  | An |
-| ă     | <----------------------->  | Ăn |
-| â     | <----------->  | Ân |
+| a     | ----------------------------------- | An |
+| ă     | -----------------------  | Ăn |
+| â     | --------------  | Ân |
 
 ### Vowel Series
 The vowels are grouped into series based on their phonetic characteristics:
