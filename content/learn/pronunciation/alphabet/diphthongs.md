@@ -11,6 +11,7 @@ gallery:
   - src: "thumbnail.jpg"
     title: "Word 3"
     video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+next: /learn/pronunciation/tonal-system
 ---
 
 This page demonstrates how to use the new image-video-grid shortcode. The shortcode displays a grid of images that, when clicked, open a modal with an embedded video.

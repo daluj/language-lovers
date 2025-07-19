@@ -1,4 +1,4 @@
 ---
-title: "Beginner"
+title: "Basic"
 weight: 1
 ---

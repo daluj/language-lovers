@@ -90,18 +90,6 @@ The Goldlist Method aligns with cognitive science:
 **Success Tip**: Write in a quiet, comfortable space to enhance focus and enjoyment.
 {{< /callout >}}
 
-## Infographic: Goldlist Method Workflow
-
-```mermaid
-graph TD
-    A[Create Headlist: 25 Words] --> B[Write & Read Aloud]
-    B --> C[Wait 2 Weeks]
-    C --> D[Distill: Keep ~17 Words]
-    D --> E[Create D1 List]
-    E --> F[Repeat Distillations]
-    F --> G[Start New Headlist]
-```
-
 ## Frequently Asked Questions
 
 - **How many lists should I create?** Start with 1–2 headlists per week, adjusting based on your pace.

@@ -2,6 +2,7 @@
 title: The Alphabet
 description: An overview of the Vietnamese alphabet, vowels, and consonants for learning Vietnamese.
 weight: 1
+next: /learn/pronunciation/alphabet/alphabet-pictures
 ---
 
 ## The Vietnamese Alphabet

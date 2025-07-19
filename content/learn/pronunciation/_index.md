@@ -3,6 +3,7 @@ title: "Step 1 - The Sound System"
 description: "Learn the phonetic system of vietnamese with practical tips, minimal pair exercises, and native speaker shadowing for perfect pronunciation."
 weight: 3
 tags: ["language learning", "pronunciation", "phonetics", "minimal pairs", "spaced repetition"]
+next: /learn/pronunciation/alphabet/
 ---
 
 Pronunciation is the foundation of language learning. By mastering the sound system first, you train your ears, mouth, and brain to recognize and produce the unique sounds of Vietnamese. This guide provides actionable steps to improve your pronunciation using minimal pairs, native speaker shadowing, and spaced repetition.
@@ -93,19 +94,3 @@ Don’t wait for perfection, start speaking immediately to build confidence and 
 - **Practice daily**: Consistency is key to building muscle memory for pronunciation.
 
 {{% /steps %}}
-
-## Your Pronunciation Roadmap
-
-```mermaid
-graph TD
-    A[Start with Phonemes] --> B[Practice Minimal Pairs]
-    B --> C[Mimic Native Speakers]
-    C --> D[Use Spaced Repetition]
-    D --> E[Speak Daily]
-    E --> F[Record & Compare]
-    F --> G[Refine with Feedback]
-```
-
-## Conclusion
-
-Mastering the sound system of Vietnamese sets the stage for fluent communication. By focusing on phonemes, minimal pairs, and native speaker shadowing, you’ll build a strong foundation for pronunciation. Start speaking from day one, use SRS for reinforcement.
