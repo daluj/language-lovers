@@ -78,7 +78,7 @@ menu:
       pageRef: "/learn/tools/flashcards/"
       weight: 2
     - identifier: fluency
-      name: "Fluency Speaking Tool"
+      name: "Speak Fluently"
       pageRef: "/learn/tools/fluency/"
     - identifier: grammar
       name: "Quick Chats"
