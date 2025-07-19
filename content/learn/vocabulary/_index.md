@@ -3,7 +3,7 @@ title: Step 3 - Vocabulary
 weight: 5
 ---
 
-Building a robust vocabulary is the cornerstone of language fluency. This guide shows you how to learn the 625 most common words in your target language using image-based flashcards, spaced repetition systems (SRS), and mnemonic techniques. By focusing on visual, high-frequency words and contextual learning, you’ll retain vocabulary faster and more effectively.
+Building a robust vocabulary is the cornerstone of language fluency. This guide shows you how to learn the 625 most common Vietnamese words using image-based flashcards, spaced repetition systems (SRS), and mnemonic techniques. By focusing on visual, high-frequency words and contextual learning, you’ll retain vocabulary faster and more effectively.
 
 ## Why Focus on Essential Vocabulary?
 
@@ -78,26 +78,3 @@ Make words memorable with vivid associations:
 Engage your passions to stay motivated:
 
 - Learn words tied to your interests.
-
-## Your Vocabulary Learning Roadmap
-
-```mermaid
-graph TD
-    A[Start with 625 Words] --> B[Create Image-Based Flashcards]
-    B --> C[Use Spaced Repetition]
-    C --> D[Learn in Sentences]
-    D --> E[Apply Mnemonics]
-    E --> F[Personalize & Gamify]
-```
-
-## Advanced Vocabulary
-
-Once you master the 625 words, expand with:
-
-- High-frequency words from sentence databases.
-- Words specific to your goals (e.g., travel or work terms).
-- Continue using SRS and contextual sentences.
-
-## Conclusion
-
-Vocabulary learning doesn’t have to be daunting. Whether you prefer the Goldlist Method or tech-driven spaced repetition, these techniques will help you build a strong foundation for fluency.
