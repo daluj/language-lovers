@@ -17,3 +17,5 @@ devbox.lock
 agent-ui/
 tmp/
 __pycache__/
+
+.vercel/
