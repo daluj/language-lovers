@@ -2,7 +2,11 @@
   Image Video Grid Shortcode
   
   Usage in content files:
-  {{< image-video-grid gallery="gallery_name" >}}
+  {{< image-video-grid gallery="gallery_name" columns="grid-cols-1 sm:grid-cols-2 md:grid-cols-4" >}}
+  
+  Parameters:
+  - gallery: Name of the gallery parameter in front matter (required)
+  - columns: Grid column classes for responsive layout (optional, defaults to "grid-cols-1 sm:grid-cols-2 md:grid-cols-3")
   
   Where gallery_name is a parameter in the front matter that contains
   an array of objects with the following structure:
@@ -17,10 +21,11 @@
 */}}
 
 {{- $galleryName := .Get "gallery" -}}
+{{- $columns := .Get "columns" | default "grid-cols-1 sm:grid-cols-2 md:grid-cols-3" -}}
 {{- $images := index .Page.Params $galleryName -}}
 
 <div class="container mx-auto px-4 py-8">
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+  <div class="grid {{ $columns }} gap-4">
     {{- range $index, $image := $images -}}
     <div x-data="{
         isOpen: false,

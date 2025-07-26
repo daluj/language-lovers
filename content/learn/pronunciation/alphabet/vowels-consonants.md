@@ -3,14 +3,31 @@ title: "Vowels with Consonants"
 description: Explore common Vietnamese syllables formed by combining vowels with final consonants.
 weight: 4
 gallery:
-  - src: "thumbnail.jpg"
-    title: "Word 1"
+  - src: "sound-system/vowels-consonants/vc_image_01.png"
     video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
-  - src: "thumbnail.jpg"
-    title: "Word 2"
+  - src: "sound-system/vowels-consonants/vc_image_02.png"
     video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
-  - src: "thumbnail.jpg"
-    title: "Word 3"
+  - src: "sound-system/vowels-consonants/vc_image_03.png"
+    video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  - src: "sound-system/vowels-consonants/vc_image_04.png"
+    video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  - src: "sound-system/vowels-consonants/vc_image_05.png"
+    video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  - src: "sound-system/vowels-consonants/vc_image_06.png"
+    video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  - src: "sound-system/vowels-consonants/vc_image_07.png"
+    video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  - src: "sound-system/vowels-consonants/vc_image_08.png"
+    video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  - src: "sound-system/vowels-consonants/vc_image_09.png"
+    video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  - src: "sound-system/vowels-consonants/vc_image_10.png"
+    video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  - src: "sound-system/vowels-consonants/vc_image_11.png"
+    video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  - src: "sound-system/vowels-consonants/vc_image_12.png"
+    video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  - src: "sound-system/vowels-consonants/vc_image_13.png"
     video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
 ---
 
@@ -51,4 +68,4 @@ When we combine the main vowels with final consonants, we get the following comm
 
 ## Common rhymes with pictures
 
-{{< image-video-grid gallery="gallery" >}}
+{{< image-video-grid gallery="gallery" columns="grid-cols-1 sm:grid-cols-1 md:grid-cols-1" >}}
