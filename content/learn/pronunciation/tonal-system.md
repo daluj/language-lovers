@@ -8,6 +8,9 @@ There are 6 tones in Standard Vietnamese. In the Southern dialect, the two tones
 
 Every word only has one tone and is located above (except 'dot tone' which is located below) the main vowel.
 
+{{< image src="images/sound-system/tones.png" alt="Tones System" widths="400 800 1200" quality="80" isLCP=true" >}}
+
+
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8 mt-8">
   <!-- 1. Ngang (Level) -->
   <div class="rounded-lg p-6 border">
@@ -94,7 +97,7 @@ Every word only has one tone and is located above (except 'dot tone' which is lo
   </div>
 </div>
 
-## Practice Examples
+## In Sentence
 
 Here are some example sentences showing how tones work in context:
 
