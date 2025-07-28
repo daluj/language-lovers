@@ -12,72 +12,84 @@ Every word only has one tone and is located above (except 'dot tone' which is lo
   <!-- 1. Ngang (Level) -->
   <div class="rounded-lg p-6 border">
     <h3 class="text-lg font-semibold text-blue-600 mb-4">1. Ngang (Flat Tone)</h3>
-    <div class=" rounded p-4 mb-4 h-24 flex items-center justify-center">
-      <svg width="200" height="60" viewBox="0 0 200 60" class="w-full h-full">
-        <line x1="20" y1="30" x2="180" y2="30" stroke="#4F46E5" stroke-width="3" stroke-linecap="round"/>
+    <div class="rounded p-4 mb-4 h-24 flex items-center justify-center">
+      <span class="text-6xl font-bold text-blue-600">a</span>
+    </div>
+    <div class="flex items-center justify-center mb-2">
+      <svg width="120" height="40" viewBox="0 0 120 40" class="w-full h-full">
+        <line x1="10" y1="20" x2="110" y2="20" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"/>
       </svg>
     </div>
-    <p class="text-sm text-gray-600 mb-2"><strong>Symbol:</strong> No mark (a)</p>
     <p class="text-sm text-gray-600"><strong>Description:</strong> This is a flat tone, no melody</p>
   </div>
 
   <!-- 2. Huyền (Falling) -->
   <div class="rounded-lg p-6 border">
     <h3 class="text-lg font-semibold text-blue-600 mb-4">2. Huyền (Down Tone)</h3>
-    <div class=" rounded p-4 mb-4 h-24 flex items-center justify-center">
-      <svg width="200" height="60" viewBox="0 0 200 60" class="w-full h-full">
-        <line x1="20" y1="20" x2="180" y2="40" stroke="#4F46E5" stroke-width="3" stroke-linecap="round"/>
+    <div class="rounded p-4 mb-4 h-24 flex items-center justify-center">
+      <span class="text-6xl font-bold text-blue-600">à</span>
+    </div>
+    <div class="flex items-center justify-center mb-2">
+      <svg width="120" height="40" viewBox="0 0 120 40" class="w-full h-full">
+        <line x1="10" y1="15" x2="110" y2="25" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"/>
       </svg>
     </div>
-    <p class="text-sm text-gray-600 mb-2"><strong>Symbol:</strong> Grave accent (à)</p>
     <p class="text-sm text-gray-600"><strong>Description:</strong> Start from flat and go down, straight down</p>
   </div>
 
   <!-- 3. Hỏi (Dipping-Rising) -->
   <div class="rounded-lg p-6 border">
     <h3 class="text-lg font-semibold text-blue-600 mb-4">3. Hỏi (Question Tone)</h3>
-    <div class=" rounded p-4 mb-4 h-24 flex items-center justify-center">
-      <svg width="200" height="60" viewBox="0 0 200 60" class="w-full h-full">
-        <path d="M20,25 Q80,35 120,20 Q160,15 180,25" stroke="#4F46E5" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <div class="rounded p-4 mb-4 h-24 flex items-center justify-center">
+      <span class="text-6xl font-bold text-blue-600">ả</span>
+    </div>
+    <div class="flex items-center justify-center mb-2">
+      <svg width="120" height="40" viewBox="0 0 120 40" class="w-full h-full">
+        <path d="M10,18 Q40,25 70,15 Q100,10 110,18" stroke="#4F46E5" stroke-width="2" fill="none" stroke-linecap="round"/>
       </svg>
     </div>
-    <p class="text-sm text-gray-600 mb-2"><strong>Symbol:</strong> Hook above (ả)</p>
     <p class="text-sm text-gray-600"><strong>Description:</strong> Your voice goes up like if you were asking a question</p>
   </div>
 
   <!-- 4. Ngã (Tumbling) -->
   <div class="rounded-lg p-6 border">
     <h3 class="text-lg font-semibold text-blue-600 mb-4">4. Ngã (Wave Tone)</h3>
-    <div class=" rounded p-4 mb-4 h-24 flex items-center justify-center">
-      <svg width="200" height="60" viewBox="0 0 200 60" class="w-full h-full">
-        <path d="M20,30 Q60,35 100,25 Q140,20 180,30" stroke="#4F46E5" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <div class="rounded p-4 mb-4 h-24 flex items-center justify-center">
+      <span class="text-6xl font-bold text-blue-600">ã</span>
+    </div>
+    <div class="flex items-center justify-center mb-2">
+      <svg width="120" height="40" viewBox="0 0 120 40" class="w-full h-full">
+        <path d="M10,20 Q35,25 60,18 Q85,15 110,20" stroke="#4F46E5" stroke-width="2" fill="none" stroke-linecap="round"/>
       </svg>
     </div>
-    <p class="text-sm text-gray-600 mb-2"><strong>Symbol:</strong> Tilde (ã)</p>
     <p class="text-sm text-gray-600"><strong>Description:</strong> Similar to question tone but there is a short break in between. In the south there is only 5 tones.</p>
   </div>
 
   <!-- 5. Sắc (High-Rising) -->
   <div class="rounded-lg p-6 border">
     <h3 class="text-lg font-semibold text-blue-600 mb-4">5. Sắc (Up Tone)</h3>
-    <div class=" rounded p-4 mb-4 h-24 flex items-center justify-center">
-      <svg width="200" height="60" viewBox="0 0 200 60" class="w-full h-full">
-        <line x1="20" y1="40" x2="180" y2="15" stroke="#4F46E5" stroke-width="3" stroke-linecap="round"/>
+    <div class="rounded p-4 mb-4 h-24 flex items-center justify-center">
+      <span class="text-6xl font-bold text-blue-600">á</span>
+    </div>
+    <div class="flex items-center justify-center mb-2">
+      <svg width="120" height="40" viewBox="0 0 120 40" class="w-full h-full">
+        <line x1="10" y1="25" x2="110" y2="12" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"/>
       </svg>
     </div>
-    <p class="text-sm text-gray-600 mb-2"><strong>Symbol:</strong> Acute accent (á)</p>
     <p class="text-sm text-gray-600"><strong>Description:</strong> Straight up, start from medium then go high but has a stop on the top</p>
   </div>
 
   <!-- 6. Nặng (Heavy) -->
   <div class="rounded-lg p-6 border">
     <h3 class="text-lg font-semibold text-blue-600 mb-4">6. Nặng (Dot Tone)</h3>
-    <div class=" rounded p-4 mb-4 h-24 flex items-center justify-center">
-      <svg width="200" height="60" viewBox="0 0 200 60" class="w-full h-full">
-        <path d="M20,20 L120,35 L180,20" stroke="#4F46E5" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <div class="rounded p-4 mb-4 h-24 flex items-center justify-center">
+      <span class="text-6xl font-bold text-blue-600">ạ</span>
+    </div>
+    <div class="flex items-center justify-center mb-2">
+      <svg width="120" height="40" viewBox="0 0 120 40" class="w-full h-full">
+        <path d="M10,15 L70,25 L110,15" stroke="#4F46E5" stroke-width="2" fill="none" stroke-linecap="round"/>
       </svg>
     </div>
-    <p class="text-sm text-gray-600 mb-2"><strong>Symbol:</strong> Dot below (ạ)</p>
     <p class="text-sm text-gray-600"><strong>Description:</strong> Strong, low. On the opposite direction of the question tone. On the way down</p>
   </div>
 </div>
