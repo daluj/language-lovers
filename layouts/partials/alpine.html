@@ -24,7 +24,25 @@
               this.currentLetter = null;
           }
       }));
+
+      Alpine.data('vietnameseDiphthongs', () => ({
+          selectedDiphthong: null,
+          showWords: false,
+          
+          diphthongs: JSON.parse("{{ .Site.Data.soundSystem.diphthongs | jsonify }}"),
+          
+          selectDiphthong(diphthong) {
+              this.selectedDiphthong = diphthong;
+              this.showWords = true;
+          },
+          
+          closeWords() {
+              this.selectedDiphthong = null;
+              this.showWords = false;
+          }
+      }));
   });
+</script>
 </script>
 <script>
   document.addEventListener('alpine:init', () => {

@@ -1,0 +1,97 @@
+[
+    {
+        "character": "iê-",
+        "words": [
+            {"word": "Tiền", "meaning": "money"},
+            {"word": "bao nhiêu", "meaning": "how much"},
+            {"word": "nhiều", "meaning": "alot/many"},
+            {"word": "chiều", "meaning": "evening"},
+            {"word": "triệu", "meaning": "millions"},
+            {"word": "hiểu", "meaning": "understand"},
+            {"word": "biết", "meaning": "know"},
+            {"word": "tiếng Việt", "meaning": "Vietnamese language"}
+        ]
+    },
+    {
+        "character": "yê-",
+        "words": [
+            {"word": "Yêu", "meaning": "to love for relationship/country/family"},
+            {"word": "Thích", "meaning": "to like"},
+            {"word": "Mê", "meaning": "be passionate about"},
+            {"word": "Yếu", "meaning": "weak"}
+        ]
+    },
+    {
+        "character": "-ia",
+        "words": [
+            {"word": "Bia", "meaning": "beer"},
+            {"word": "chia", "meaning": "divide"},
+            {"word": "mía", "meaning": "sugar cane"},
+            {"word": "kia", "meaning": "there"},
+            {"word": "thìa", "meaning": "spoon – northern word"},
+            {"word": "vỉa hè", "meaning": "pavement"},
+            {"word": "nĩa", "meaning": "fork"},
+            {"word": "dĩa", "meaning": "plate"}
+        ]
+    },
+    {
+        "character": "-ya",
+        "words": [
+            {"word": "Khuya", "meaning": "midnight"}
+        ]
+    },
+    {
+        "character": "ươ-",
+        "words": [
+            {"word": "Mười", "meaning": "10"},
+            {"word": "lười", "meaning": "lazy"},
+            {"word": "cười", "meaning": "smile"},
+            {"word": "đường", "meaning": "sugar or street"},
+            {"word": "phường", "meaning": "ward"},
+            {"word": "hướng", "meaning": "direction"},
+            {"word": "sườn", "meaning": "ribs"},
+            {"word": "lương", "meaning": "salary"},
+            {"word": "thương", "meaning": "more than 'like', less than 'love'"},
+            {"word": "trường", "meaning": "school"}
+        ]
+    },
+    {
+        "character": "ưa",
+        "words": [
+            {"word": "Mưa", "meaning": "rain"},
+            {"word": "hứa", "meaning": "promise"},
+            {"word": "trưa", "meaning": "afternoon -> ăn trưa (have lunch)"},
+            {"word": "bữa ăn", "meaning": "meal"},
+            {"word": "lừa", "meaning": "fool"},
+            {"word": "lửa", "meaning": "fire"},
+            {"word": "chưa", "meaning": "not yet"},
+            {"word": "dừa", "meaning": "coconut"},
+            {"word": "sửa", "meaning": "fix"},
+            {"word": "sữa", "meaning": "milk"}
+        ]
+    },
+    {
+        "character": "uô-",
+        "words": [
+            {"word": "Uống", "meaning": "drink"},
+            {"word": "muốn", "meaning": "want"},
+            {"word": "buồn", "meaning": "sad"},
+            {"word": "luôn", "meaning": "always"},
+            {"word": "rau muống", "meaning": "morning glory"},
+            {"word": "muối", "meaning": "salt"},
+            {"word": "muỗi", "meaning": "mosquito"},
+            {"word": "muỗng", "meaning": "spoon – southern word"}
+        ]
+    },
+    {
+        "character": "ua",
+        "words": [
+            {"word": "Mua", "meaning": "buy"},
+            {"word": "mùa", "meaning": "season"},
+            {"word": "chua", "meaning": "sour"},
+            {"word": "chùa", "meaning": "pagoda"},
+            {"word": "cua", "meaning": "crab"},
+            {"word": "của", "meaning": "of"}
+        ]
+    }
+]
