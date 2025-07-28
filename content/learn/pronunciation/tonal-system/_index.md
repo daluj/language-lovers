@@ -1,7 +1,7 @@
 ---
 title: "Tonal System"
-weight: 2
-next: /learn/pronunciation/word/
+weight: 1
+next: /learn/pronunciation/tonal-system/tone-integration-1/
 ---
 
 There are 6 tones in Standard Vietnamese. In the Southern dialect, the two tones “hỏi” and “ngã” are pronounced identically.
