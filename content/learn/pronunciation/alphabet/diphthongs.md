@@ -4,6 +4,8 @@ weight: 5
 next: /learn/pronunciation/tonal-system
 ---
 
+{{< image src="images/sound-system/diphthongs.png" alt="Tones System" widths="400 800 1200" quality="80" isLCP=true" >}}
+
 Click on any diphthong to see example words:
 
 <div x-data="vietnameseDiphthongs" class="max-w-4xl mx-auto">
