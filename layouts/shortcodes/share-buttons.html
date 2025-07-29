@@ -18,8 +18,4 @@
     {{- end -}}
 </div>
 
-<div x-data>
-  <button class="fixed bottom-4 right-6 flex items-center space-x-2 bg-orange-800 text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all pulse z-50 shadow-lg md:bottom-6 md:right-8 sm:bottom-2 sm:right-2" @click="window.open('https://tally.so/r/w4qe6b', '_blank')">
-    <span>Let's Talk</span>
-  </button>
-</div>
+{{ partial "lets-talk.html" . }}
