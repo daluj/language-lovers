@@ -77,17 +77,6 @@ Avoid translating, think directly in Vietnamese to build fluency:
 
 {{% /steps %}}
 
-## Your Vietnamese Learning Roadmap
-
-```mermaid
-graph TD
-    A[Adopt Positive Mindset] --> B[Immerse in Vietnamese]
-    B --> C[Set SMART Goals]
-    C --> D[Think in Vietnamese]
-    D --> E[Practice Daily]
-    E --> F[Track Progress]
-```
-
 ## Next Steps
 
 Ready to dive in? Start with our comprehensive guide to rapid language acquisition:
