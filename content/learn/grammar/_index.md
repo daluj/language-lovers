@@ -1,7 +1,7 @@
 ---
-title: Step 2 - Grammar Guide
+title: Step 3 - Grammar Guide
 description: Discover an engaging way to learn Vietnamese grammar using sentence-based learning, music, visual stories, and language chunking. Master high-frequency phrases, contextual sentences, and grammar patterns for effective language acquisition.
-weight: 4
+weight: 5
 ---
 
 By combining **sentence-based learning**, **rhythm and music**, **visual stories**, and **language chunking**, this method makes grammar fun, intuitive, and memorable. Whether you're a beginner or an advanced learner, this guide will help you learn grammar naturally through engaging, personalized content.
