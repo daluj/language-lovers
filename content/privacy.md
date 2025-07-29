@@ -1,6 +1,10 @@
 ---
 title: "Privacy Policy"
 description: "Privacy Policy for Vietnamese Language Learning Platform"
+sidebar:
+  exclude: true
+excludeSearch: true
+toc: false
 ---
 
 # Privacy Policy

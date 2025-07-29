@@ -1,11 +1,11 @@
 ---
 title: "Terms of Service"
 description: "Terms of Service for Vietnamese Language Learning Platform"
+sidebar:
+  exclude: true
+excludeSearch: true
+toc: false
 ---
-
-# Terms of Service
-
-*Last updated: December 2024*
 
 ## 1. Acceptance of Terms
 
