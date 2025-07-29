@@ -16,11 +16,11 @@ share_platforms:
 ---
 
 <div class="min-h-screen" x-data="chatApp()">
-<div class="flex flex-col h-full max-w-4xl mx-auto bg-white shadow-lg">
+<div class="flex flex-col h-full max-w-4xl mx-auto shadow-lg">
 <!-- Chat area -->
 <div class="flex-1 overflow-hidden flex flex-col">
     <!-- Participants info -->
-    <div class="bg-gray-50 p-3 border-b flex justify-between items-center">
+    <div class="p-3 border-b flex justify-between items-center">
         <div class="flex items-center space-x-3">
             <div class="relative">
                 <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">A</div>
@@ -75,16 +75,16 @@ share_platforms:
 </div>
 
 <!-- Categories selector (where message input would normally be) -->
-<div class="bg-gray-50 p-4 border-t">
+<div class="p-4 border-t">
     <div class="mb-2 text-sm font-medium text-gray-700">Filter by category:</div>
-    <div class="flex space-x-3 overflow-x-auto pb-2">
+    <div class="mt-2 flex space-x-3 overflow-x-auto pb-2">
         <template x-for="category in categories" :key="category">
             <div 
                 @click="selectCategory(category)"
                 :class="{
-                    'category-card active': selectedCategory === category,
-                    'category-card': selectedCategory !== category,
-                    'bg-white border border-gray-200 rounded-lg p-3 cursor-pointer flex-shrink-0': true
+                    'mt-2 category-card active': selectedCategory === category,
+                    'mt-2 category-card': selectedCategory !== category,
+                    'mt-2 border border-gray-200 rounded-lg p-3 cursor-pointer flex-shrink-0': true
                 }"
             >
                 <div class="flex items-center space-x-2">
