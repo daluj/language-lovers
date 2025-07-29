@@ -74,7 +74,7 @@ menu:
         type: separator
       weight: 1
     - identifier: flashcards
-      name: "Vocabulary Flashcards"
+      name: "Flashcards"
       pageRef: "/learn/tools/flashcards/"
       weight: 2
     - identifier: fluency
