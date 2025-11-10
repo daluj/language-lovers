@@ -6,16 +6,12 @@
         {{ i18n "hero_title" | default "Is it a bad idea to finally speak Vietnamese fluently?" }}
       </h1>
       <p class="text-muted-foreground md:text-lg">
-        {{ i18n "hero_subtitle" | default "In just 200 hours, master real-life conversations with our immersive, science-backed method, no textbooks or boring stuff." }}
+        {{ i18n "hero_subtitle" | default "In just 200 hours, master real-life conversations with our immersive method, no textbooks or boring stuff." }}
       </p>
     </div>
     
     <!-- CTAs -->
     <div class="mt-6 flex max-md:flex-col md:gap-x-4 max-md:gap-y-4 justify-center">
-      <a href="{{ "/learn/" | relLangURL }}"
-        class="px-6 py-3 border-2 border-blue-800 text-blue-800 rounded-lg hover:bg-blue-800 hover:text-white transition-all duration-300" aria-label="View documentation">
-        {{ i18n "view_docs" | default "Learn For Free" }}
-      </a>
       <a href="https://tally.so/r/w4qe6b" target="_blank"
         class="px-6 py-3 bg-orange-800 text-white rounded-lg hover:bg-orange-900 transition-all pulse" aria-label="Get started, contact us">
         {{ i18n "get_started" | default "Let's Talk Free, No Commitment" }}
@@ -79,7 +75,6 @@
               </svg>
             </div>
             <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Fun Travel</h3>
-            <p class="mt-4 text-sm">As a tourist, you want to learn simple Vietnamese words, so you can talk to people, find your way, and enjoy Vietnam.</p>
           </li>
 
           <!-- Foreigners Living in Vietnam User Story -->
@@ -90,7 +85,6 @@
               </svg>
             </div>
             <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Easy Living</h3>
-            <p class="mt-4 text-sm">As a foreigner in Vietnam, you want to speak Vietnamese, so you can make friends, do daily tasks, and feel at home.</p>
           </li>
 
           <!-- Business Professionals User Story -->
@@ -101,7 +95,6 @@
               </svg>
             </div>
             <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Business Success</h3>
-            <p class="mt-4 text-sm">As a business person, you want to learn Vietnamese for your company, so you can talk to partners and grow your business.</p>
           </li>
 
           <!-- Vietnamese Living Abroad User Story -->
@@ -112,7 +105,6 @@
               </svg>
             </div>
             <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Family Roots</h3>
-            <p class="mt-4 text-sm">As a Vietnamese living far away, you want to learn Vietnamese, so you can talk to family and feel closer to your culture.</p>
           </li>
 
           <!-- Vietnamese Spouse User Story -->
@@ -123,7 +115,6 @@
               </svg>
             </div>
             <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Family Love</h3>
-            <p class="mt-4 text-sm">As a partner of a Vietnamese person, you want to learn Vietnamese, so you can talk to their family and share their traditions.</p>
           </li>
 
           <!-- People Who Like Learning New Languages User Story -->
@@ -134,239 +125,9 @@
               </svg>
             </div>
             <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Language Fun</h3>
-            <p class="mt-4 text-sm">As a language lover, you want to learn Vietnamese, so you can have fun, meet new people, and enjoy a new culture.</p>
           </li>
       </ul>
 
-  </section>
-
-  <section id="success-stories" class="text-center mb-12 mt-12 lg:mb-12 lg:mt-16">
-      <div class="text-center">
-        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-blue-800">
-            Real People, Real Results, Just Like You.
-        </h2>
-        <p class="mt-4 text-lg  ">
-            What if your breakthrough was just one step away?
-        </p>
-      </div>
-    <div class="mt-8 mx-auto overflow-hidden relative w-full max-w-[1200px]">
-      <div class="w-full flex animate-infinite-scroll">
-        <ul class="inline-flex gap-12">
-          <li class="w-[300px] flex-shrink-0 overflow-hidden mx-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <!-- Review Content -->
-              <div class="p-6">
-                  <div class="mb-6">
-                      <p class="text-gray-700 italic text-lg leading-relaxed">
-                          "I went from zero Vietnamese to having my first real conversation with my wife's grandmother in just 8 weeks. The moment she smiled and said 'Cháu nói tiếng Việt giỏi quá!' changed everything."
-                      </p>
-                  </div>
-              </div>
-              
-              <!-- Person Details -->
-              <div class="px-8 py-4 border-t border-gray-100">
-                  <div class="flex items-center space-x-4">
-                      {{ partial "image-optimized.html" (dict 
-                      "src" "images/success-story1.jpg"
-                      "alt" "Thomas learning Vietnamese"
-                      "isLCP" true
-                      "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
-                    ) }}
-                      <div>
-                          <h3 class="font-semibold">Thomas H. - Germany</h3>
-                          <p class="text-xs text-gray-500">Married to Vietnamese wife</p>
-                      </div>
-                  </div>
-              </div>
-          </li>
-          <li class="w-[300px] flex-shrink-0 overflow-hidden mx-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <!-- Review Content -->
-              <div class="p-6">
-                  <div class="mb-6">
-                      <p class="text-gray-700 italic text-lg leading-relaxed">
-                          "Before this method, I wasted 2 years with apps and got nowhere. Now I'm closing business deals in Vietnamese after just 12 weeks. My revenue in Vietnam increased 340% this quarter."
-                      </p>
-                  </div>
-              </div>
-              
-              <!-- Person Details -->
-              <div class="px-8 py-4 border-t border-gray-100">
-                  <div class="flex items-center space-x-4">
-                    {{ partial "image-optimized.html" (dict 
-                      "src" "images/success-story2.jpg"
-                      "alt" "Brian doing business in Vietnam"
-                      "isLCP" true
-                      "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
-                    ) }}
-              <div>
-                          <h3 class="font-semibold">Brian S. - USA</h3>
-                          <p class="text-xs text-gray-500">Tech entrepreneur</p>
-                      </div>
-                  </div>
-              </div>
-          </li>
-          <li class="w-[300px] flex-shrink-0 overflow-hidden mx-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <!-- Review Content -->
-              <div class="p-6">
-                  <div class="mb-6">
-                      <p class="text-gray-700 italic text-lg leading-relaxed">
-                          "I almost gave up on Vietnamese after failing with 3 different tutors. This system made me conversational in 10 weeks. Now my Vietnamese colleagues invite me to family dinners—I'm not just a foreigner anymore."
-                      </p>
-                  </div>
-              </div>
-              
-              <!-- Person Details -->
-              <div class="px-8 py-4 border-t border-gray-100">
-                  <div class="flex items-center space-x-4">
-                    {{ partial "image-optimized.html" (dict 
-                      "src" "images/success-story3.jpg"
-                      "alt" "Robert with Vietnamese colleagues"
-                      "isLCP" true
-                      "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
-                    ) }}
-              <div>
-                          <h3 class="font-semibold">Robert K. - Australia</h3>
-                          <p class="text-xs text-gray-500">Expat in Ho Chi Minh City</p>
-                      </div>
-                  </div>
-              </div>
-          </li>
-          <li class="w-[300px] flex-shrink-0 overflow-hidden mx-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <!-- Review Content -->
-              <div class="p-6">
-                  <div class="mb-6">
-                      <p class="text-gray-700 italic text-lg leading-relaxed">
-                          "My daughter was embarrassed I couldn't speak to her Vietnamese friends' parents. After 6 weeks with this method, I surprised her at school pickup speaking fluent Vietnamese. She hugged me and said 'I'm so proud of you, Dad.'"
-                      </p>
-                  </div>
-              </div>
-              
-              <!-- Person Details -->
-              <div class="px-8 py-4 border-t border-gray-100">
-                  <div class="flex items-center space-x-4">
-                      {{ partial "image-optimized.html" (dict 
-                        "src" "images/success-story4.jpg"
-                        "alt" "Ron with his daughter"
-                        "isLCP" true
-                        "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
-                      ) }}
-              <div>
-                          <h3 class="font-semibold">Ron F. - Canada</h3>
-                          <p class="text-xs text-gray-500">Father of Vietnamese-Canadian daughter</p>
-                      </div>
-                  </div>
-              </div>
-          </li>
-        </ul>
-        <ul class="inline-flex gap-12">
-          <li class="w-[300px] flex-shrink-0 overflow-hidden mx-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <!-- Review Content -->
-              <div class="p-6">
-                  <div class="mb-6">
-                      <p class="text-gray-700 italic text-lg leading-relaxed">
-                          "I went from zero Vietnamese to having my first real conversation with my wife's grandmother in just 8 weeks. The moment she smiled and said 'Cháu nói tiếng Việt giỏi quá!' changed everything."
-                      </p>
-                  </div>
-              </div>
-              
-              <!-- Person Details -->
-              <div class="px-8 py-4 border-t border-gray-100">
-                  <div class="flex items-center space-x-4">
-                      {{ partial "image-optimized.html" (dict 
-                      "src" "images/success-story1.jpg"
-                      "alt" "Thomas learning Vietnamese"
-                      "isLCP" true
-                      "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
-                    ) }}
-                      <div>
-                          <h3 class="font-semibold">Thomas H. - Germany</h3>
-                          <p class="text-xs text-gray-500">Married to Vietnamese wife</p>
-                      </div>
-                  </div>
-              </div>
-          </li>
-          <li class="w-[300px] flex-shrink-0 overflow-hidden mx-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <!-- Review Content -->
-              <div class="p-6">
-                  <div class="mb-6">
-                      <p class="text-gray-700 italic text-lg leading-relaxed">
-                          "Before this method, I wasted 2 years with apps and got nowhere. Now I'm closing business deals in Vietnamese after just 12 weeks. My revenue in Vietnam increased 340% this quarter."
-                      </p>
-                  </div>
-              </div>
-              
-              <!-- Person Details -->
-              <div class="px-8 py-4 border-t border-gray-100">
-                  <div class="flex items-center space-x-4">
-                    {{ partial "image-optimized.html" (dict 
-                      "src" "images/success-story2.jpg"
-                      "alt" "Brian doing business in Vietnam"
-                      "isLCP" true
-                      "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
-                    ) }}
-              <div>
-                          <h3 class="font-semibold">Brian S. - USA</h3>
-                          <p class="text-xs text-gray-500">Tech entrepreneur</p>
-                      </div>
-                  </div>
-              </div>
-          </li>
-          <li class="w-[300px] flex-shrink-0 overflow-hidden mx-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <!-- Review Content -->
-              <div class="p-6">
-                  <div class="mb-6">
-                      <p class="text-gray-700 italic text-lg leading-relaxed">
-                          "I almost gave up on Vietnamese after failing with 3 different tutors. This system made me conversational in 10 weeks. Now my Vietnamese colleagues invite me to family dinners—I'm not just a foreigner anymore."
-                      </p>
-                  </div>
-              </div>
-              
-              <!-- Person Details -->
-              <div class="px-8 py-4 border-t border-gray-100">
-                  <div class="flex items-center space-x-4">
-                    {{ partial "image-optimized.html" (dict 
-                      "src" "images/success-story3.jpg"
-                      "alt" "Robert with Vietnamese colleagues"
-                      "isLCP" true
-                      "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
-                    ) }}
-              <div>
-                          <h3 class="font-semibold">Robert K. - Australia</h3>
-                          <p class="text-xs text-gray-500">Expat in Ho Chi Minh City</p>
-                      </div>
-                  </div>
-              </div>
-          </li>
-          <li class="w-[300px] flex-shrink-0 overflow-hidden mx-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <!-- Review Content -->
-              <div class="p-6">
-                  <div class="mb-6">
-                      <p class="text-gray-700 italic text-lg leading-relaxed">
-                          "My daughter was embarrassed I couldn't speak to her Vietnamese friends' parents. After 6 weeks with this method, I surprised her at school pickup speaking fluent Vietnamese. She hugged me and said 'I'm so proud of you, Dad.'"
-                      </p>
-                  </div>
-              </div>
-              
-              <!-- Person Details -->
-              <div class="px-8 py-4 border-t border-gray-100">
-                  <div class="flex items-center space-x-4">
-                      {{ partial "image-optimized.html" (dict 
-                        "src" "images/success-story4.jpg"
-                        "alt" "Ron with his daughter"
-                        "isLCP" true
-                        "class" "w-10 h-10 border-2 rounded-full flex-shrink-0"
-                      ) }}
-              <div>
-                          <h3 class="font-semibold">Ron F. - Canada</h3>
-                          <p class="text-xs text-gray-500">Father of Vietnamese-Canadian daughter</p>
-                      </div>
-                  </div>
-              </div>
-          </li>
-        </ul>
-      </div>
-      <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r "></div>
-      <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l "></div>
-    </div>
   </section>
 
   <section id="our-process" class="px-6 my-24">
@@ -381,9 +142,6 @@
           <div class="mr-8 md:mr-24 relative p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg ">
               <div class="w-full text-left">
                 <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Pronunciation first learning</h3>
-                <p class="mt-4 text-sm ">
-                    Master Vietnamese sounds from day one. We start with the foundation tones, vowels, and consonants, so you speak clearly and confidently from your very first conversation.
-                </p>
               </div>
           </div>
           
@@ -393,9 +151,6 @@
           <div class="ml-8 md:ml-24 relative p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg ">
               <div class="w-full text-left">
                 <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Real Memory Training</h3>
-                <p class="mt-4 text-sm ">
-                    Build lasting vocabulary through proven memory techniques. Our spaced repetition system and contextual learning help you remember words naturally, not through endless drilling.
-                </p>
               </div>
           </div>
           <svg class="h-16 mx-auto text-blue-500 md:h-20" viewBox="0 0 60 200">
@@ -404,9 +159,6 @@
           <div class="mr-8 md:mr-24 relative p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg ">
               <div class="w-full text-left">
                 <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Personalized Learning</h3>
-                <p class="mt-4 text-sm ">
-                    Your learning path adapts to your goals and pace. Whether you're preparing for travel, business, or family connections, we customize lessons to match your specific needs and interests.
-                </p>
               </div>
           </div>
           <svg class="h-16 mx-auto text-blue-500 md:h-20" viewBox="0 0 60 200">
@@ -415,9 +167,6 @@
           <div class="ml-8 md:ml-24 relative p-6 glass ring-1 dark:ring-blue-700/50 ring-blue-700/50 rounded-lg ">
               <div class="w-full text-left">
                 <h3 class="text-2xl font-semibold leading-snug tracking-tight text-blue-800">Real Conversation Practice</h3>
-                <p class="mt-4 text-sm ">
-                    Practice speaking in real-world scenarios that matter to you. From ordering food to business meetings, you'll gain confidence through structured conversations with native speakers.
-                </p>
               </div>
           </div>
         </div>
@@ -445,7 +194,7 @@
     </div>
 
     <!-- Pricing Cards Grid -->
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 mb-12">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 mb-12">
       
       <!-- Slow and Steady Plan -->
       <div class="relative rounded-2xl border-2 border-green-200 shadow-lg p-6 hover:shadow-xl transition-all duration-300">
@@ -524,92 +273,6 @@
 
         <!-- CTA Button -->
         <a href="https://tally.so/r/w4qe6b" target="_blank" class="block w-full text-center border-2 border-blue-800 text-blue-800 font-semibold rounded-lg py-3 hover:bg-blue-800 hover:text-white transition-all duration-300">
-          Get Started
-        </a>
-      </div>
-
-      <!-- Fire Up Plan (Popular) -->
-      <div class="relative rounded-2xl border-2 border-orange-400 shadow-xl p-6 hover:shadow-2xl transition-all duration-300 transform scale-105">
-        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span class="bg-orange-800 text-white text-xs font-semibold px-4 py-1 rounded-full">Fire Up</span>
-        </div>
-        
-        <!-- Popular Badge -->
-        <div class="absolute -top-2 -right-2">
-          <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full transform rotate-12">POPULAR</span>
-        </div>
-        
-        <!-- Icon and Title -->
-        <div class="text-center mt-4 mb-6">
-          <div class="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">
-            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-            </svg>
-          </div>
-          <h4 class="text-xl font-semibold text-blue-800">Twice Weekly</h4>
-        </div>
-
-        <!-- Features Table -->
-        <div class="space-y-4 mb-6">
-          <div class="flex items-center justify-between py-2 border-b border-gray-100">
-            <div class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-              <span class="text-sm text-gray-600">Session Duration</span>
-            </div>
-            <span class="text-sm font-medium">20 mins</span>
-          </div>
-          
-          <div class="flex items-center justify-between py-2 border-b border-gray-100">
-            <div class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-              </svg>
-              <span class="text-sm text-gray-600">Frequency</span>
-            </div>
-            <span class="text-sm font-medium">2x / week</span>
-          </div>
-          
-          <div class="flex items-center justify-between py-2 border-b border-gray-100">
-            <div class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-2-2V10a2 2 0 012-2h8z"></path>
-              </svg>
-              <span class="text-sm text-gray-600">One-on-One Coaching</span>
-            </div>
-            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          
-          <div class="flex items-center justify-between py-2 border-b border-gray-100">
-            <div class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-              </svg>
-              <span class="text-sm text-gray-600">Personalized Curriculum</span>
-            </div>
-            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-        </div>
-
-        <!-- Price -->
-        <div class="text-center mb-6">
-          <div class="text-sm text-gray-500 mb-1">PRICE¹</div>
-          <div class="text-4xl font-bold text-blue-800 mb-2">$185</div>
-          <div class="flex items-center justify-center gap-2 text-sm text-gray-500">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-            <span>Charged Monthly</span>
-          </div>
-        </div>
-
-        <!-- CTA Button -->
-        <a href="https://tally.so/r/w4qe6b" target="_blank" class="block w-full text-center bg-orange-800 text-white font-semibold rounded-lg py-3 hover:bg-orange-900 transition-all duration-300">
           Get Started
         </a>
       </div>
@@ -866,19 +529,13 @@
   </section>
 </div>
  
- {{- $copyright := (T "copyright") | default "© 2024 V2L." -}}
+ {{- $year := (now.Format "2006") -}}
+ {{- $copyright := (T "copyright" (dict "Year" $year)) | default (printf "© %s V2L." $year) -}}
 <footer class="flex items-center gap-x-3 p-4 lg:p-6 text-xs text-muted-foreground">
   <span><a class="hover:text-primary" href="/about">{{ $copyright }}</a></span>
   <a class="hover:text-primary" href="/terms">Terms</a>
   <a class="hover:text-primary" href="/privacy">Privacy</a>
-  <a class="ml-auto hover:text-primary" href="https://facebook.com/" target="_blank">
-    <svg fill="currentColor" class="h-4 w-4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <title>Facebook</title>
-      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
-    </svg>
-  </a>
   {{- if hugo.IsMultilingual -}}
     {{- partial "language-switch.html" (dict "context" .) -}}
   {{- end -}}
-  {{ partial "theme-toggle.html" }}
 </footer>
