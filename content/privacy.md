@@ -162,15 +162,10 @@ In the event of a merger, acquisition, or sale, your information may be transfer
 ## 8. Cookies and Tracking
 
 ### 8.1 Types of Cookies
-- **Essential cookies:** Required for platform functionality
-- **Analytics cookies:** Help us understand usage patterns
-- **Preference cookies:** Remember your settings and choices
-- **Marketing cookies:** Deliver relevant advertisements (with consent)
+- **Essential cookies only:** We use strictly necessary cookies required for core platform functionality (e.g., authentication, session management, security). We do not use analytics, preference, or marketing cookies.
 
 ### 8.2 Cookie Management
-- Configure cookie preferences in your browser
-- Opt out of non-essential cookies through our settings
-- Use browser extensions to block tracking
+- You can manage or block cookies via your browser settings. Blocking essential cookies may impact core functionality (e.g., login, session persistence).
 
 ## 9. Cross-Border Data Transfers
 
