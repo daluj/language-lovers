@@ -1,5 +1,5 @@
 # Configuration
-baseURL: "http://localhost:1313/"
+baseURL: "https://language-lovers.pages.dev"
 title: "BEST Vietnamese Teacher Ho Chi Minh | If you’re looking for vietnamese teacher services hope V2L is the place to be"
 timeout: "2m"
 enableRobotsTXT: true
@@ -89,9 +89,8 @@ taxonomies:
   category: categories
 
 params:
-
   navbar:
-    displayTitle: true
+    displayTitle: false
     displayLogo: true
 
   page:

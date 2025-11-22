@@ -34,9 +34,9 @@ Our platform provides Vietnamese language learning services including:
 ## 4. Payment and Billing
 
 ### 4.1 Subscription Plans
-- All prices are listed in USD and charged monthly unless otherwise specified
+- All prices are listed in VND (₫) and charged monthly unless otherwise specified
 - Payment is due in advance for each billing cycle
-- We accept major credit cards and PayPal
+- We accept major international cards and local payment methods (bank transfer, domestic cards, e-wallets)
 
 ### 4.2 Refund Policy
 - 7-day money-back guarantee for new subscribers
@@ -75,7 +75,7 @@ Our platform provides Vietnamese language learning services including:
 
 - Your privacy is important to us
 - Please review our Privacy Policy for detailed information about data collection and use
-- We comply with applicable data protection regulations including GDPR
+- We comply with Vietnam’s Personal Data Protection regulations (Decree 13/2023/ND-CP) and other applicable laws; where relevant, we align with international standards such as GDPR
 
 ## 8. Prohibited Uses
 
@@ -118,8 +118,8 @@ You may not use our service to:
 ## 12. Dispute Resolution
 
 ### 12.1 Governing Law
-- These terms are governed by the laws of [Your Jurisdiction]
-- Any disputes will be resolved in the courts of [Your Jurisdiction]
+- These terms are governed by the laws of the Socialist Republic of Vietnam
+- Any disputes will be resolved in the competent courts of Ho Chi Minh City, Vietnam
 
 ### 12.2 Arbitration
 - For disputes under $10,000, binding arbitration may be required
@@ -136,8 +136,8 @@ You may not use our service to:
 For questions about these Terms of Service, please contact us at:
 
 **Email:** legal@vietnameselanguagelearning.com  
-**Address:** [Your Business Address]  
-**Phone:** [Your Phone Number]
+**Address:** Ho Chi Minh City, Vietnam  
+**Phone:** +84 [Your Phone Number]
 
 ---
 

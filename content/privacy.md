@@ -172,12 +172,12 @@ In the event of a merger, acquisition, or sale, your information may be transfer
 - Opt out of non-essential cookies through our settings
 - Use browser extensions to block tracking
 
-## 9. International Data Transfers
+## 9. Cross-Border Data Transfers
 
-- Data may be processed in countries outside your residence
-- We ensure adequate protection through appropriate safeguards
-- Standard contractual clauses used for international transfers
-- Compliance with applicable data protection laws
+- Data may be processed in countries outside Vietnam when necessary for service provision (e.g., cloud hosting)
+- We ensure adequate protection through appropriate safeguards and contractual commitments
+- Where applicable, we implement standard contractual clauses and conduct transfer impact assessments
+- Compliance with Vietnam’s Personal Data Protection regulations and other applicable data protection laws
 
 ## 10. Children's Privacy
 
@@ -208,30 +208,29 @@ In the event of a merger, acquisition, or sale, your information may be transfer
 - Previous versions available upon request
 - Summary of changes provided with updates
 
-## 13. Regional Privacy Rights
+## 13. Vietnam Privacy Rights
 
-### 13.1 GDPR (European Union)
-- Enhanced rights for EU residents
-- Legal basis for data processing clearly defined
-- Data Protection Officer contact available
+### 13.1 Consent and Processing Principles
+- We obtain explicit consent where required under Decree 13/2023/ND-CP
+- Processing adheres to principles of purpose limitation, data minimization, and security
 
-### 13.2 CCPA (California)
-- Additional rights for California residents
-- Right to know about personal information collection
-- Right to opt out of sale of personal information
+### 13.2 Data Subject Rights
+- Right to be informed about processing activities
+- Right to access, correct, delete, and request cessation of processing
+- Right to withdraw consent without affecting prior lawful processing
 
-### 13.3 Other Jurisdictions
-- Compliance with local privacy laws
-- Additional rights as required by applicable regulations
+### 13.3 Local Compliance
+- We maintain records of processing activities and implement risk mitigation measures
+- We appoint a contact responsible for personal data protection compliance in Vietnam
 
 ## 14. Contact Information
 
 For privacy-related questions or to exercise your rights, contact us:
 
 **Privacy Officer:** privacy@vietnameselanguagelearning.com  
-**Data Protection Officer:** dpo@vietnameselanguagelearning.com  
-**Mailing Address:** [Your Business Address]  
-**Phone:** [Your Phone Number]
+**Data Protection Contact (Vietnam):** dpo@vietnameselanguagelearning.com  
+**Mailing Address:** Ho Chi Minh City, Vietnam  
+**Phone:** +84 [Your Phone Number]
 
 ### Response Times
 - General inquiries: 2-3 business days
