@@ -9,11 +9,11 @@ toc: false
 
 # Privacy Policy
 
-*Last updated: December 2024*
-
 ## 1. Introduction
 
 We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, store, and protect your data when you use our Vietnamese language learning platform and coaching services.
+
+This website and services are owned and operated by DAVID LUENGO JUAREZ LLC.
 
 ## 2. Information We Collect
 
@@ -174,10 +174,10 @@ In the event of a merger, acquisition, or sale, your information may be transfer
 
 ## 9. Cross-Border Data Transfers
 
-- Data may be processed in countries outside Vietnam when necessary for service provision (e.g., cloud hosting)
+- Data may be processed in countries outside the United States when necessary for service provision (e.g., cloud hosting)
 - We ensure adequate protection through appropriate safeguards and contractual commitments
 - Where applicable, we implement standard contractual clauses and conduct transfer impact assessments
-- Compliance with Vietnam’s Personal Data Protection regulations and other applicable data protection laws
+- Compliance with applicable U.S. laws and other relevant data protection regulations
 
 ## 10. Children's Privacy
 
@@ -208,35 +208,30 @@ In the event of a merger, acquisition, or sale, your information may be transfer
 - Previous versions available upon request
 - Summary of changes provided with updates
 
-## 13. Vietnam Privacy Rights
+## 13. U.S. Privacy Rights
 
-### 13.1 Consent and Processing Principles
-- We obtain explicit consent where required under Decree 13/2023/ND-CP
-- Processing adheres to principles of purpose limitation, data minimization, and security
+### 13.1 Federal and State Framework
+- We follow applicable federal laws and honor state-specific privacy requirements (including Wyoming law). For residents of certain states (e.g., California), additional rights may apply.
 
 ### 13.2 Data Subject Rights
-- Right to be informed about processing activities
-- Right to access, correct, delete, and request cessation of processing
+- Right to access, correct, delete, and request cessation of processing where applicable
+- Right to opt out of certain data uses (e.g., targeted advertising) where required
 - Right to withdraw consent without affecting prior lawful processing
 
-### 13.3 Local Compliance
-- We maintain records of processing activities and implement risk mitigation measures
-- We appoint a contact responsible for personal data protection compliance in Vietnam
+### 13.3 Additional Protections
+- We provide clear notice of data practices and honor valid consumer requests within required timeframes
 
 ## 14. Contact Information
 
 For privacy-related questions or to exercise your rights, contact us:
 
-**Privacy Officer:** privacy@vietnameselanguagelearning.com  
-**Data Protection Contact (Vietnam):** dpo@vietnameselanguagelearning.com  
-**Mailing Address:** Ho Chi Minh City, Vietnam  
-**Phone:** +84 [Your Phone Number]
+**Company:** DAVID LUENGO JUAREZ LLC  
+**Privacy Officer:** privacy@davidluengojuarez.com  
+**Data Protection Contact (U.S.):** dpo@davidluengojuarez.com  
+**Mailing Address:** 30 N Gould St Ste R Sheridan, 82801 Wyoming, United States  
+**Phone:** +1 (307) 2883104
 
 ### Response Times
 - General inquiries: 2-3 business days
 - Data access requests: 30 days
 - Urgent privacy concerns: 24 hours
-
----
-
-*This Privacy Policy is effective as of the last updated date above and supersedes all previous versions. We are committed to protecting your privacy and will continue to update our practices to reflect the highest standards of data protection.*

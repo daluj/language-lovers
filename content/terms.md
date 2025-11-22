@@ -11,12 +11,13 @@ toc: false
 
 By accessing and using our Vietnamese language learning platform and coaching services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.
 
+This website and services are owned and operated by DAVID LUENGO JUAREZ LLC.
+
 ## 2. Service Description
 
 Our platform provides Vietnamese language learning services including:
 - Online coaching sessions with native speakers
 - Personalized curriculum and learning materials
-- Mobile app access for practice and exercises
 - Group learning opportunities
 - Corporate training programs
 
@@ -34,7 +35,7 @@ Our platform provides Vietnamese language learning services including:
 ## 4. Payment and Billing
 
 ### 4.1 Subscription Plans
-- All prices are listed in VND (₫) and charged monthly unless otherwise specified
+- All prices are listed in USD ($) and charged monthly unless otherwise specified
 - Payment is due in advance for each billing cycle
 - We accept major international cards and local payment methods (bank transfer, domestic cards, e-wallets)
 
@@ -75,7 +76,7 @@ Our platform provides Vietnamese language learning services including:
 
 - Your privacy is important to us
 - Please review our Privacy Policy for detailed information about data collection and use
-- We comply with Vietnam’s Personal Data Protection regulations (Decree 13/2023/ND-CP) and other applicable laws; where relevant, we align with international standards such as GDPR
+- We comply with applicable U.S. data protection laws and, where relevant, align with international standards such as GDPR
 
 ## 8. Prohibited Uses
 
@@ -118,8 +119,8 @@ You may not use our service to:
 ## 12. Dispute Resolution
 
 ### 12.1 Governing Law
-- These terms are governed by the laws of the Socialist Republic of Vietnam
-- Any disputes will be resolved in the competent courts of Ho Chi Minh City, Vietnam
+- These terms are governed by the laws of the State of Wyoming, United States
+- Any disputes will be resolved in the state or federal courts located in Wyoming
 
 ### 12.2 Arbitration
 - For disputes under $10,000, binding arbitration may be required
@@ -135,10 +136,7 @@ You may not use our service to:
 
 For questions about these Terms of Service, please contact us at:
 
-**Email:** legal@vietnameselanguagelearning.com  
-**Address:** Ho Chi Minh City, Vietnam  
-**Phone:** +84 [Your Phone Number]
-
----
-
-*These terms are effective as of the last updated date above and supersede all previous versions.*
+**Company:** DAVID LUENGO JUAREZ LLC  
+**Email:** contact@davidluengojuarez.com  
+**Address:** 30 N Gould St Ste R Sheridan, 82801 Wyoming, United States  
+**Phone:** +1 (307) 2883104
