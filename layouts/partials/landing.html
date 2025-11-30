@@ -489,7 +489,7 @@
 </div>
  
  {{- $year := (now.Format "2006") -}}
- {{- $copyright := (T "copyright" (dict "Year" $year)) | default (printf "© %s V2L." $year) -}}
+ {{- $copyright := (T "copyright" (dict "Year" $year)) | default (printf "© %s vietnameseteacher.online." $year) -}}
 <footer class="flex items-center gap-x-3 p-4 lg:p-6 text-xs text-muted-foreground">
   <span>{{ $copyright }}</span>
   <a class="hover:text-primary" href="/terms">Terms</a>
