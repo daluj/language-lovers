@@ -1,7 +1,11 @@
 {
     "name": "Vietnamese Language Lovers",
     "short_name": "Vietnamese Language Lovers",
-    "start_url": "index.html",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f9fafb",
+    "theme_color": "#2563eb",
+    "orientation": "portrait-primary",
     "icons": [
       {
         "src": "android-chrome-192x192.png",
@@ -13,8 +17,5 @@
         "sizes": "512x512",
         "type": "image/png"
       }
-    ],
-    "theme_color": "#000000",
-    "background_color": "#000000",
-    "display": "standalone"
+    ]
 }
