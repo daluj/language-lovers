@@ -603,6 +603,39 @@
         <p class="text-base leading-7 text-gray-600">Previous failures weren't your fault; they were method failures. Traditional approaches focus on grammar and memorization, which doesn't work for most adults. Our conversation-first method is different: you speak from day one, learn in context, and build confidence through real interactions.</p>
       </dd>
     </div>
+
+    <div class="rounded-lg border border-gray-200 shadow-sm">
+      <dt class="px-4 py-3 sm:px-6">
+        <button @click="toggle(9)" class="flex w-full items-start justify-between text-left" :aria-expanded="isOpen(9)">
+          <span class="text-base font-semibold leading-7">How long do I actually need lessons? Will I be stuck paying forever?</span>
+          <span class="ml-6 flex h-7 items-center">
+            <svg class="h-6 w-6" :class="{'rotate-180': isOpen(9)}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+          </span>
+        </button>
+      </dt>
+      <dd class="px-4 pb-5 sm:px-6" x-show="isOpen(9)" x-collapse>
+        <p class="text-base leading-7 text-gray-600">It looks like a lot of people worry they’ll be paying for lessons indefinitely and never reach a point where they can learn on their own. The truth is we’ve had many students who, after about 6 months of consistent lessons, feel so confident that they no longer need our services and happily move to self-learning. Our method is built to give you the ear, the patterns, and the speaking confidence you need to keep growing without a teacher. When a student messages us saying “I don’t need lessons anymore, I can do this myself now,” that’s honestly one of the best compliments we ever get. We’re not here to keep you dependent; we’re here to set you free.</p>
+      </dd>
+    </div>
+    
+    <div class="rounded-lg border border-gray-200 shadow-sm">
+      <dt class="px-4 py-3 sm:px-6">
+        <button @click="toggle(10)" class="flex w-full items-start justify-between text-left" :aria-expanded="isOpen(10)">
+          <span class="text-base font-semibold leading-7">Okay, how does the pricing actually work?</span>
+          <span class="ml-6 flex h-7 items-center">
+            <svg class="h-6 w-6" :class="{'rotate-180': isOpen(10)}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+          </span>
+        </button>
+      </dt>
+      <dd class="px-4 pb-5 sm:px-6" x-show="isOpen(10)" x-collapse>
+        <p class="text-base leading-7 text-gray-600">It seems like the biggest worry for most people is pricing and if it is really worth it or if they’ll end up spending more than they expected. We keep pricing simple and transparent: one session is $30, but the moment you buy a pack (5, 10, or 20 sessions), the price per session drops straight away with meaningful discounts that get better the more you commit to. Many students tell us they actually feel relieved once they see the pack pricing because it rewards consistency without any hidden fees or long-term contracts. The real question isn’t “Can I afford this?” but “How fast will I start having real Vietnamese conversations?”.</p>
+      </dd>
+    </div>
+
     </dl>
 
     <div class="text-center py-20">
